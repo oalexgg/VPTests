@@ -1,0 +1,29 @@
+<ion-menu [content]="content" side="right">
+
+  <ion-content>
+    <img id="imgMenuSide"  src="img/logo-vec.png">
+
+      <ion-list>
+        <ion-item menu-close ng-click="gogallery()">
+          <i class="icon ion-images iconMenu"></i>&nbsp;&nbsp;
+          Galerie
+        </ion-item>
+        <ion-item menu-close ng-click="golangue()">
+          <i class="icon ion-earth iconMenu"></i>&nbsp;&nbsp;
+          Translate
+        </ion-item>
+        <ion-item menu-close ng-if="firstLaunch==false" ng-click="gomajAFL()">
+          <i class="icon ion-android-upload iconMenu"></i>&nbsp;&nbsp;
+          Mise à jour
+        </ion-item>
+        <ion-item menu-close ng-if="firstLaunch" ng-click="gomaj()">
+          <i class="icon ion-android-upload iconMenu"></i>&nbsp;&nbsp;
+          Mise à jour
+        </ion-item>
+      </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

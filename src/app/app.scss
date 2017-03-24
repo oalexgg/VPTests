@@ -1,0 +1,59 @@
+/*Menu Side*/
+#imgMenuSide{
+  width: 100%;
+  background-color: #7c413d!important;
+}
+
+.iconMenu{
+  font-size: 23px;
+}
+
+/*
+Image Navigation bar
+*********************
+*/
+
+.title-image {
+  height: 45px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: bold;
+  color: black;
+}
+/*
+*********************
+*/
+/*
+NavBar and footer Background 
+*********************
+*/
+.toolbar-background, .tabbar {
+  border-color: #7c413d!important;
+  background-color: #7c413d !important;
+}
+/*
+*********************
+*/
+/*
+Icons Color
+*********************
+*/
+ion-icon, span{
+  color: #f2eded!important;
+}
+/*
+*********************
+*/
+/*
+NavBar Height
+*********************
+*/
+ion-navbar {
+  height: 44px;
+}
