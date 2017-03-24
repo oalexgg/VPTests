@@ -20,14 +20,12 @@
 			<h2 style="text-align: center">Les parcours du moment</h2>
 	    </ion-item>
 	</ion-card>
-	<ion-card>
+	<ion-card *ngFor="let parcours of parcoursM">
 	    <ion-card-content>
-		    <ion-item *ngFor="let parcours of parcoursM">
+		    <ion-item>
         <a>
-			    <ion-avatar item-left>
-			        <img [src]="parcours.icone">
-			    </ion-avatar>
-			    <p>{{parcours.title}}</p>
+			        <img class="center icon-Acc" [src]="parcours.icone">
+			    <h1 class="center">{{parcours.title}}</h1>
         </a>
 			</ion-item>
 		</ion-card-content>

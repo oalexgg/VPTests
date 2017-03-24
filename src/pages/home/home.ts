@@ -1,9 +1,8 @@
-import { Component, ViewChild, ElementRef  } from '@angular/core';
-
-import { Parcours } from '../../providers/parcours'
-
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { Parcours } from "../../services/model";
+import { ParcourService } from "../../services/parcours-service";
 
 declare var google;
 
@@ -11,18 +10,24 @@ declare var google;
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
-
+export class HomePage implements OnInit{
+	parcoursM: Array<Parcours>;
 	@ViewChild('map') mapElement: ElementRef;
 	map: any;
-	parcoursM: any;
-	constructor(public navCtrl: NavController, public parcourService: Parcours) {	 
+	constructor(public navCtrl: NavController, public parcourService: ParcourService) {	 
 	}
 	 
-	ionViewDidLoad(){
+	 ngOnInit() {
+
 		this.loadMap();
-		this.listeParcours();
-	}
+        this.parcourService.getParcours()
+            .subscribe(
+                (parcoursM: Parcours[])=> {
+                    this.parcoursM = parcoursM
+                },
+                (err: any) => console.error(err)
+            );
+    }
 	 
 	loadMap(){
 	 
@@ -36,21 +41,6 @@ export class HomePage {
 	 	
 		this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
 	}
-
-	listeParcours(){
-		console.log(this.parcourService.getJSON());
-		this.parcourService.getJSON()
-		.subscribe(
-			data => {
-				this.parcoursM = data.result
-				console.log("1" + this.parcoursM);
-			});
-
-		console.log("2" + this.parcoursM);
-
-	}
-	
-
 	
 	centerOnMe() {
 		console.log("holas");

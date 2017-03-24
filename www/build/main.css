@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -26870,6 +26871,12 @@ NavBar Height
 */
 ion-navbar {
   height: 44px;
+}
+
+/* Permet de gérer la taille de l'icone pour les parcours sur la page d'accueil*/
+.icon-Acc {
+  width: 20%;
+  margin-top: 10px;
 }
 
 .ios page-home .scroll-content, .md page-home .scroll-content {
