@@ -1,6 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Component, Input } from '@angular/core';
+import { Injectable }     from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+
 
 /*
   Generated class for the Parcours provider.
@@ -10,9 +14,17 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class Parcours {
+	
 
-  constructor(public http: Http) {
-    console.log('Hello Parcours Provider');
-  }
+  constructor(private http: Http) {
+         var obj;
+         this.getJSON().subscribe(data => obj=data, error => console.log(error));
+    }
+
+    public getJSON(): Observable<any> {
+         return this.http.get("/data/fr_parcours.json")
+                         .map((res:any) => res.json());
+
+     }
 
 }

@@ -22,12 +22,12 @@
 	</ion-card>
 	<ion-card>
 	    <ion-card-content>
-		    <ion-item *ngFor="let parcoursM of parcm">
+		    <ion-item *ngFor="let parcours of parcoursM">
         <a>
 			    <ion-avatar item-left>
-			        <img [src]="parcoursM.icone">
+			        <img [src]="parcours.icone">
 			    </ion-avatar>
-			    <p>{{parcoursM.title}}</p>
+			    <p>{{parcours.title}}</p>
         </a>
 			</ion-item>
 		</ion-card-content>
