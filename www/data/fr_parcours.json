@@ -1,4 +1,5 @@
-  [
+{
+  "parcours": [
     {
       "id": "1803",
       "title": "Coeur historique",
@@ -29,7 +30,7 @@
             "lon": "0.871042000000",
             "lat": "46.426614000000"
           },
-          "description": "<p>L’église Saint-Martial,mentionnée au XIIe siècle, est le siège d’un prieuré dépendant de l’abbaye Saint-Martial de Limoges. Elle est en grande partie reconstruite au 19e siècle. Jusqu’au milieu du 18e siècle, le cimetière se développait devant l’édifice. Déplacé un peu plus loin, il laisse un espace libre qui est aménagé en place publique qui accueille aujourd’hui le monument aux morts et  la statue du Général Ladmirault.</p>\n",
+          "description": "<p>L’église Saint-Martial, mentionnée au XIIe siècle, est le siège d’un prieuré dépendant de l’abbaye Saint-Martial de Limoges. Elle est en grande partie reconstruite au 19e siècle. Jusqu’au milieu du 18e siècle, le cimetière se développait devant l’édifice. Déplacé un peu plus loin, il laisse un espace libre qui est aménagé en place publique qui accueille aujourd’hui le monument aux morts et  la statue du Général Ladmirault.</p>\n",
           "image": {
             "image": "24.jpg",
             "auteur": "© Béatrice Guyonnet",
@@ -302,3 +303,4 @@
       ]
     }
   ]
+}

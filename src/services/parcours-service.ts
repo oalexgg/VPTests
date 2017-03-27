@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Jsonp } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -9,12 +9,14 @@ import {Parcours} from './model';
 @Injectable()
 export class ParcourService {
     Parcours: Array<Parcours> = [];
+    //url: string = "http://crowdsensing.univ-lr.fr/vp/montmorillon/sites/default/files/json/20170217122045/fr_parcours.json?callback=JSONP_CALLBACK";
+    url: string = "data/fr_parcours.json";
 
-    constructor(public http: Http) {
+    constructor(public http: Http, private _jsonp: Jsonp) {
     }
 
     getParcours(){
-        return this.http.get("data/fr_parcours.json")
+        return this.http.get(this.url)
             .map((res: Response) => <Parcours>res.json())
             .catch(ParcourService.handleError);
     }

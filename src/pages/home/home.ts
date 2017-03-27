@@ -12,6 +12,7 @@ declare var google;
 })
 export class HomePage implements OnInit{
 	parcoursM: Array<Parcours>;
+	parcours: Array<any>;
 	@ViewChild('map') mapElement: ElementRef;
 	map: any;
 	constructor(public navCtrl: NavController, public parcourService: ParcourService) {	 
@@ -20,10 +21,14 @@ export class HomePage implements OnInit{
 	 ngOnInit() {
 
 		this.loadMap();
+		this.parcoursM = [];
         this.parcourService.getParcours()
             .subscribe(
-                (parcoursM: Parcours[])=> {
-                    this.parcoursM = parcoursM
+                parcoursM=> {
+                	this.parcours = Object.keys(parcoursM).map(k => { return parcoursM[k] });
+                	for (var i of this.parcours) {
+                		this.parcoursM = i;
+                	}
                 },
                 (err: any) => console.error(err)
             );

@@ -26879,10 +26879,6 @@ ion-navbar {
   margin-top: 10px;
 }
 
-.ios page-home .scroll-content, .md page-home .scroll-content {
-  height: 100%;
-}
-
 .ios page-home #map, .md page-home #map {
   width: 100%;
   height: 40%;
