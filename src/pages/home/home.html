@@ -6,7 +6,7 @@
   	<button ion-button menuToggle right>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>
+    <ion-title style="z-index: -1">
     	<img class="title-image center" src="img/logoM.png"/>
     </ion-title>
   </ion-navbar>
@@ -15,17 +15,17 @@
 <ion-content>
     <div #map id="map"></div>  
     <ion-card>
-	    <ion-item>
+	    <ion-item style=" background-color: #d6d6d6">
 			<h2 style="text-align: center">Les parcours du moment</h2>
 	    </ion-item>
 	</ion-card>
-	<ion-card *ngFor="let parcours of parcoursM">
+	<ion-card *ngFor="let parcours of parcoursM; let i = index">
 	    <ion-card-content>
-		    <ion-item>
-        <a>
-			        <img class="center icon-Acc" [src]="parcours.icone">
+		    <ion-item (click)="voirListePI(i)">
+        
+			    <img class="center icon-Acc" [src]="parcours.icone">
 			    <h1 class="center">{{parcours.title}}</h1>
-        </a>
+        
 			</ion-item>
 		</ion-card-content>
 	</ion-card>

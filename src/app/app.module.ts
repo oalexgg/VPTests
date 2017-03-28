@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { ParcourService } from "../services/parcours-service";
+import { PiService } from "../services/pi-service";
+import { PointsInteretPage } from '../pages/points-interet/points-interet';
+import { DetailPiPage } from '../pages/detail-pi/detail-pi';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +21,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PointsInteretPage,
+    DetailPiPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -31,13 +36,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PointsInteretPage,
+    DetailPiPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ParcourService
+    ParcourService,
+    PiService
   ]
 })
 export class AppModule {}

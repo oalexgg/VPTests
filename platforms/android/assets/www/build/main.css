@@ -26876,10 +26876,30 @@ ion-navbar {
 /* Permet de gérer la taille de l'icone pour les parcours sur la page d'accueil*/
 .icon-Acc {
   width: 20%;
+  max-width: 90px;
   margin-top: 10px;
+}
+
+/* Permet de centre le titre sur MD(Android) */
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 90px 1px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 .ios page-home #map, .md page-home #map {
   width: 100%;
   height: 40%;
+}
+
+page-points-interet {
+  /* image slider size */
+}
+
+page-points-interet ion-slides {
+  height: 30%;
 }

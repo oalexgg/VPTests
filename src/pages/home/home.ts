@@ -3,6 +3,8 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Parcours } from "../../services/model";
 import { ParcourService } from "../../services/parcours-service";
+import { PointsInteretPage } from '../points-interet/points-interet';
+import { ContactPage } from '../contact/contact';
 
 declare var google;
 
@@ -13,6 +15,8 @@ declare var google;
 export class HomePage implements OnInit{
 	parcoursM: Array<Parcours>;
 	parcours: Array<any>;
+	selection: number;
+
 	@ViewChild('map') mapElement: ElementRef;
 	map: any;
 	constructor(public navCtrl: NavController, public parcourService: ParcourService) {	 
@@ -26,12 +30,13 @@ export class HomePage implements OnInit{
             .subscribe(
                 parcoursM=> {
                 	this.parcours = Object.keys(parcoursM).map(k => { return parcoursM[k] });
-                	for (var i of this.parcours) {
+                	for (let i of this.parcours) {
                 		this.parcoursM = i;
                 	}
                 },
                 (err: any) => console.error(err)
             );
+           
     }
 	 
 	loadMap(){
@@ -48,6 +53,14 @@ export class HomePage implements OnInit{
 	}
 	
 	centerOnMe() {
-		console.log("holas");
+		this.navCtrl.push(ContactPage);
 	}
+
+	voirListePI(i: number) {
+		this.navCtrl.push(PointsInteretPage, {
+    		pointsInteret: this.parcoursM[i].pi,
+    		images: this.parcoursM[i].image
+    		});
+		}
+
 }
