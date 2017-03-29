@@ -16,10 +16,16 @@ import { PiService } from "../../services/pi-service";
 export class DetailPiPage {
 	pointsInteret: Array<any>;
   pointInteret: PI;
+  adresse: string;
+  horaire: string;
   id: any;
+  loaded: boolean = false;
+  imagesColection: Array<any>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public piService: PiService) {
   	this.id = navParams.get("piId");
     this.pointsInteret = [];
+    this.imagesColection = [];
         this.piService.getPis()
             .subscribe(
                 pis=> {
@@ -29,13 +35,25 @@ export class DetailPiPage {
                       this.pointInteret = i;
                     }
                   }
+                  this.adresse = "<div class='info'> Adresse:"+this.pointInteret["adresse"]+"</div>";
+                  if(this.pointInteret["horaire"]!= null) 
+                  {
+                    this.horaire = "<div class='info'> Horaire:"+this.pointInteret["horaire"]+"</div>";
+                  }
+
+                  this.imagesColection.push(this.pointInteret["image"]);
+                  for (let i of this.pointInteret["image_collection"]) {
+                    this.imagesColection.push(i);
+                  }
                 },
                 (err: any) => console.error(err)
             );
   }
 
   ionViewDidLoad() {
-
+    setTimeout(() => {
+       this.loaded = true;
+     }, 100);
   }
 
 }

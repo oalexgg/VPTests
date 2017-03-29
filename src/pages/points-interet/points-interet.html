@@ -25,6 +25,11 @@
 
 </ion-slides>
 
+  <ion-card >
+    <ion-card-content>
+      <p [innerHTML]="description"></p>
+    </ion-card-content>
+  </ion-card>
 
   <ion-card *ngFor="let pi of pointsInteret; let i = index" >
       <ion-card-content (click)="detailPI(i)">

@@ -17,12 +17,23 @@
 
 
 <ion-content padding>
+  <ion-slides autoplay="5000" loop pager effect="fade" *ngIf="loaded">
+    <ion-slide *ngFor="let images of imagesColection">
+        <img [src]="images.image">
+        <div class="textCopyright">
+          <p>{{images.auteur}}</p>
+        </div>
+    </ion-slide>
+  </ion-slides>
+
   <ion-card *ngIf="pointInteret">
       <ion-card-content>
-        <ion-item >
-          <h1 class="center">{{pointInteret.id}}</h1>
-      </ion-item>
-      <p [innerHTML]="pointInteret.anecdote"></p>
-    </ion-card-content>
+        <ion-item class="item-text-wrap">
+          <h1 class="center">{{pointInteret.title}}</h1>
+          <p [innerHTML]="adresse"></p>
+          <p [innerHTML]="horaire"></p>
+        </ion-item>
+        <p [innerHTML]="pointInteret.description"></p>
+      </ion-card-content>
   </ion-card>
 </ion-content>

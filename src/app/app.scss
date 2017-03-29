@@ -74,3 +74,21 @@ ion-title {
   height: 100%;
   text-align: center;
 }
+/*Ici on definit la localisation du copyright */
+.textCopyright{
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  right:30px;
+  text-align: end;
+}
+
+/*Ici on definit la police du copyright  */
+.textCopyright p{
+  font: bold Helvetica, Sans-Serif;
+  opacity: 0.8;
+  color: white;
+  font-size: 2vw;
+  line-height: normal;
+  margin: auto;
+}

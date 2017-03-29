@@ -1,0 +1,583 @@
+{
+  "lespis": [
+    {
+      "id": "1786",
+      "title": "Chapelle Saint-Nicolas",
+      "description": "<p>La chapelle Saint-Nicolas est mentionnée au 11e siècle, il s’agit alors du siège d’un prieuré dépendant de l’abbaye de Charroux et situé à l’écart de la ville. De la chapelle d’origine, il ne reste que le chevet (partie orientale de l’édifice). Au cours du 19e et au début du 20e siècle, elle faisait l’objet de pèlerinages importants. Les fidèles venaient chercher la guérison de maladies rhumatismales, et les jeunes filles venaient prier pour trouver un mari.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.851276000000",
+        "lat": "46.416471000000"
+      },
+      "adresse": "<p>Chapelle Saint-Nicolas, rue Saint-Nicolas 86500 Montmorillon</p>\r\n",
+      "horaire": "<p>Chapelle accessible uniquement en visite guidée.</p>\r\n",
+      "tarif": null,
+      "telephone": "0549911196",
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>Les filles qui souhaitaient trouver un mari devaient gravir sept fois de suite la colline en répétant «&nbsp;Bon saint Nicolas qui mariez les filles aux gars, ne m’oubliez pas&nbsp;». &nbsp;</p>\r\n",
+      "image": {
+        "image": "28.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Vue sur la chapelle Saint-Nicolas"
+      },
+      "image_collection": [
+        {
+          "image": "39.jpg",
+          "auteur": "© G. Touraine",
+          "legende": "Carte postale du pélerinage à la chapelle Saint-Nicolas"
+        },
+        {
+          "image": "40.jpg",
+          "auteur": "© G. Touraine",
+          "legende": "Carte postale du pélerinage à la chapelle Saint-Nicolas"
+        }
+      ]
+    },
+    {
+      "id": "1787",
+      "title": "Maison-Dieu",
+      "description": "<p>Une première fondation hospitalière est établie sur le site au 11e siècle mais elle tombe vite en ruine. Le véritable développement de l’ensemble est attribué à un seigneur pèlerin au 12e siècle. L’hôpital, relevé de ses ruines, est rapidement associé à un monastère. L’ensemble relève de plusieurs périodes de construction qui correspondent aux grands moments de son histoire (hôpital-monastère, petit séminaire). L’Octogone, ancien ossuaire et chapelle de cimetière du 12e siècle, reste le monument emblématique du site.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.863640000000",
+        "lat": "46.422708000000"
+      },
+      "adresse": "<p>6 Rue des Augustins, 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>En 1937, le musée est créé au 1<sup>er</sup> étage de la mairie de Montmorillon. Mais en 1975, les collections du musée de l’hôtel de ville sont transférées à l’intérieur de la Tour de la Maison-Dieu et de la grange du 17<sup>e</sup> siècle suite à l’enrichissement des collections du musée et la découverte, en 1966, du site préhistorique de la «&nbsp;Piscine&nbsp;».</p>\r\n",
+      "image": {
+        "image": "51.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Joseph Dezitter, Séminaire de Montmorillon, encre de chine sur papier, 30x42.5 cm"
+      },
+      "image_collection": [
+        {
+          "image": "52.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Jardins de la Maison Dieu"
+        },
+        {
+          "image": "53.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Tour de fortification de la Maison Dieu "
+        },
+        {
+          "image": "54.jpg",
+          "auteur": "© Club photo Vidéo de Saulgé",
+          "legende": "Vue sur l'Octogone"
+        },
+        {
+          "image": "55.jpg",
+          "auteur": "© Région Aquitaine Limousin Poitou-Charentes",
+          "legende": "Vue tirée de : Petit séminaire Cardinal Pie, 1926-1927. Tourte et Petitin éditeurs à Paris. "
+        }
+      ]
+    },
+    {
+      "id": "1788",
+      "title": "L’Aventure de la Machine à écrire et à calculer",
+      "description": "<p>Au cœur de la Cité de l'Écrit et des Métiers du Livre, l’Aventure de la Machine à écrire et à calculer vous invite à découvrir l’histoire de ces machines (200 modèles différents), de leurs inventeurs et de leurs utilisateurs. Vous pouvez les voir fonctionner, les essayer et les écouter.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.864881000000",
+        "lat": "46.426120000000"
+      },
+      "adresse": "<p>3 Rue Bernard Harent,86500 Montmorillon</p>\r\n",
+      "horaire": "<p>Ouvert tous les jours&nbsp;de 10h à 12h30 et de 14h à 18h.</p>\r\n",
+      "tarif": "<p class=\"rtejustify\">Visite gratuite</p>\r\n\r\n<p class=\"rtejustify\">Visite de groupe: le tarif est de 20 € par séquence de 1h/1h30 avec un maximum de 20 personnes.</p>\r\n",
+      "telephone": "0549830303 ",
+      "site_internet": null,
+      "email": "cite-de-lecrit@wanadoo.fr  ",
+      "anecdote": null,
+      "image": {
+        "image": "14.jpg",
+        "auteur": "© Club photo Vidéo de Saulgé",
+        "legende": "L’Aventure de la Machine à écrire et à calculer"
+      },
+      "image_collection": [
+        {
+          "image": "50.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Intérieur de l'aventure de la machine à écrire et calculer  "
+        }
+      ]
+    },
+    {
+      "id": "1789",
+      "title": "Le Brouard",
+      "description": "<p>Le quartier du Brouard est le cœur de la ville médiévale. Il s’est développé aux pieds du château et de l’église Notre-Dame et mène au Vieux pont. Les maisons les plus anciennes conservent des éléments caractéristiques du Moyen Âge : entrées de caves surmontées d’arcs brisés, maisons à pans de bois, anciennes entrées de boutiques… Au 19e et au début du 20e siècle c’est aussi un quartier d’artisans et de petits commerces. Depuis 2000, la Cité de l’Écrit perpétue cet héritage. C’est un endroit incontournable pour les amateurs de lecture, d'écriture et d'arts.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.866554000000",
+        "lat": "46.426435000000"
+      },
+      "adresse": "<p>Rue Montebello, 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "46.jpg",
+        "auteur": "© G. Touraine",
+        "legende": "Carte postale du Brouard "
+      },
+      "image_collection": [
+        {
+          "image": "47.jpg",
+          "auteur": "© G. Touraine",
+          "legende": "Carte postale du Brouard "
+        }
+      ]
+    },
+    {
+      "id": "1790",
+      "title": "Église Notre-Dame",
+      "description": "<p>Les parties les plus anciennes de l’église Notre-Dame remontent au 11e siècle. Les peintures murales de la crypte Sainte-Catherine ont été réalisées autour des années 1200. Elles évoquent quelques épisodes de la vie légendaire de sainte Catherine d’Alexandrie, sainte martyre des premiers temps chrétiens. Dans les années 1970, deux personnages représentant les Vieillards de l’Apocalypse ont été retirés de la voûte pour des raisons de conservation préventive et sont conservés dans les réserves du Musée.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.865989000000",
+        "lat": "46.426160000000"
+      },
+      "adresse": "<p>1 Rue Bernard Harent,86500 Montmorillon</p>\r\n",
+      "horaire": "<p>Crypte accessible en visite&nbsp;guidée</p>\r\n",
+      "tarif": null,
+      "telephone": "0549911196",
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "12.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Intérieur de la crypte"
+      },
+      "image_collection": [
+        {
+          "image": "41.jpg",
+          "auteur": "© Région ALPC",
+          "legende": "Détail des visages de la Vierge à l'Enfant, crypte Sainte-Catherine"
+        },
+        {
+          "image": "42.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Fragments représentant les vieillards de l'Apocalypse"
+        }
+      ]
+    },
+    {
+      "id": "1791",
+      "title": "Le Vieux Pont",
+      "description": "<p>Un pont existe dès le 12e siècle et permet de traverser la Gartempe à toute saison et de relier les deux parties de la ville. Reconstruit et transformé au fil du temps, il constitue un élément incontournable de Montmorillon qui a inspiré de nombreux artistes, dont Raoul Carré. Ce peintre a réalisé une huile sur toile depuis la rive droite intitulée <em>Montmorillon, Le Vieux Pont</em>. Ce pont possédait une porte de ville sur l’arche la plus proche de la rive droite, comme l’indique le relevé des Ponts et Chaussées.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.867218000000",
+        "lat": "46.425831000000"
+      },
+      "adresse": "<p>Rue du Vieux Pont, Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>À l’origine il comptait trois arches. Les deux latérales ont été emportées lors des crues importantes de la Gartempe. Les espaces aménagés sur les piles s’appellent des refuges. Ils permettaient notamment aux passants de se mettre à l’écart lorsque les «&nbsp;voitures&nbsp;» à cheval empruntaient le pont.</p>\r\n",
+      "image": {
+        "image": "33.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Raoul Carré, Montmorillon, le Vieux pont, huile sur toile, 50x57cm "
+      },
+      "image_collection": [
+        {
+          "image": "66.jpg",
+          "auteur": "© Christian Daniel Perez - Archives départementales de la Vienne",
+          "legende": "Détail du plan des ponts et chaussées de 1733"
+        },
+        {
+          "image": "67.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Vue sur le vieux pont"
+        }
+      ]
+    },
+    {
+      "id": "1793",
+      "title": "Le Vieux-Palais",
+      "description": "<p>Au 13e siècle, un ensemble monastique dépendant de l’abbaye de Grandmont (Haute-Vienne), est installé sur ce site. Vendu plus tard à des particuliers, plusieurs édifices y sont construits, effaçant progressivement l’implantation religieuse. Seule reste la salle voutée du 13e siècle. Le Vieux-Palais et l’hôtel Saint-Christophe, datant de l’époque classique, ont vraisemblablement accueilli les audiences de justice. Montmorillon était depuis 1545, siège de Sénéchaussée. </p>\n",
+      "longitude_latitude": {
+        "lon": "0.867970000000",
+        "lat": "46.426512000000"
+      },
+      "adresse": "<p>2 Rue Saint-Christophe 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>L’anonyme représenté sur le tableau<em> Portrait d’homme </em>n’a jamais été formellement identifié. Bien que ce notable local ait des liens avec la sénéchaussée, plusieurs éléments laissent à penser qu’il s’agit du maire perpétuel de la ville.</p>\r\n",
+      "image": {
+        "image": "30.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Vue sur le Vieux Palais"
+      },
+      "image_collection": [
+        {
+          "image": "68.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Détail du tableau, anonyme, huile sur toile, 120x95cm"
+        },
+        {
+          "image": "69.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Intérieur de la salle des Grandmontains"
+        }
+      ]
+    },
+    {
+      "id": "1794",
+      "title": "Place Saint-Martial",
+      "description": "<p>L’église Saint-Martial, mentionnée au XIIe siècle, est le siège d’un prieuré dépendant de l’abbaye Saint-Martial de Limoges. Elle est en grande partie reconstruite au 19e siècle. Jusqu’au milieu du 18e siècle, le cimetière se développait devant l’édifice. Déplacé un peu plus loin, il laisse un espace libre qui est aménagé en place publique qui accueille aujourd’hui le monument aux morts et  la statue du Général Ladmirault.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.871042000000",
+        "lat": "46.426614000000"
+      },
+      "adresse": "<p>Place st martial 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": "0549911196",
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">Le monument aux morts se situait à l’origine près du Pont Neuf, il a été déplacé ici en 1974.&nbsp;Cette place a également&nbsp; accueilli un kiosque à musique à la fin du 19<sup>e</sup> siècle et jusqu’en 1974.</p>\r\n",
+      "image": {
+        "image": "24.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Détail de la statue de Ladmirault"
+      },
+      "image_collection": [
+        {
+          "image": "59.jpg",
+          "auteur": "© Région Aquitaine Limousin Poitou-Charentes",
+          "legende": "Kiosque de la place saint-Martial "
+        }
+      ]
+    },
+    {
+      "id": "1795",
+      "title": "Musée de Montmorillon",
+      "description": "<p>Créé en 1937, le musée de Montmorillon occupe actuellement une partie du 1er étage des anciens locaux de l’école primaire supérieure. Lieu d’exposition, le musée permettra aux visiteurs de découvrir des collections hétérogènes allant des Beaux-Arts à l'Ethnologie en passant par l’Archéologie.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.872817000000",
+        "lat": "46.428841000000"
+      },
+      "adresse": "<p>9 Avenue Pasteur, 86500 Montmorillon</p>\r\n",
+      "horaire": "<p>Le musée est en cours de rénovation et de modernisation. Son ouverture est prévue pour 2017.</p>\r\n",
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": "musee@ville-montmorillon.fr",
+      "anecdote": "<p>Le musée et la médiathèque se trouvent dans les locaux de l’ancienne école primaire supérieure. Cet établissement public et gratuit permettait aux écoliers âgés de douze ans de poursuivre leur scolarité après le certificat d'études primaires élémentaires.</p>\r\n",
+      "image": {
+        "image": "27.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Musée de Montmorillon"
+      },
+      "image_collection": [
+        {
+          "image": "56.jpg",
+          "auteur": "© Ville de Montmorillon 2",
+          "legende": "Inauguration de l'arbre de la liberté en 1948, avenue Pasteur"
+        }
+      ]
+    },
+    {
+      "id": "1802",
+      "title": "Office du tourisme",
+      "description": "<p>Cet édifice a été construit en 1863 pour abriter le palais de justice. À l’époque, il s’insère dans un programme d’aménagement urbain plus important. À cette occasion des îlots de maisons sont détruits et des halles métalliques, aujourd’hui disparues, sont implantées devant le palais en 1878. Le peintre montmorillonnais Jehan Berjonneau a immortalisé le marché couvert, lieu animé où les Montmorillonnais se retrouvent régulièrement. Le tableau <em>Place du Vieux Marché </em>rappelle son intérêt pour les scènes de vie quotidienne mais aussi son attachement pour sa terre natale.  </p>\n",
+      "longitude_latitude": {
+        "lon": "0.868267000000",
+        "lat": "46.425579000000"
+      },
+      "adresse": "<p>2 Place du Maréchal Leclerc, 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "29.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Vue sur la façade de l'ancien palais de justice"
+      },
+      "image_collection": [
+        {
+          "image": "57.jpg",
+          "auteur": "© Région Aquitaine Limousin Poitou-Charentes",
+          "legende": "Le marché aux oies près du Palais de Justice "
+        },
+        {
+          "image": "58.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Jehan Berjonneau, Place du Marché, Montmorillon, huile sur toile, 60x73cm"
+        }
+      ]
+    },
+    {
+      "id": "1784",
+      "title": "Sanctuaire de Masamas",
+      "description": "<p>Les fouilles réalisées de 1964 à 1987 ont mis au jour un sanctuaire rural présentant plusieurs traces d’occupations. Un premier sanctuaire construit à l’époque gauloise comprenait un mur d’enceinte et plusieurs  constructions carrées évoquant un <em>fanum</em> gaulois. Puis, au 1er siècle ap. J.C., le sanctuaire s’agrandit passant de 900m² à 2000 m². Le péribole est reconstruit sur une partie du mur d’enceinte existant et, deux temples jumeaux orientés à l’est, remplacent les constructions gauloises. Les divinités rattachées à ces temples n’ont pas été identifiées.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.973577000000",
+        "lat": "46.399169000000"
+      },
+      "adresse": "<p>Sanctuaire gallo-romain de Masamas, les Grandes Brandes,86290 Saint Léomer</p>\r\n",
+      "horaire": "<p>Visite libre toute la semaine</p>\r\n",
+      "tarif": "<p>Gratuit</p>\r\n",
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>Les fouilles archéologiques ont mis au jour un abondant mobilier de l’époque gauloise et de l’époque romaine ainsi que des tessons de céramiques médiévales et divers silex taillés du Néolithique. Parmi les objets découverts, une quarantaine d’antéfixes ont été mis au jour par les archéologues. Ces objets en terre cuite ornaient le bord de la toiture des temples jumeaux. Ils sont décorés d’une tête de Méduse, les yeux ouverts.</p>\r\n",
+      "image": {
+        "image": "62.jpg",
+        "auteur": "© Alain Buchet Studio Buch Créations",
+        "legende": "Vue aérienne du site antique de Masamas"
+      },
+      "image_collection": [
+        {
+          "image": "63.jpg",
+          "auteur": "© Club photo Vidéo de Saulgé",
+          "legende": "Vue sur une partie du site de Masamas "
+        },
+        {
+          "image": "64.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Tuiles gallo-romaines avec antéfixe à tête de Méduse "
+        }
+      ]
+    },
+    {
+      "id": "1785",
+      "title": "Saint-Léomer",
+      "description": "<p>Le prieuré-cure dépendait de l’abbaye de Lesterps (Charente). Saint Léomer, prêtre du diocèse de Chartres au 6e siècle, est appelé localement « saint Yomé ». L’église du 12e siècle a été reprise à l’intérieur au 19e siècle. Elle conserve le buste de saint « Yomé », du 17e siècle, représenté sous les traits de saint François de Sales. Associé à la fontaine appelée la font Galou, il faisait l’objet d’un pèlerinage local ou « voyage ». Les fidèles venaient y chercher la guérison de diverses maladies de peau.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.994362000000",
+        "lat": "46.436270000000"
+      },
+      "adresse": "<p>Eglise de Saint-Léomer</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "22.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Détail de la statue de saint \"Yomé\""
+      },
+      "image_collection": [
+        {
+          "image": "63.jpg",
+          "auteur": "© Club photo Vidéo de Saulgé",
+          "legende": "Vue sur une partie du site de Masamas "
+        },
+        {
+          "image": "64.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Tuiles gallo-romaines avec antéfixe à tête de Méduse "
+        }
+      ]
+    },
+    {
+      "id": "1796",
+      "title": "Moussac-sur-Gartempe",
+      "description": "<p>La chapelle Saint-Martin, datée de l’époque romane, conserve quelques éléments pouvant remonter à l’époque carolingienne (mur de la nef). Elle correspond au siège d’une ancienne paroisse sans doute antérieure à celle de Montmorillon. Des vestiges de peintures murales y sont conservés. L’ancienne lanterne des morts date du 12e siècle. Elle a perdu sa partie supérieure ajourée.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.904152000000",
+        "lat": "46.409536000000"
+      },
+      "adresse": "<p>Moussac, 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>Au 19<sup>e</sup> siècle la lanterne des morts avait été déplacée sur le bord de la route de Bourg-Archambault. En 2004, elle est restaurée et réintègre l’espace qui devait être le sien à l’origine, l’ancien cimetière, près de la chapelle.</p>\r\n",
+      "image": {
+        "image": "26.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Lanterne des Morts - Gravure sur bois de Jehan Berjonneau"
+      },
+      "image_collection": [
+        {
+          "image": "63.jpg",
+          "auteur": "© Club photo Vidéo de Saulgé",
+          "legende": "Vue sur une partie du site de Masamas "
+        },
+        {
+          "image": "64.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Tuiles gallo-romaines avec antéfixe à tête de Méduse "
+        }
+      ]
+    },
+    {
+      "id": "1797",
+      "title": "Bourg-Archambault",
+      "description": "<p>Bourg-Archambault se développe au Moyen Âge autour de l’église Saint-Laurent et d’un premier château probablement édifié au 13e siècle. Le château actuel est le fruit de trois principales campagnes de construction : deux de la fin du 15e siècle et l’une de 1865. L’église Saint-Laurent, construite à l’époque romane, a été reprise au fil des siècles. Une pietà, appelée de façon populaire « saint Braillaud », faisait l’objet de « voyages ». Les fidèles venaient demander la guérison des enfants « braillards ».</p>\n",
+      "longitude_latitude": {
+        "lon": "1.003307000000",
+        "lat": "46.382919000000"
+      },
+      "adresse": "<p>Place de la Pierrere, 86390 Bourg-Archambault</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>Le plan d’ensemble du château, avec ses douves, s’inspire de celui du château du Plessis-Bourré (Maine-et-Loire).</p>\r\n",
+      "image": {
+        "image": "7.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Vue sur l'église Saint-Laurent"
+      },
+      "image_collection": [
+        {
+          "image": "37.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Pietà à l'intérieur de l'église de Bourg-Archambault"
+        },
+        {
+          "image": "38.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Vue sur les douves et d'une partie du châtelet d’entrée du château - Gravure sur bois de Jehan Berjonneau "
+        }
+      ]
+    },
+    {
+      "id": "1798",
+      "title": "Église Saint-Maurice de Lathus",
+      "description": "<p>L’église Saint-Maurice était le siège d’un prieuré dépendant de l’abbaye de La Chaise-Dieu (Haute-Loire) et la paroisse de Lathus relevait du diocèse de Poitiers. Construite au 12e siècle, elle est reprise au 13e et au 19e siècle. De l’influence limousine, elle a repris notamment l’imposant clocher octogonal et, dans la partie romane, l’utilisation du granit. Elle conserve des éléments sculptés caractéristiques de l’époque romane : têtes grimaçantes, lions, oiseaux, basilic. </p>\n",
+      "longitude_latitude": {
+        "lon": "0.958881000000",
+        "lat": "46.333680000000"
+      },
+      "adresse": "<p>Places des Victoires, 86390 Lathus-Saint-Rémy</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": "0549911196",
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>Pendant la guerre de Cent Ans, comme de nombreuses églises de la région, ses parties orientales ont été fortifiées. Ces vestiges sont encore visibles avec la surélévation de l’abside principale et de l’absidiole nord. Ces détails n’ont pas échappé à l’artiste Jehan Berjonneau représentant sur sa gravure sur bois, le chevet d’époque romane et ces surélévations ainsi que l’imposant clocher limousin.</p>\r\n",
+      "image": {
+        "image": "43.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Vue sur le chevet et le clocher de l'église de Lathus - Gravure sur bois de Jehan Berjonneau"
+      },
+      "image_collection": [
+        {
+          "image": "44.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Détail d'un chapiteau avec basilic - chevet de l'église "
+        },
+        {
+          "image": "45.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Vue sur le chevet et le clocher de l'église"
+        }
+      ]
+    },
+    {
+      "id": "1799",
+      "title": "Le Roc d'Enfer à Lathus",
+      "description": "<p>Ce site naturel protégé est au cœur du site classé de la vallée de la Gartempe.  Cette rivière, encore sauvage, arrive à Lathus sur un socle granitique. La vallée encaissée et ses chaos granitiques constituent un ensemble paysager d’exception. C’est aussi un espace qui abrite une faune et une flore de qualité et parfois rares (Loutre d’Europe, Cincle plongeur…). Lieu parfois mystérieux, il a également inspiré de nombreuses légendes.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.934093000000",
+        "lat": "46.318426000000"
+      },
+      "adresse": "<p>Les Portes d'Enfer, route départementale 10, 86390 Lathus-Saint-Rémy</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>De nombreux artistes montmorillonnais ont immortalisé la nature dans leurs œuvres. C’est le cas de Jehan Berjonneau qui a réalisé un bois gravé représentant le Roc d'Enfer. La gravure forme un feuillet qui s’accompagne d’un poème de Soline. Le Roc d’Enfer fait partie d’un ouvrage intitulé <em>Paysages de chez nous</em> qui se compose de 66 planches couleur non reliées représentant les paysages poitevins et les monuments et paysages du Montmorillonnais, du Châtelleraudais et du Civraisien.</p>\r\n",
+      "image": {
+        "image": "34.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Site naturel du Roc d'Enfer sur la Gartempe"
+      },
+      "image_collection": [
+        {
+          "image": "48.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Ail des ours sur le site du Roc d'Enfer"
+        },
+        {
+          "image": "49.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Vue sur le Roc d'Enfer - Gravure de Jehan Berjonneau"
+        }
+      ]
+    },
+    {
+      "id": "1800",
+      "title": "Plaisance",
+      "description": "<p>Au Moyen Âge, l’église Notre-Dame est située au cœur d’une petite ville fortifiée. L’édifice actuel a été bâti entre le milieu du 12e siècle et le début du 13e siècle. Suite à la destruction du chevet, le chœur est installé dans la partie orientale de la nef. Sa façade présente encore de beaux éléments sculptés (modillons, bas-reliefs). La statue de la Vierge faisait l’objet de pèlerinages importants. L’artiste montmorillonnais Jehan Berjonneau a réalisé une vue de l’église sur bois gravé.  </p>\n",
+      "longitude_latitude": {
+        "lon": "0.872792000000",
+        "lat": "46.333017000000"
+      },
+      "adresse": "<p>2 Place de l'Eglise, 86500 Plaisance</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p>Selon la légende, l’église aurait été fondée par Charlemagne, mais aucune source ne permet de le confirmer. Cependant au cours du Moyen Âge, le prieuré a reçu les faveurs de plusieurs rois de France.</p>\r\n",
+      "image": {
+        "image": "32.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Façade de l'église de Plaisance"
+      },
+      "image_collection": [
+        {
+          "image": "60.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Bas-relief situé à proximité du portail de l'église "
+        },
+        {
+          "image": "61.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Vue sur l'église de Plaisance - Jehan Berjonneau, Paysage de chez nous, 1932"
+        }
+      ]
+    },
+    {
+      "id": "1801",
+      "title": "Saulgé",
+      "description": "<p>L’église priorale Saint-Divitien, citée entre 1087 et 1092, dépendait de l’abbaye bénédictine du Bourg-Dieu à Déols (Indre) et servait, probablement dès le Moyen Âge, d’église paroissiale. L’ensemble comprenait plusieurs édifices : église, chapelle, bâtiments conventuels, cloitre et pigeonnier, en partie visibles sur des documents anciens. L’église présente plusieurs grandes périodes de construction du 11e au 19e siècle. En 1859, elle reçoit un vaste décor peint qui l’inscrit dans le parcours de « la Vallée des fresques ».</p>\n",
+      "longitude_latitude": {
+        "lon": "0.874966000000",
+        "lat": "46.378032000000"
+      },
+      "adresse": "<p>Place du Prieuré, 86500 Saulgé</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "35.jpg",
+        "auteur": "© Club photo Vidéo de Saulgé",
+        "legende": "Église de Saulgé de nuit "
+      },
+      "image_collection": [
+        {
+          "image": "65.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Bas-relief à Saulgé"
+        }
+      ]
+    }
+  ]
+}

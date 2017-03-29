@@ -17,9 +17,11 @@ export class PointsInteretPage {
 	pointsInteret: Array<PI>;
 	imageParam: Object;
 	images: string[] = [];
+  description: string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   	this.pointsInteret = this.navParams.get('pointsInteret');
   	this.imageParam = this.navParams.get("images");
+    this.description = this.navParams.get("description");
   	Object.getOwnPropertyNames(this.imageParam).forEach(val => {
   		this.images.push(this.imageParam[val]);
   	});

@@ -4,5 +4,18 @@ page-points-interet {
 	ion-slides {
 		height: 30%;
 	}
-	
+
+	/* Text style*/
+	p {
+		text-align: justify;
+	}
+
+	.card p {
+		font-size:90%;
+	}
+
+	.card-title {
+		font-size:1.9rem;
+	}
+
 }

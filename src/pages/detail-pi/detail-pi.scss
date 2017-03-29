@@ -1,3 +1,11 @@
-page-detail-parcours {
+page-detail-pi {
+	/* image slider size */
+	ion-slides {
+		height: 50%;
+	}
 
+	/*information du pi*/
+	.info{
+		white-space: normal;
+	}
 }

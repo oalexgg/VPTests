@@ -26891,6 +26891,39 @@ ion-title {
   text-align: center;
 }
 
+/*Ici on definit la localisation du copyright dans les pages Détails PI et Détails parcours */
+.textCopyright {
+  position: absolute;
+  width: 100%;
+}
+
+/*Ici on definit la police du copyright dans les pages Détails PI et Détails parcours */
+.textCopyright p {
+  font: bold Helvetica, Sans-Serif;
+  opacity: 0.8;
+  color: black;
+  font-size: 2vw;
+  line-height: normal;
+  margin: auto;
+  bottom: 6px;
+  left: 16px;
+  right: 16px;
+  text-align: end;
+}
+
+page-detail-pi {
+  /* image slider size */
+  /*information du pi*/
+}
+
+page-detail-pi ion-slides {
+  height: 50%;
+}
+
+page-detail-pi .info {
+  white-space: normal;
+}
+
 .ios page-home #map, .md page-home #map {
   width: 100%;
   height: 40%;
@@ -26898,8 +26931,21 @@ ion-title {
 
 page-points-interet {
   /* image slider size */
+  /* Text style*/
 }
 
 page-points-interet ion-slides {
   height: 30%;
+}
+
+page-points-interet p {
+  text-align: justify;
+}
+
+page-points-interet .card p {
+  font-size: 90%;
+}
+
+page-points-interet .card-title {
+  font-size: 1.9rem;
 }

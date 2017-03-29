@@ -4,7 +4,6 @@ import { NavController } from 'ionic-angular';
 import { Parcours } from "../../services/model";
 import { ParcourService } from "../../services/parcours-service";
 import { PointsInteretPage } from '../points-interet/points-interet';
-import { ContactPage } from '../contact/contact';
 
 declare var google;
 
@@ -23,8 +22,7 @@ export class HomePage implements OnInit{
 	}
 	 
 	 ngOnInit() {
-
-		this.loadMap();
+	 	this.loadMap();
 		this.parcoursM = [];
         this.parcourService.getParcours()
             .subscribe(
@@ -33,19 +31,27 @@ export class HomePage implements OnInit{
                 	for (let i of this.parcours) {
                 		this.parcoursM = i;
                 	}
+                	for (let i of this.parcoursM) {
+						for (let j = 0; j<Object.keys(i.pi).length; j++) {
+							new google.maps.Marker({
+					    		position: {lat: Number(i.pi[j].longitude_latitude["lat"]), lng:Number(i.pi[j].longitude_latitude["lon"])},
+					    		map: this.map,
+					    		title: i.title
+					 		 });
+						}
+					}
                 },
                 (err: any) => console.error(err)
             );
-           
     }
 	 
 	loadMap(){
 	 
-		let latLng = new google.maps.LatLng(46.43333, 0.86667);
+		let latLng = new google.maps.LatLng(46.42493120988299, 0.867619514465332);
 	 
 	    let mapOptions = {
 	      center: latLng,
-	      zoom: 14,
+	      zoom: 15,
 	      mapTypeId: google.maps.MapTypeId.ROADMAP
 	    }
 	 	
@@ -53,13 +59,15 @@ export class HomePage implements OnInit{
 	}
 	
 	centerOnMe() {
-		this.navCtrl.push(ContactPage);
+
+		console.log("button center on me");
 	}
 
 	voirListePI(i: number) {
 		this.navCtrl.push(PointsInteretPage, {
     		pointsInteret: this.parcoursM[i].pi,
-    		images: this.parcoursM[i].image
+    		images: this.parcoursM[i].image,
+    		description: this.parcoursM[i].description_parcours
     		});
 		}
 
