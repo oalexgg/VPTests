@@ -77,10 +77,11 @@ ion-title {
 /*Ici on definit la localisation du copyright */
 .textCopyright{
   position: absolute;
-  bottom: 25px;
-  left: 30px;
-  right:30px;
   text-align: end;
+  bottom: 0px;
+  left: 16px;
+  right:16px;
+  height: 20%;
 }
 
 /*Ici on definit la police du copyright  */
@@ -91,4 +92,32 @@ ion-title {
   font-size: 2vw;
   line-height: normal;
   margin: auto;
+}
+.textleg{
+  background-color:#7c413d;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right:0px;
+  text-align: center;
+  height: 10%;
+}
+
+/*Ici on définit la police du nom des parcours sur la page 'parcours' */
+.textleg p{
+  font: bold Helvetica, Sans-Serif;
+  color: white;
+  font-size: 1.9rem;
+  margin-top: 3vw;
+}
+/* Ici on rajoute le petit bandeau sur le bas des images */
+.textim{
+  opacity: 0.8;
+  background-color:#7c413d;
+  position: absolute;
+  bottom: 19px;
+  left: 16px;
+  right:16px;
+  text-align: center;
+  height: 25%;
 }

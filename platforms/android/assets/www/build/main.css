@@ -26891,24 +26891,23 @@ ion-title {
   text-align: center;
 }
 
-/*Ici on definit la localisation du copyright dans les pages Détails PI et Détails parcours */
+/*Ici on definit la localisation du copyright */
 .textCopyright {
   position: absolute;
-  width: 100%;
+  bottom: 40px;
+  left: 30px;
+  right: 30px;
+  text-align: end;
 }
 
-/*Ici on definit la police du copyright dans les pages Détails PI et Détails parcours */
+/*Ici on definit la police du copyright  */
 .textCopyright p {
   font: bold Helvetica, Sans-Serif;
   opacity: 0.8;
-  color: black;
+  color: white;
   font-size: 2vw;
   line-height: normal;
   margin: auto;
-  bottom: 6px;
-  left: 16px;
-  right: 16px;
-  text-align: end;
 }
 
 page-detail-pi {
