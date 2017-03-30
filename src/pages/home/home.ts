@@ -1,11 +1,11 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { Parcours } from "../../services/model";
 import { ParcourService } from "../../services/parcours-service";
 import { PointsInteretPage } from '../points-interet/points-interet';
+import { DetailPiPage } from "../detail-pi/detail-pi";
 
-declare var google;
 
 @Component({
   selector: 'page-home',
@@ -15,15 +15,17 @@ export class HomePage implements OnInit{
 	parcoursM: Array<Parcours>;
 	parcours: Array<any>;
 	selection: number;
+	lat: number = 46.42493120988299;
+  	lng: number = 0.867619514465332;
+  	positions: Array<any>;
+  	zoom: number = 15;
 
-	@ViewChild('map') mapElement: ElementRef;
-	map: any;
 	constructor(public navCtrl: NavController, public parcourService: ParcourService) {	 
 	}
 	 
 	 ngOnInit() {
-	 	this.loadMap();
 		this.parcoursM = [];
+		this.positions = [];
         this.parcourService.getParcours()
             .subscribe(
                 parcoursM=> {
@@ -33,33 +35,22 @@ export class HomePage implements OnInit{
                 	}
                 	for (let i of this.parcoursM) {
 						for (let j = 0; j<Object.keys(i.pi).length; j++) {
-							new google.maps.Marker({
-					    		position: {lat: Number(i.pi[j].longitude_latitude["lat"]), lng:Number(i.pi[j].longitude_latitude["lon"])},
-					    		map: this.map,
-					    		title: i.title
-					 		 });
+							this.positions.push(i.pi[j]);
 						}
 					}
+					let j = 0;
+					for (let i of this.positions) {
+						this.positions[j].longitude_latitude.lat = Number(i.longitude_latitude.lat);
+						this.positions[j].longitude_latitude.lon = Number(i.longitude_latitude.lon);
+						j++;		
+						}
+
                 },
                 (err: any) => console.error(err)
             );
     }
 	 
-	loadMap(){
-	 
-		let latLng = new google.maps.LatLng(46.42493120988299, 0.867619514465332);
-	 
-	    let mapOptions = {
-	      center: latLng,
-	      zoom: 15,
-	      mapTypeId: google.maps.MapTypeId.ROADMAP
-	    }
-	 	
-		this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-	}
-	
 	centerOnMe() {
-
 		console.log("button center on me");
 	}
 
@@ -70,5 +61,12 @@ export class HomePage implements OnInit{
     		description: this.parcoursM[i].description_parcours
     		});
 		}
+
+	voirDetailPI(id: any) {
+		this.navCtrl.push(DetailPiPage,{
+  		piId: id
+  	});
+
+	}
 
 }

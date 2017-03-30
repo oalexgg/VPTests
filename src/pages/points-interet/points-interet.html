@@ -17,11 +17,13 @@
 
 
 <ion-content padding>
-  <ion-slides autoplay="5000" loop pager effect="fade" zoom>
+<ion-slides autoplay="5000" loop pager effect="fade">
 
-  <ion-slide *ngFor="let image of images">
-    <img [src]="image">
-  </ion-slide>
+    <ion-slide *ngFor="let image of images">
+        <div class="box">
+            <img class="full-image" [src]="image">
+        </div>
+    </ion-slide>
 
 </ion-slides>
 

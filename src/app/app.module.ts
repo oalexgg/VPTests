@@ -1,5 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { CommonModule } from '@angular/common';
+
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -13,6 +16,8 @@ import { DetailPiPage } from '../pages/detail-pi/detail-pi';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 
 @NgModule({
@@ -28,7 +33,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     IonicModule.forRoot(MyApp),
     JsonpModule,
-    HttpModule
+    HttpModule,
+    BrowserModule,
+    CommonModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

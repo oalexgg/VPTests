@@ -26895,7 +26895,7 @@ ion-title {
 .textCopyright {
   position: absolute;
   text-align: end;
-  bottom: 0px;
+  bottom: 6%;
   left: 16px;
   right: 16px;
   height: 20%;
@@ -26912,26 +26912,27 @@ ion-title {
 }
 
 .textleg {
+  opacity: 1;
   background-color: #7c413d;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  bottom: 2%;
+  left: 16px;
+  right: 16px;
   text-align: center;
-  height: 10%;
+  height: 20%;
 }
 
 /*Ici on définit la police du nom des parcours sur la page 'parcours' */
 .textleg p {
   font: bold Helvetica, Sans-Serif;
   color: white;
-  font-size: 1.9rem;
+  font-size: 3vw;
   margin-top: 3vw;
 }
 
 /* Ici on rajoute le petit bandeau sur le bas des images */
 .textim {
-  opacity: 0.8;
+  opacity: 0.9;
   background-color: #7c413d;
   position: absolute;
   bottom: 19px;
@@ -26954,8 +26955,7 @@ page-detail-pi .info {
   white-space: normal;
 }
 
-.ios page-home #map, .md page-home #map {
-  width: 100%;
+.ios page-home .sebm-google-map-container, .md page-home .sebm-google-map-container {
   height: 40%;
 }
 
