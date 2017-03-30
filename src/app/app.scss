@@ -62,7 +62,6 @@ ion-navbar {
 .icon-Acc{
   width: 20%;
   max-width: 90px;
-  margin-top: 10px;
 }
 /* Permet de centre le titre sur MD(Android) */
 ion-title {
@@ -121,4 +120,9 @@ ion-title {
   right:16px;
   text-align: center;
   height: 25%;
+}
+.buttonDemarrer {
+  background-color: #7c413d;
+  
+
 }

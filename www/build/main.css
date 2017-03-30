@@ -26877,7 +26877,6 @@ ion-navbar {
 .icon-Acc {
   width: 20%;
   max-width: 90px;
-  margin-top: 10px;
 }
 
 /* Permet de centre le titre sur MD(Android) */
@@ -26942,6 +26941,10 @@ ion-title {
   height: 25%;
 }
 
+.buttonDemarrer {
+  background-color: #7c413d;
+}
+
 page-detail-pi {
   /* image slider size */
   /*information du pi*/
@@ -26956,7 +26959,16 @@ page-detail-pi .info {
 }
 
 .ios page-home .sebm-google-map-container, .md page-home .sebm-google-map-container {
-  height: 40%;
+  height: 30%;
+}
+
+.ios page-home .imageHome, .md page-home .imageHome {
+  height: 30%;
+  width: 100%;
+}
+
+page-parcour .sebm-google-map-container {
+  height: 50%;
 }
 
 page-points-interet {

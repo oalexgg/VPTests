@@ -13,8 +13,15 @@
 </ion-header>
 
 <ion-content>
+  <img class="imageHome"  src="56.jpg">
   <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
       <sebm-google-map-marker *ngFor="let pos of positions" [latitude]="pos.longitude_latitude.lat" [longitude]="pos.longitude_latitude.lon" (markerClick)="voirDetailPI(pos.id)" [iconUrl]="'img/icon-map.png'" >
+        <!--<sebm-google-map-info-window>
+           <strong>pos.title</strong>
+        </sebm-google-map-info-window>
+        -->
+      </sebm-google-map-marker>
+     <sebm-google-map-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng" [iconUrl]="'img/ic.png'" [visible]="visible" >
         <!--<sebm-google-map-info-window>
            <strong>pos.title</strong>
         </sebm-google-map-info-window>
@@ -23,10 +30,10 @@
     </sebm-google-map> 
     <ion-card>
 	    <ion-item style=" background-color: #d6d6d6">
-			<h2 style="text-align: center">Les parcours du moment</h2>
+			<h2 style="text-align: center">Les Parcours</h2>
 	    </ion-item>
 	</ion-card>
-	<ion-card *ngFor="let parcours of parcoursM; let i = index">
+	<ion-card *ngFor="let parcours of parcoursM; let i = index" style="height: 20%">
 	    <ion-card-content>
 		    <ion-item (click)="voirListePI(i)">
         

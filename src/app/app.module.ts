@@ -13,6 +13,7 @@ import { ParcourService } from "../services/parcours-service";
 import { PiService } from "../services/pi-service";
 import { PointsInteretPage } from '../pages/points-interet/points-interet';
 import { DetailPiPage } from '../pages/detail-pi/detail-pi';
+import { ParcourPage } from '../pages/parcour/parcour';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     HomePage,
     TabsPage,
     PointsInteretPage,
-    DetailPiPage
+    DetailPiPage,
+    ParcourPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -48,7 +50,8 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     HomePage,
     TabsPage,
     PointsInteretPage,
-    DetailPiPage
+    DetailPiPage, 
+    ParcourPage
   ],
   providers: [
     StatusBar,
