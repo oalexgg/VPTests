@@ -38,7 +38,7 @@ export class PointsInteretPage {
   }
 
   demarrerParcour() {
-    this.navCtrl.push(ParcourPage);
+    this.navCtrl.push(ParcourPage, {parcours: this.pointsInteret});
   }
 
 }
