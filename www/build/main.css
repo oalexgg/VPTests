@@ -26958,7 +26958,7 @@ page-detail-pi .info {
   white-space: normal;
 }
 
-.ios page-home .sebm-google-map-container, .md page-home .sebm-google-map-container {
+.ios page-home ngui-map, .md page-home ngui-map {
   height: 30%;
 }
 
@@ -26967,8 +26967,8 @@ page-detail-pi .info {
   width: 100%;
 }
 
-page-parcour .sebm-google-map-container {
-  height: 50%;
+page-parcour ngui-map {
+  height: 100%;
 }
 
 page-points-interet {

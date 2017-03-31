@@ -14,20 +14,10 @@
 
 <ion-content>
   <img class="imageHome"  src="56.jpg">
-  <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-      <sebm-google-map-marker *ngFor="let pos of positions" [latitude]="pos.longitude_latitude.lat" [longitude]="pos.longitude_latitude.lon" (markerClick)="voirDetailPI(pos.id)" [iconUrl]="'img/icon-map.png'" >
-        <!--<sebm-google-map-info-window>
-           <strong>pos.title</strong>
-        </sebm-google-map-info-window>
-        -->
-      </sebm-google-map-marker>
-     <sebm-google-map-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng" [iconUrl]="'img/ic.png'" [visible]="visible" >
-        <!--<sebm-google-map-info-window>
-           <strong>pos.title</strong>
-        </sebm-google-map-info-window>
-        -->
-      </sebm-google-map-marker>
-    </sebm-google-map> 
+  <ngui-map [center]="lat+','+lng" [zoom]="zoom">
+    <marker *ngFor="let pos of positionsM" [position]="pos" icon="img/icon-map.png" animation="DROP" (click)="voirDetailPI(pos[2])"></marker>
+    <marker [position]="markers" icon="img/ic.png" [visible]="visible" animation="BOUNCE"></marker>
+  </ngui-map>
     <ion-card>
 	    <ion-item style=" background-color: #d6d6d6">
 			<h2 style="text-align: center">Les Parcours</h2>

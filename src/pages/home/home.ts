@@ -7,11 +7,13 @@ import { PointsInteretPage } from '../points-interet/points-interet';
 import { DetailPiPage } from "../detail-pi/detail-pi";
 
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit{
+
 	parcoursM: Array<Parcours>;
 	parcours: Array<any>;
 	selection: number;
@@ -19,12 +21,10 @@ export class HomePage implements OnInit{
   	lng: number = 0.867619514465332;
   	positions: Array<any>;
   	zoom: number = 15;
-  	markers: marker[] = [{
-  					  lat: 46.1428292,
-				      lng: -1.1520256,
-				      draggable : false
-  	}];
+  	positionsM: Array<any>;
+  	markers: any = [46.42493120988299, 0.867619514465332];
   	visible: boolean = false;
+  	
 
 	constructor(public navCtrl: NavController, public parcourService: ParcourService, private alertCtrl: AlertController) {	 
 	}
@@ -32,6 +32,7 @@ export class HomePage implements OnInit{
 	 ngOnInit() {
 		this.parcoursM = [];
 		this.positions = [];
+		this.positionsM = [];
         this.parcourService.getParcours()
             .subscribe(
                 parcoursM=> {
@@ -44,11 +45,8 @@ export class HomePage implements OnInit{
 							this.positions.push(i.pi[j]);
 						}
 					}
-					let j = 0;
 					for (let i of this.positions) {
-						this.positions[j].longitude_latitude.lat = Number(i.longitude_latitude.lat);
-						this.positions[j].longitude_latitude.lon = Number(i.longitude_latitude.lon);
-						j++;		
+						this.positionsM.push([Number(i.longitude_latitude.lat), Number(i.longitude_latitude.lon), i.id]);	
 						}
 
                 },
@@ -57,22 +55,20 @@ export class HomePage implements OnInit{
     }
 	 
 	centerOnMe() {
-		if(!!navigator.geolocation) {
+		if(navigator.geolocation) {
            navigator.geolocation.getCurrentPosition(position => {
-				 this.markers[0].lat = position.coords.latitude;
-				 this.markers[0].lng = position.coords.longitude;
+				 this.markers = {lat: position.coords.latitude, lng: position.coords.longitude};
 				 this.visible = true;
 				 this.lat = position.coords.latitude;
 				 this.lng = position.coords.longitude;
 
 		    }, error => {
 		    	this.presentAlert()
-		    });
+		    }, {timeout: 1000});
 		        
 		    } else {
 		        this.presentAlert();
-		    }
-			}
+		    }			}
 
 	voirListePI(i: number) {
 		this.navCtrl.push(PointsInteretPage, {
@@ -98,11 +94,4 @@ export class HomePage implements OnInit{
 	  alert.present();
 	}
 
-}
-
-interface marker {
-	lat: number;
-	lng: number;
-	label?: string;
-	draggable: boolean;
 }

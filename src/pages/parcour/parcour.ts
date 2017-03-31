@@ -1,7 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { PI } from "../../services/model";
+import { DirectionsRenderer } from '@ngui/map';
+import {  FabContainer } from 'ionic-angular';
+
 declare var google: any;
 /*
   Generated class for the Parcour page.
@@ -13,76 +16,73 @@ declare var google: any;
   selector: 'page-parcour',
   templateUrl: 'parcour.html'
 })
-export class ParcourPage {
-	@ViewChild('mapParcour') el:ElementRef;
+export class ParcourPage implements OnInit {
+   @ViewChild(DirectionsRenderer) directionsRendererDirective: DirectionsRenderer;
 
+  directionsRenderer: google.maps.DirectionsRenderer;
+  directionsResult: google.maps.DirectionsResult;
+  direction:any = [];
 	lat: number = 46.42493120988299;
-  	lng: number = 0.867619514465332;
-  	zoom: number = 15;
-
-// instantiate google map objects for directions
-  directionsDisplay: any = new google.maps.DirectionsRenderer();
-  directionsService: any = new google.maps.DirectionsService();
-  geocoder: any = new google.maps.Geocoder();
-
+  lng: number = 0.867619514465332;
+  zoom: number = 15;
   parcours: Array<PI>;
+  travelMode: string = "DRIVING";
 
-
+  wayPoints: any = [
+          {location: {lat:44.32384807250689, lng: -78.079833984375}},
+          {location: {lat:44.55916341529184, lng: -76.17919921875}},
+        ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   		this.parcours = this.navParams.get("parcours"); 
   	   }
 
-  ionViewDidLoad() {
-  	this.directionsService = new google.maps.DirectionsService;
-	this.directionsDisplay = new google.maps.DirectionsRenderer;
-	//this.calculateAndDisplayRoute();
-  	this.getDirections();
+  ngOnInit() {
+    this.getDirections();
+    this.directionsRendererDirective['initialized$'].subscribe( directionsRenderer => {
+      this.directionsRenderer = directionsRenderer;
+    });
 
-  }  
-  // directions object -- with defaults
-  directions: any = {
-    origin: "3 Place Saint-Martial, 86500 Montmorillon, France",
-    destination: "15A Rue François de Vaux de Foletier, 17000 La Rochelle, France"
   }
-  
+
+  ionViewDidLoad() {
+  }    
   //get directions using google maps api
-  getDirections = function () {
-  	var waypts = [];
-	  console.log(this.el);
-	  for (var i = 0; i < this.parcours.length; i++) {
+  getDirections () {
+  	this.wayPoints = [];
+	  for (var i = 1; i < this.parcours.length-1; i++) {
 	  	
-	      waypts.push({
-	        location: {lat: this.parcours[i].longitude_latitude.lat,
-	        			lng: this.parcours[i].longitude_latitude.lon
+	      this.wayPoints.push({
+	        location: {
+            lat: Number(this.parcours[i].longitude_latitude["lat"]),
+	        	lng: Number(this.parcours[i].longitude_latitude["lon"])
 	        },
 	        stopover: true
 	      });
 	  }
 	  let last = this.parcours.length-1; 
-	  let startLat = this.parcours[0].longitude_latitude.lat;
-	  let startLng = this.parcours[0].longitude_latitude.lon;
-	  let destLat = this.parcours[last].longitude_latitude.lat;
-	  let destLng = this.parcours[last].longitude_latitude.lon;
+	  let startLat = Number(this.parcours[0].longitude_latitude["lat"]);
+	  let startLng = Number(this.parcours[0].longitude_latitude["lon"]);
+	  let destLat = Number(this.parcours[last].longitude_latitude["lat"]);
+	  let destLng = Number(this.parcours[last].longitude_latitude["lon"]);
 
-    let request:any = {
-       origin: {lat: startLat,
-	        	lng: startLng
-	        },
-	    destination: {lat: destLat ,
-	        		  lng: destLng 
-	        },
-	    waypoints: waypts,
-	    optimizeWaypoints: true,
-	    travelMode: google.maps.TravelMode.DRIVING
+    this.direction = {
+      origin: {
+        lat: startLat,
+	      lng: startLng
+	    },
+	    destination: {
+        lat: destLat ,
+	      lng: destLng 
+	    },
+      waypoints: this.wayPoints,
+      optimizeWaypoints: true,
+      travelMode: this.travelMode 
     };
-    this.directionsService.route(request, (response, status) => {
-      if (status === google.maps.DirectionsStatus.OK) {
-        this.directionsDisplay.setDirections(response);
-        this.directionsDisplay.setMap(this.el._mapsWrapper._map.__zone_symbol__value);
-        } else {
-        console.log('Google route unsuccesfull!');
-      }
-      console.log(this.el);
-    });
+  }
+
+  changeTravelMode(TM, fab: FabContainer) {
+    fab.close();
+    this.travelMode = TM;
+    this.getDirections();
   }
 }
