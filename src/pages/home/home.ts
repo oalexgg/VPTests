@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NavController, AlertController  } from 'ionic-angular';
+import { NavController, ToastController  } from 'ionic-angular';
 import { Parcours } from "../../services/model";
 import { ParcourService } from "../../services/parcours-service";
 import { PointsInteretPage } from '../points-interet/points-interet';
@@ -26,7 +26,7 @@ export class HomePage implements OnInit{
   	visible: boolean = false;
   	
 
-	constructor(public navCtrl: NavController, public parcourService: ParcourService, private alertCtrl: AlertController) {	 
+	constructor(public navCtrl: NavController, public parcourService: ParcourService, private toastCtrl: ToastController) {	 
 	}
 	 
 	 ngOnInit() {
@@ -47,7 +47,7 @@ export class HomePage implements OnInit{
 					}
 					for (let i of this.positions) {
 						this.positionsM.push([Number(i.longitude_latitude.lat), Number(i.longitude_latitude.lon), i.id]);	
-						}
+					}
 
                 },
                 (err: any) => console.error(err)
@@ -68,7 +68,8 @@ export class HomePage implements OnInit{
 		        
 		    } else {
 		        this.presentAlert();
-		    }			}
+		    }			
+		}
 
 	voirListePI(i: number) {
 		this.navCtrl.push(PointsInteretPage, {
@@ -86,12 +87,16 @@ export class HomePage implements OnInit{
 	}
 
 	presentAlert() {
-	  let alert = this.alertCtrl.create({
-	    title: 'Attention!',
-	    subTitle: 'La geolocalisation n\'est pas activée',
-	    buttons: ['Dismiss']
-	  });
-	  alert.present();
+	  let toast = this.toastCtrl.create({
+    message: 'Veuillez activer le GPS pour vous géolocaloser',
+    duration: 3000,
+    position: 'middle'
+  });
+
+  toast.onDidDismiss(() => {
+  });
+
+  toast.present();
 	}
 
 }

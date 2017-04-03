@@ -4,8 +4,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
 
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { PointsInteretMainPage } from '../pages/points-interet-main/points-interet-main';
+import { ParcoursMainPage } from '../pages/parcours-main/parcours-main';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule, JsonpModule } from '@angular/http';
@@ -24,8 +24,8 @@ import { NguiMapModule} from '@ngui/map';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    PointsInteretMainPage,
+    ParcoursMainPage,
     HomePage,
     TabsPage,
     PointsInteretPage,
@@ -43,8 +43,8 @@ import { NguiMapModule} from '@ngui/map';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    PointsInteretMainPage,
+    ParcoursMainPage,
     HomePage,
     TabsPage,
     PointsInteretPage,

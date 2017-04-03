@@ -23,10 +23,9 @@
 			<h2 style="text-align: center">Les Parcours</h2>
 	    </ion-item>
 	</ion-card>
-	<ion-card *ngFor="let parcours of parcoursM; let i = index" style="height: 20%">
+	<ion-card *ngFor="let parcours of parcoursM; let i = index" style="height: 23%">
 	    <ion-card-content>
 		    <ion-item (click)="voirListePI(i)">
-        
 			    <img class="center icon-Acc" [src]="parcours.icone">
 			    <h1 class="center">{{parcours.title}}</h1>
         

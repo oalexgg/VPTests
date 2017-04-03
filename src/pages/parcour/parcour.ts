@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { PI } from "../../services/model";
+import { DetailPiPage } from "../detail-pi/detail-pi";
+
 import { DirectionsRenderer } from '@ngui/map';
 import {  FabContainer } from 'ionic-angular';
 
@@ -27,11 +29,14 @@ export class ParcourPage implements OnInit {
   zoom: number = 15;
   parcours: Array<PI>;
   travelMode: string = "DRIVING";
-
+  distance: any = 0;
+  travelTime: any = 0;
   wayPoints: any = [
           {location: {lat:44.32384807250689, lng: -78.079833984375}},
           {location: {lat:44.55916341529184, lng: -76.17919921875}},
         ];
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   		this.parcours = this.navParams.get("parcours"); 
   	   }
@@ -41,12 +46,14 @@ export class ParcourPage implements OnInit {
     this.directionsRendererDirective['initialized$'].subscribe( directionsRenderer => {
       this.directionsRenderer = directionsRenderer;
     });
-
+    setTimeout(() => {
+       this.calcTimeDistance();
+     }, 2000);
   }
 
   ionViewDidLoad() {
   }    
-  //get directions using google maps api
+
   getDirections () {
   	this.wayPoints = [];
 	  for (var i = 1; i < this.parcours.length-1; i++) {
@@ -78,11 +85,41 @@ export class ParcourPage implements OnInit {
       optimizeWaypoints: true,
       travelMode: this.travelMode 
     };
+    
   }
 
   changeTravelMode(TM, fab: FabContainer) {
     fab.close();
     this.travelMode = TM;
     this.getDirections();
+    setTimeout(() => {
+       this.calcTimeDistance();
+     }, 500);
+  }
+
+
+  voirPI(id) {
+    this.navCtrl.push(DetailPiPage,{
+      piId: id
+    });
+  }
+
+  calcTimeDistance () {
+    this.distance = 0;
+    this.travelTime = 0;
+    this.directionsRenderer.getDirections().routes.forEach( r => {
+         r.legs.forEach(l => {
+           this.distance = Number(this.distance) + Number(l.distance.value);
+           this.travelTime = this.travelTime + l.duration.value;
+         });
+       });
+       var addZero = function(v) { return v<10 ? '0' + v : v; };
+          var d = new Date(this.travelTime * 1000); // js fonctionne en milisecondes
+          var t = [];
+          t.push(addZero(d.getHours()-1));
+          t.push(addZero(d.getMinutes()));
+       this.travelTime = t.join(' heures ');
+       this.distance = this.distance/1000;
+       this.distance = (Math.round(this.distance * 10)/10)+" ";
   }
 }

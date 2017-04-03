@@ -16,13 +16,13 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 	<ngui-map [center]="lat+','+lng" [zoom]="zoom" mapTypeId="satellite" streetViewControl="false" zoomControl="false" fullscreenControl="false" mapTypeControl="false">
     <directions-renderer
       [suppressMarkers]="true"
       [directions-request]="direction">
     </directions-renderer>
-    <marker *ngFor="let pos of parcours" [position]="pos.longitude_latitude.lat+','+pos.longitude_latitude.lon" icon="img/icon-map.png" animation="DROP"></marker>
+    <marker *ngFor="let pos of parcours" [position]="pos.longitude_latitude.lat+','+pos.longitude_latitude.lon" icon="img/icon-map.png" animation="DROP" (click)="voirPI(pos.id)"></marker>
   </ngui-map>
   <ion-fab right bottom #fab>
     <button ion-fab color="bordeaux"><ion-icon name="arrow-dropleft"></ion-icon></button>
@@ -35,4 +35,24 @@
       <button ion-fab color="secondary" (click)="changeTravelMode('WALKING', fab)" *ngIf="travelMode=='WALKING'"><ion-icon name="walk"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title style="text-align: center">
+        Temps et distance
+      </ion-card-title>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='time' item-left style="color: black!important;" ></ion-icon>
+      Trajet de: 
+      <ion-badge item-center>{{travelTime}} minutes</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='navigate' item-left style="color: black!important"></ion-icon>
+      Distance:
+      <ion-badge item-center>{{distance}} km</ion-badge>
+    </ion-item>
+
+  </ion-card>
 </ion-content>

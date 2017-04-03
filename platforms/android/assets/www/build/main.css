@@ -26877,7 +26877,6 @@ ion-navbar {
 .icon-Acc {
   width: 20%;
   max-width: 90px;
-  margin-top: 10px;
 }
 
 /* Permet de centre le titre sur MD(Android) */
@@ -26894,10 +26893,11 @@ ion-title {
 /*Ici on definit la localisation du copyright */
 .textCopyright {
   position: absolute;
-  bottom: 40px;
-  left: 30px;
-  right: 30px;
   text-align: end;
+  bottom: 6%;
+  left: 16px;
+  right: 16px;
+  height: 20%;
 }
 
 /*Ici on definit la police du copyright  */
@@ -26908,6 +26908,41 @@ ion-title {
   font-size: 2vw;
   line-height: normal;
   margin: auto;
+}
+
+.textleg {
+  opacity: 1;
+  background-color: #7c413d;
+  position: absolute;
+  bottom: 2%;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  height: 20%;
+}
+
+/*Ici on définit la police du nom des parcours sur la page 'parcours' */
+.textleg p {
+  font: bold Helvetica, Sans-Serif;
+  color: white;
+  font-size: 3vw;
+  margin-top: 3vw;
+}
+
+/* Ici on rajoute le petit bandeau sur le bas des images */
+.textim {
+  opacity: 0.9;
+  background-color: #7c413d;
+  position: absolute;
+  bottom: 19px;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  height: 25%;
+}
+
+.buttonDemarrer {
+  background-color: #7c413d;
 }
 
 page-detail-pi {
@@ -26923,9 +26958,17 @@ page-detail-pi .info {
   white-space: normal;
 }
 
-.ios page-home #map, .md page-home #map {
+.ios page-home ngui-map, .md page-home ngui-map {
+  height: 30%;
+}
+
+.ios page-home .imageHome, .md page-home .imageHome {
+  height: 30%;
   width: 100%;
-  height: 40%;
+}
+
+page-parcour ngui-map {
+  height: 100%;
 }
 
 page-points-interet {
