@@ -1,0 +1,33 @@
+<!--
+  Generated template for the PointsInteretMain page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+  	<button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="z-index: -1">
+    	<img class="title-image center" src="img/logoM.png"/>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="card-background-page">
+<ion-card *ngFor="let pi of PIS; let i = index ">
+    <ion-item>
+      <img [src]="pi.image.image" (click)="detailPI(i)">
+      <div class="textCopyright2">
+        <p>{{pi.image.auteur}}</p>
+      </div>
+      <div class="textimg">
+        <p>
+          {{pi.title}}
+        </p>
+      </div>
+    </ion-item>
+  </ion-card>
+</ion-content>
