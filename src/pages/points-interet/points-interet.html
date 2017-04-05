@@ -16,7 +16,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 <ion-slides autoplay="5000" loop pager effect="fade">
 
     <ion-slide *ngFor="let image of images">
@@ -41,7 +41,7 @@
             <strong style="font-size: .65em">{{pi.title}}</strong>
           </ion-card-title>
           <ion-thumbnail item-right>
-            <img src="11.png">
+            <img src="11.png"><!--[src]="pi.image.image" real src code-->
           </ion-thumbnail>
         </ion-item>
       <p [innerHTML]="pi.description"></p>

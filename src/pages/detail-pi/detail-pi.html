@@ -16,7 +16,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-slides autoplay="5000" loop pager effect="fade" *ngIf="loaded">
     <ion-slide *ngFor="let images of imagesColection">
         <div class="box">
@@ -38,7 +38,21 @@
           <p [innerHTML]="adresse"></p>
           <p [innerHTML]="horaire"></p>
         </ion-item>
-        <p [innerHTML]="pointInteret.description"></p>
+        <p class="text" [innerHTML]="pointInteret.description"></p>
+        <h2 *ngIf="pointInteret.anecdote != null"><b>Le saviez-vous?</b></h2>
+        <p class="text" [innerHTML]="pointInteret.anecdote"></p>
+      </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content *ngIf="pointInteret">
+      <ion-card-title>
+        Localisation
+      </ion-card-title>
+        <ion-item class="item-text-wrap">
+          <ngui-map [center]="pointInteret.longitude_latitude.lat+','+pointInteret.longitude_latitude.lon" [zoom]="zoom">
+            <marker [position]="pointInteret.longitude_latitude.lat+','+pointInteret.longitude_latitude.lon" icon="img/icon-map.png" animation="DROP"></marker>
+          </ngui-map>
+        </ion-item>
       </ion-card-content>
   </ion-card>
 </ion-content>

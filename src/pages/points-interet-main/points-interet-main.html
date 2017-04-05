@@ -16,7 +16,7 @@
 </ion-header>
 
 
-<ion-content padding class="card-background-page">
+<ion-content class="card-background-page">
 <ion-card *ngFor="let pi of PIS; let i = index ">
     <ion-item>
       <img [src]="pi.image.image" (click)="detailPI(i)">

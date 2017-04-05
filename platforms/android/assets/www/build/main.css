@@ -26876,7 +26876,7 @@ ion-navbar {
 /* Permet de gérer la taille de l'icone pour les parcours sur la page d'accueil*/
 .icon-Acc {
   width: 20%;
-  max-width: 90px;
+  max-width: 140px;
 }
 
 /* Permet de centre le titre sur MD(Android) */
@@ -26945,6 +26945,445 @@ ion-title {
   background-color: #7c413d;
 }
 
+.roundedImage {
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.textimg {
+  opacity: 0.8;
+  background-color: #7c413d;
+  position: absolute;
+  bottom: 19px;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  height: 20%;
+  display: inline-block;
+}
+
+/*Ici on définit la police du nom des parcours sur la page 'parcours' */
+.textimg p {
+  font: bold Helvetica, Sans-Serif;
+  color: white;
+  font-size: 6vw !important;
+  margin-top: 3vw !important;
+}
+
+/* Empty. Add your own CSS if you like */
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+/*Ici on definit le style d'ecriture des titre d'ongles dans la page DétailsPI*/
+.item.item-stable {
+  font-weight: 500;
+}
+
+/* Ici on difinit la police du bouton TEL dans la page détailsPi */
+.button.button-positive.button-outline {
+  border-color: #7c413d;
+  background: transparent;
+  color: #7c413d;
+}
+
+/*Permet de changer la couleur du bandeau du haut pour les pages de détail*/
+.bar.bar-positive {
+  border-color: #7c413d !important;
+  background-color: #7c413d !important;
+  background-image: linear-gradient(0deg, #fafafa, #fafafa 50%, rgba(255, 255, 255, 0.4) 50%);
+}
+
+/*Permet de changer la couleur du bandeau du bas*/
+.tab-nav {
+  border-color: #7c413d !important;
+  background-color: #7c413d !important;
+}
+
+/* Permet de définir les propriétés de l'image dans le bandeau du haut ( emplacement et taille ) */
+.title-image {
+  height: 45px;
+}
+
+/* Permet de définir les propriétés des différents parcours sur la page d'accueil */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: bold;
+  color: black;
+}
+
+/* Permet de gérer le style du container " Les parcours du moment " sur la page d'accueil ( police, taille, couleur ) */
+.font {
+  font-size: 14pt;
+  font-weight: bold;
+  color: black;
+}
+
+/* Permet de gérer la taille de l'icone pour les parcours sur la page d'accueil*/
+.icon-Acc {
+  width: 20%;
+  margin-top: 10px;
+}
+
+/* Ici, on définit une marge entre les différents parcours de la page d'accueil. Cela permet d'avoir de l'espace enntre les parcours. */
+.marge {
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+/*Permet d'enlever le souligner du text en dessous de tous les liens de l'application */
+a {
+  text-decoration: none;
+}
+
+/* Ici, on définit l'emplacement du bouton de démarrage d'un parcours, sur la page 'parcours-detail' */
+.boutonDem {
+  float: right;
+  margin-top: 5px;
+}
+
+/* Permet de définir le bouton de géolocalisation en haut à gauche( emplacement, taille, forme ) sur la 'page d'accueil' */
+.geo {
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+}
+
+/* Ici on justifie le texte de la description du parcours sur la page 'parcours-detail' */
+.justify {
+  text-align: justify;
+}
+
+.ion-android-walkk {
+  content: url("../img/icon-g.png") !important;
+  width: 60px !important;
+}
+
+.ion-social-tux {
+  content: url("../img/icon.png") !important;
+  width: 60px !important;
+}
+
+/* Ici on rajoute le petit bandeau sur le bas des images */
+.textimg {
+  opacity: 0.8;
+  background-color: #7c413d;
+  position: absolute;
+  bottom: 19px;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  height: 20%;
+}
+
+/*Ici on définit la police du nom des parcours sur la page 'parcours' */
+.textimg p {
+  font: bold Helvetica, Sans-Serif;
+  color: white;
+  font-size: 6vw;
+  margin-top: 3vw;
+}
+
+/* Ici on rajoute le petit bandeau sur le bas des images */
+.textim {
+  opacity: 0.8;
+  background-color: #7c413d;
+  position: absolute;
+  bottom: 19px;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  height: 25%;
+}
+
+/*Ici on définit la police du nom des parcours sur la page 'parcours'*/
+.textim p {
+  font: bold Helvetica, Sans-Serif;
+  color: white;
+  font-size: 6vw;
+  line-height: normal;
+  margin: auto;
+}
+
+/* Permet de définir la taille de l'icone des parcours sur la page 'parcours'*/
+.textimg img {
+  height: 8vw !important;
+  width: 8vw;
+  vertical-align: middle !important;
+}
+
+/* Permet de définir la taille de l'icone du parcours dans la page 'parcours-detail'*/
+.vertical-middle {
+  height: 60px;
+  vertical-align: middle;
+}
+
+/* définir des images arrondie*/
+.roundedImage {
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Permet de définir la couleur du bouton demarrer de la page details d'un parcours*/
+.boutonDem {
+  border-color: #7c413d !important;
+  color: #7c413d !important;
+}
+
+/* Permet de définir la couleur a l'appui du bouton demarrer de la page details d'un parcours*/
+.boutonDem.activated {
+  background-color: #7c413d !important;
+  color: #FFFFFF !important;
+}
+
+/* Ici on difinit la police de la bare de titre de la page DétailsPi*/
+.barpi {
+  color: white !important;
+  background-color: #7c413d !important;
+  border-width: 1px !important;
+  border-top-style: solid;
+}
+
+.barpi h1 {
+  color: white !important;
+}
+
+/*Ici on définit la police du zoom des photos sur la page 'photo' */
+@media all and (min-width: 580px) {
+  .image-list-thumb {
+    padding: 2px 2px 2px 2px;
+    height: 140px;
+  }
+  .image {
+    width: 100%;
+    height: 800px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center, center;
+  }
+}
+
+@media all and (max-width: 679px) {
+  .image-list-thumb {
+    padding: 2px 2px 2px 2px;
+    height: 100px;
+  }
+  .image {
+    width: 100%;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center, center;
+  }
+}
+
+.image-modal {
+  width: 100% !important;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.transparent {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/*Ici on définit le design d'un bouton actif sur la page 'carte' */
+.button.active {
+  background-color: #7c413d !important;
+  color: #FFFFFF !important;
+}
+
+/*Ici on définit les dimensions des drapeaux de la page internationalisation*/
+#frLanguage {
+  height: 70px;
+  width: 140px;
+}
+
+#engLanguage {
+  height: 70px;
+  width: 140px;
+}
+
+/* Bar partage */
+.bar.bar-positivee {
+  border-color: #000000 !important;
+  background-color: #000000 !important;
+}
+
+@media screen and (min-width: 580px) {
+  .bar.bar-positivee {
+    height: 60px;
+  }
+  .button.button-light.button-outline {
+    font-size: 20px;
+  }
+}
+
+/*Boite de dialogue*/
+div.popup-buttons .button.button-positive {
+  border-color: transparent;
+  background-color: #7c413d;
+  color: #fff;
+}
+
+div.popup-buttons .button.button-positive.activated {
+  background-color: #ffffff !important;
+  color: #7c413d !important;
+}
+
+div.popup-buttons .button.button-default {
+  border-color: transparent;
+  color: #7c413d;
+}
+
+/*bar mes souvenirs*/
+.bar.bar-gallery {
+  background-color: #7c413d !important;
+  color: #FFFFFF !important;
+}
+
+i.ion-images {
+  margin: auto;
+  font-size: 23px;
+}
+
+/*Police du texte de galerie*/
+.noImage {
+  font-size: 23px;
+  text-align: center;
+  color: rgba(64, 91, 110, 0.38);
+}
+
+.platform-ios .noImage {
+  margin-top: 1em;
+}
+
+.platform-ios .bar-gallery i.ion-images {
+  margin-top: 0.7em !important;
+}
+
+/*Menu Side*/
+#imgMenuSide {
+  width: 100%;
+  background-color: #7c413d !important;
+}
+
+.iconMenu {
+  font-size: 23px;
+}
+
+/* Css barre de progression */
+/* Moving on to the styling, we'll start with the main progress bar first and then the value part of it. After that, we'll do some experiments :D */
+progress {
+  width: 90%;
+  margin: auto;
+  display: block;
+  /* Important Thing */
+  -webkit-appearance: none;
+  border: none;
+}
+
+/* All good till now. Now we'll style the background */
+progress::-webkit-progress-bar {
+  background: black;
+  padding: 2px;
+}
+
+/* Now the value part */
+progress::-webkit-progress-value {
+  background: -webkit-linear-gradient(left, #7c413d, #7c413d);
+}
+
+#progress h1 {
+  text-align: center;
+}
+
+/*Ici on difinit la police du bouton mise à jour dans la page mise à jour*/
+.button.button-block {
+  border-color: transparent;
+  background-color: #7c413d;
+  font-size: 23px;
+}
+
+.button.button-block.activated {
+  border-color: transparent;
+  background-color: white;
+  color: #7c413d;
+  font-size: 23px;
+}
+
+/*Ici on definit la police du texte de la page MAJ*/
+.maj {
+  font-size: 23px;
+  line-height: normal;
+  text-align: center;
+}
+
+@media all and (max-width: 500px) {
+  /*Ici on definit la police du texte de la page MAJ*/
+  .maj {
+    font-size: 1em !important;
+  }
+}
+
+@media all and (max-width: 800px) {
+  /*Ici on definit la police du texte de la page MAJ*/
+  .maj {
+    font-size: 1.5em !important;
+  }
+}
+
+/*Ici on definit la localisation du copyright dans les pages List PI et List parcours */
+.textCopyright2 {
+  position: absolute;
+  bottom: 22px;
+  left: 16px;
+  right: 22px;
+  text-align: end;
+}
+
+/*Ici on definit la police du copyright dans les pages List PI et List parcours */
+.textCopyright2 p {
+  font: bold Helvetica, Sans-Serif;
+  opacity: 1;
+  color: white;
+  font-size: 1.5vw;
+  line-height: normal;
+  margin: auto;
+}
+
+/*Ici on définit le contour pour les carousel*/
+.ion-record {
+  text-shadow: white 1px 1px, white -1px 1px, white -1px -1px, white 1px -1px;
+}
+
 page-detail-pi {
   /* image slider size */
   /*information du pi*/
@@ -26958,17 +27397,44 @@ page-detail-pi .info {
   white-space: normal;
 }
 
+page-detail-pi .text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .ios page-home ngui-map, .md page-home ngui-map {
   height: 30%;
 }
 
 .ios page-home .imageHome, .md page-home .imageHome {
-  height: 30%;
+  height: 25%;
   width: 100%;
 }
 
 page-parcour ngui-map {
-  height: 100%;
+  height: 60%;
+}
+
+page-parcours-main .card-background-page .card-title {
+  position: absolute;
+  bottom: 16%;
+  font-size: 1.8em;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  float: left;
+}
+
+page-parcours-main .card-background-page .card-subtitle {
+  font-size: 1.0em;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  color: #fff;
+}
+
+page-parcours-main .card-background-page .icon-Parc {
+  width: 20%;
 }
 
 page-points-interet {
@@ -26977,7 +27443,7 @@ page-points-interet {
 }
 
 page-points-interet ion-slides {
-  height: 30%;
+  height: 40%;
 }
 
 page-points-interet p {
@@ -26990,4 +27456,26 @@ page-points-interet .card p {
 
 page-points-interet .card-title {
   font-size: 1.9rem;
+}
+
+page-points-interet-main .card-background-page .card-title {
+  position: absolute;
+  bottom: 16%;
+  font-size: 1.8em;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  float: left;
+}
+
+page-points-interet-main .card-background-page .card-subtitle {
+  font-size: 1.0em;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  color: #fff;
+}
+
+page-points-interet-main .card-background-page .icon-Parc {
+  width: 20%;
 }

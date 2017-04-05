@@ -19,7 +19,6 @@ import { DetailPiPage } from "../detail-pi/detail-pi";
 export class PointsInteretMainPage {
 	parcoursM: Array<Parcours>;
 	parcours: Array<any>;
-	PI: Array<any>;
 	PIS: Array<any>;
 	constructor(public navCtrl: NavController, public navParams: NavParams, public parcourService: ParcourService) {}
 
@@ -29,19 +28,17 @@ export class PointsInteretMainPage {
 	ngOnInit() {
 		this.parcoursM = [];
 		this.PIS = [];
-		this.PI = [];
 		
         this.parcourService.getParcours()
             .subscribe(
                 parcoursM=> {
                 	this.parcours = Object.keys(parcoursM).map(k => { return parcoursM[k] });
                 	for (let i of this.parcours) {
-                		this.parcoursM = i;
+                    for (let j of i) {
+                      this.PIS.push(j.pi);
+                    }
                 	}
-                	for (let i of this.parcoursM) {
-                    this.PI.push(i.pi);
-                  }
-                  this.PIS = this.PI[0].concat(this.PI[1]);
+                  this.PIS = this.PIS[0].concat(this.PIS[1]);
                 },
                 (err: any) => console.error(err)
             );

@@ -30,3 +30,11 @@ export class PI {
     public image_collection: string[]) { }
 }
 
+export class ParcoursMoment {
+
+  constructor(
+    public id: number,
+    public title: string,
+    public image: Array<string>,
+    public icone: string) { }
+}

@@ -2,14 +2,18 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { PointsInteretMainPage } from '../pages/points-interet-main/points-interet-main';
 import { ParcoursMainPage } from '../pages/parcours-main/parcours-main';
 import { HomePage } from '../pages/home/home';
+import { CameraPage } from '../pages/camera/camera';
+import { GalleryPage } from '../pages/gallery/gallery';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { ParcourService } from "../services/parcours-service";
+import { ParcourMomentService } from "../services/parcours-moment-service";
 import { PiService } from "../services/pi-service";
 import { PointsInteretPage } from '../pages/points-interet/points-interet';
 import { DetailPiPage } from '../pages/detail-pi/detail-pi';
@@ -30,7 +34,9 @@ import { NguiMapModule} from '@ngui/map';
     TabsPage,
     PointsInteretPage,
     DetailPiPage,
-    ParcourPage
+    ParcourPage,
+    CameraPage,
+    GalleryPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -38,7 +44,8 @@ import { NguiMapModule} from '@ngui/map';
     HttpModule,
     BrowserModule,
     CommonModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es'})
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es'}),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,14 +56,17 @@ import { NguiMapModule} from '@ngui/map';
     TabsPage,
     PointsInteretPage,
     DetailPiPage, 
-    ParcourPage
+    ParcourPage,
+    CameraPage,
+    GalleryPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ParcourService,
-    PiService
-  ]
+    PiService,
+    ParcourMomentService
+    ]
 })
 export class AppModule {}

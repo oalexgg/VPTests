@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, } from 'ionic-angular';
 
-import { Parcours } from "../../services/model";
+import { Parcours, ParcoursMoment } from "../../services/model";
 import { ParcourService } from "../../services/parcours-service";
+import { ParcourMomentService } from "../../services/parcours-moment-service";
+
 import { PointsInteretPage } from '../points-interet/points-interet';
 
 /*
@@ -16,22 +18,38 @@ import { PointsInteretPage } from '../points-interet/points-interet';
   templateUrl: 'parcours-main.html'
 })
 export class ParcoursMainPage implements OnInit {
-  parcoursM: Array<Parcours>;
-	parcours: Array<any>;
-	constructor(public navCtrl: NavController, public navParams: NavParams, public parcourService: ParcourService) {}
+  parcours: Array<Parcours>;
+	parcour: Array<any>;
+  parcoursMoment: Array<ParcoursMoment>;
+
+	constructor(public navCtrl: NavController, public navParams: NavParams, public parcourService: ParcourService, public parcourMService: ParcourMomentService) {}
 
 	ionViewDidLoad() {
 	}
 
 	ngOnInit() {
-		this.parcoursM = [];
-		
+		this.parcours = [];
+		this.parcoursMoment = [];
+
+    this.parcourMService.getParcoursMoment()
+      .subscribe(
+        parcoursM => {
+          let parcours = [];
+          parcours = Object.keys(parcoursM).map(k => { return parcoursM[k]});
+          for (var i of parcours) {
+            for (var j of i) {
+              this.parcoursMoment.push(j);
+            }
+          }
+        }
+        );
+
         this.parcourService.getParcours()
             .subscribe(
                 parcoursM=> {
-                	this.parcours = Object.keys(parcoursM).map(k => { return parcoursM[k] });
-                	for (let i of this.parcours) {
-                		this.parcoursM = i;
+                	this.parcour = Object.keys(parcoursM).map(k => { return parcoursM[k] });
+                	for (let i of this.parcour) {
+                		this.parcours = i;
                 	}
                 },
                 (err: any) => console.error(err)
@@ -40,9 +58,9 @@ export class ParcoursMainPage implements OnInit {
 
    voirListePI(i: number) {
     this.navCtrl.push(PointsInteretPage, {
-        pointsInteret: this.parcoursM[i].pi,
-        images: this.parcoursM[i].image,
-        description: this.parcoursM[i].description_parcours
+        pointsInteret: this.parcours[i].pi,
+        images: this.parcours[i].image,
+        description: this.parcours[i].description_parcours
         });
     }
 }

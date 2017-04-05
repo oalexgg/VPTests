@@ -52,35 +52,7 @@ export class ParcourService {
         if (ParcourIndex >= 0) this.Parcours.splice(ParcourIndex, 1);
     */
     }
-/*
-    getWorkouts(){
-        return this.http.get(this.collectionsUrl + '/workouts' + this.params)
-            .map((res:Response) => <WorkoutPlan[]>res.json())
-            .catch(HomeService.handleError);
-    }
-
-    getWorkout(workoutName: string){
-        return this.http.get(this.collectionsUrl + '/workouts/'+ workoutName  + this.params)
-            .map((res: Response) => <WorkoutPlan>res.json())
-            .catch(HomeService.handleError);
-    }
-
-    addWorkout(workout: WorkoutPlan){
-        if (workout.name) {
-            this.workouts.push(workout);
-            return workout;
-        }
-    }
-
-    updateWorkout(workout: WorkoutPlan){
-        for (var i = 0; i < this.workouts.length; i++) {
-            if (this.workouts[i].name === workout.name) {
-                this.workouts[i] = workout;
-                break;
-            }
-        }
-    }
-*/
+    
     static handleError (error: Response) {
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');

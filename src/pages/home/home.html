@@ -13,24 +13,21 @@
 </ion-header>
 
 <ion-content>
-  <img class="imageHome"  src="56.jpg">
+  <img class="imageHome"  src="56-1.jpg">
   <ngui-map [center]="lat+','+lng" [zoom]="zoom">
     <marker *ngFor="let pos of positionsM" [position]="pos" icon="img/icon-map.png" animation="DROP" (click)="voirDetailPI(pos[2])"></marker>
     <marker [position]="markers" icon="img/ic.png" [visible]="visible" animation="BOUNCE"></marker>
   </ngui-map>
     <ion-card>
 	    <ion-item style=" background-color: #d6d6d6">
-			<h2 style="text-align: center">Les Parcours</h2>
+			<h2 style="text-align: center"><b>Les Parcours</b></h2>
 	    </ion-item>
 	</ion-card>
-	<ion-card *ngFor="let parcours of parcoursM; let i = index" style="height: 23%">
-	    <ion-card-content>
-		    <ion-item (click)="voirListePI(i)">
+	<ion-card *ngFor="let parcours of parcoursMoment; let i = index" style="height: 23%" (click)="voirListePI(i)" >
+		   
 			    <img class="center icon-Acc" [src]="parcours.icone">
 			    <h1 class="center">{{parcours.title}}</h1>
-        
-			</ion-item>
-		</ion-card-content>
+      
 	</ion-card>
 
   <!--	

@@ -28,6 +28,17 @@
         "cordova-plugin-geolocation": {
             "GEOLOCATION_USAGE_DESCRIPTION": " ",
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         }
     },
     "dependent_plugins": {
