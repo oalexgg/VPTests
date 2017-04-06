@@ -27402,6 +27402,10 @@ page-detail-pi .text {
   text-justify: inter-word;
 }
 
+page-gallery .imgCol img {
+  width: 22%;
+}
+
 .ios page-home ngui-map, .md page-home ngui-map {
   height: 30%;
 }

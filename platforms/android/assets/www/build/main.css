@@ -26876,7 +26876,7 @@ ion-navbar {
 /* Permet de gérer la taille de l'icone pour les parcours sur la page d'accueil*/
 .icon-Acc {
   width: 20%;
-  max-width: 140px;
+  max-width: 160px;
 }
 
 /* Permet de centre le titre sur MD(Android) */
@@ -27400,6 +27400,10 @@ page-detail-pi .info {
 page-detail-pi .text {
   text-align: justify;
   text-justify: inter-word;
+}
+
+page-gallery .imgCol img {
+  width: 22%;
 }
 
 .ios page-home ngui-map, .md page-home ngui-map {

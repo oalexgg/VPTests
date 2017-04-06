@@ -17,23 +17,30 @@
 
 
 <ion-content>
-	<h1 *ngIf="allImages.length == 0 ">Aucune image disponible</h1>
-	<ion-grid>
-      <ion-row wrap *ngFor="let image of  allImages; let i = index " >
-        <div *ngIf="i % 4 === 0">
-          <ion-col col-3 *ngIf="i < allImages.length">
-            <img [src]="allImages[i].src" width="100%" (click)="showImages(i)" />
-          </ion-col>
-          <ion-col col-3 *ngIf="i + 1 < allImages.length">
-            <img [src]="allImages[i + 1].src" width="100%" (click)="showImages(i + 1)"/>
-          </ion-col>
-          <ion-col col-3 *ngIf="i + 2 < allImages.length">
-            <img [src]="allImages[i + 2].src" width="100%" (click)="showImages(i + 2)"/>
-          </ion-col>
-          <ion-col col-3 *ngIf="i + 3 < allImages.length">
-            <img [src]="allImages[i + 3].src" width="100%" (click)="showImages(i + 3)"/>
-          </ion-col>
-       </div>
-      </ion-row>
- 	</ion-grid>
+  <div *ngIf="loaded">
+    <div class="bar bar-header bar-gallery">
+      <i class="ion-images">&nbsp;&nbsp;
+        Mes Souvenirs
+      </i>
+    </div>
+  	<h1 class="noImage" *ngIf="allImages.length === 0 ">Aucune image disponible</h1>
+  	<ion-grid>
+        <ion-row wrap *ngFor="let image of allImages; let i = index " >
+          <div *ngIf="i % 4 === 0">
+            <ion-col class="imgCol" *ngIf="i < allImages.length">
+              <img [src]="allImages[i]" width="100%" (click)="showImages(i)" />
+            </ion-col>
+            <ion-col class="imgCol" *ngIf="i + 1 < allImages.length">
+              <img [src]="allImages[i + 1]" width="100%" (click)="showImages(i + 1)"/>
+            </ion-col>
+            <ion-col class="imgCol" *ngIf="i + 2 < allImages.length">
+              <img [src]="allImages[i + 2]" width="100%" (click)="showImages(i + 2)"/>
+            </ion-col>
+            <ion-col class="imgCol" *ngIf="i + 3 < allImages.length">
+              <img [src]="allImages[i + 3]" width="100%" (click)="showImages(i + 3)"/>
+            </ion-col>
+         </div>
+        </ion-row>
+   	</ion-grid>
+  </div>
 </ion-content>

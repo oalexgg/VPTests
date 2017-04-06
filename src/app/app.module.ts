@@ -4,6 +4,9 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
 import { IonicStorageModule } from '@ionic/storage';
 
+import { GalleryModal } from 'ionic-gallery-modal';
+import { ZoomableImage } from 'ionic-gallery-modal';
+
 import { MyApp } from './app.component';
 import { PointsInteretMainPage } from '../pages/points-interet-main/points-interet-main';
 import { ParcoursMainPage } from '../pages/parcours-main/parcours-main';
@@ -13,6 +16,7 @@ import { GalleryPage } from '../pages/gallery/gallery';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { ParcourService } from "../services/parcours-service";
+import { GalleryService } from "../services/gallery-service";
 import { ParcourMomentService } from "../services/parcours-moment-service";
 import { PiService } from "../services/pi-service";
 import { PointsInteretPage } from '../pages/points-interet/points-interet';
@@ -36,7 +40,9 @@ import { NguiMapModule} from '@ngui/map';
     DetailPiPage,
     ParcourPage,
     CameraPage,
-    GalleryPage
+    GalleryPage,
+    GalleryModal,
+    ZoomableImage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -58,7 +64,8 @@ import { NguiMapModule} from '@ngui/map';
     DetailPiPage, 
     ParcourPage,
     CameraPage,
-    GalleryPage
+    GalleryPage,
+    GalleryModal
   ],
   providers: [
     StatusBar,
@@ -66,7 +73,8 @@ import { NguiMapModule} from '@ngui/map';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ParcourService,
     PiService,
-    ParcourMomentService
+    ParcourMomentService,
+    GalleryService
     ]
 })
 export class AppModule {}

@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { File } from '@ionic-native/file';
 import { Storage } from '@ionic/storage';
+import { GalleryModal } from 'ionic-gallery-modal';
+
+
+import { GalleryService } from '../../services/gallery-service';
 
 /*
   Generated class for the Gallery page.
@@ -18,29 +22,39 @@ export class GalleryPage implements OnInit {
 
   allImages: Array<any>;
   url: any;  
+  loaded: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private file: File, public storage: Storage) {}
+  constructor(public navCtrl: NavController,
+   public navParams: NavParams,
+    private file: File,
+     public storage: Storage,
+      public galleryService: GalleryService,
+       public modalCtrl: ModalController) {}
 
-  ionViewDidLoad() {
- 
+  ionViewDidLoad() { 
+  setTimeout(() => {
+      for (var i of this.galleryService.getAllImages()) {
+          this.allImages.push(i.src);
+      }
+       this.loaded = true;
+     }, 500);  
   }
 
   ngOnInit() {
-  	this.allImages = [];
-    this.url = [];
-   
-    this.storage.get('src').then((data) => {
-      this.url = data;
+    this.allImages = [];
+  }
+
+  showImages(i) {
+    var photos = [];
+    for (var j of this.allImages) {
+      photos.push({'url': j});
+    }
+   let modal = this.modalCtrl.create(GalleryModal, {
+      photos: photos,
+      initialSlide: i
     });
-     
-      setTimeout(() => {
-      console.log(this.url);
-      this.url = this.url.split(',');
-     for (var i of this.url) {
-        this.allImages.push({'src': i});
-      }
-     }, 8000);
-  	}
+    modal.present();
+  }
 
 
 }
