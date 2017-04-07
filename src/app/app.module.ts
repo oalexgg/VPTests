@@ -4,8 +4,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
 import { IonicStorageModule } from '@ionic/storage';
 
-import { GalleryModal } from 'ionic-gallery-modal';
-import { ZoomableImage } from 'ionic-gallery-modal';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
 
 import { MyApp } from './app.component';
 import { PointsInteretMainPage } from '../pages/points-interet-main/points-interet-main';
@@ -22,6 +22,8 @@ import { PiService } from "../services/pi-service";
 import { PointsInteretPage } from '../pages/points-interet/points-interet';
 import { DetailPiPage } from '../pages/detail-pi/detail-pi';
 import { ParcourPage } from '../pages/parcour/parcour';
+import { GalleryModal } from '../image-viewer/gallery-modal/gallery-modal';
+import { ZoomableImage } from '../image-viewer/zoomable-image/zoomable-image';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -51,7 +53,10 @@ import { NguiMapModule} from '@ngui/map';
     BrowserModule,
     CommonModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es'}),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot({
+        name: '__images',
+        driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -74,7 +79,8 @@ import { NguiMapModule} from '@ngui/map';
     ParcourService,
     PiService,
     ParcourMomentService,
-    GalleryService
+    GalleryService,
+    SocialSharing
     ]
 })
 export class AppModule {}

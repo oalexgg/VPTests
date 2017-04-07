@@ -31,6 +31,10 @@
 		1334D672739E47C08227A379 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A3B0F5CEB5467BB5E62093 /* CDVAssetLibraryFilesystem.m */; };
 		A6BC5EE2A0A9438AA81E7D47 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A139D9C31FAB46CC82BE817E /* SQLitePlugin.m */; };
 		15BB0D7C38F44E7EA46D0620 /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = 8878F710ABD7448D87B68B36 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_TEMP_STORE=2 -DSQLITE_THREADSAFE=1 -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE  -DSQLITE_OMIT_BUILTIN_TEST -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_DEFAULT_PAGE_SIZE=1024 -DSQLITE_DEFAULT_CACHE_SIZE=2000"; }; };
+		F99B405E98EC469ABFC372FA /* NSString+SSURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6354DD8336463ABE233902 /* NSString+SSURLEncoding.m */; };
+		42F92B79B9AC4B5291B70286 /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE5769F54E54BFB9E45F51E /* SocialSharing.m */; };
+		4A168ED0B88E4E2899141CB5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B79762410824C2FBA545229 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D6677E31366A42B7AD53DDED /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BEE22535494826B65D0A01 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,12 @@
 		8878F710ABD7448D87B68B36 /* sqlite3.c */ = {isa = PBXFileReference; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		2CCF5736047D4FFAA369E575 /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		53BDB101E6394DBCA01D2270 /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4B6354DD8336463ABE233902 /* NSString+SSURLEncoding.m */ = {isa = PBXFileReference; name = "NSString+SSURLEncoding.m"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		7BE5769F54E54BFB9E45F51E /* SocialSharing.m */ = {isa = PBXFileReference; name = "SocialSharing.m"; path = "cordova-plugin-x-socialsharing/SocialSharing.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C925EC4F969643168BD06D75 /* NSString+SSURLEncoding.h */ = {isa = PBXFileReference; name = "NSString+SSURLEncoding.h"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		63642EC5E43A45C9BAC22CE4 /* SocialSharing.h */ = {isa = PBXFileReference; name = "SocialSharing.h"; path = "cordova-plugin-x-socialsharing/SocialSharing.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2B79762410824C2FBA545229 /* Social.framework */ = {isa = PBXFileReference; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C2BEE22535494826B65D0A01 /* MessageUI.framework */ = {isa = PBXFileReference; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,8 @@
 				62A86BB1DDB741EB9CBE4AF9 /* CoreLocation.framework in Frameworks */,
 				563AF56E1AF74AA5B27B84F5 /* ImageIO.framework in Frameworks */,
 				104E0180B9274EDEAF6C54B1 /* AVFoundation.framework in Frameworks */,
+				4A168ED0B88E4E2899141CB5 /* Social.framework in Frameworks */,
+				D6677E31366A42B7AD53DDED /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +201,8 @@
 				D70D57255B0E4B2A9C968058 /* CoreLocation.framework */,
 				5787DD0DE3694CC882D7595E /* ImageIO.framework */,
 				E61AF69F7AF042D7B6B2FF81 /* AVFoundation.framework */,
+				2B79762410824C2FBA545229 /* Social.framework */,
+				C2BEE22535494826B65D0A01 /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -245,6 +259,10 @@
 				8878F710ABD7448D87B68B36 /* sqlite3.c */,
 				2CCF5736047D4FFAA369E575 /* SQLitePlugin.h */,
 				53BDB101E6394DBCA01D2270 /* sqlite3.h */,
+				4B6354DD8336463ABE233902 /* NSString+SSURLEncoding.m */,
+				7BE5769F54E54BFB9E45F51E /* SocialSharing.m */,
+				C925EC4F969643168BD06D75 /* NSString+SSURLEncoding.h */,
+				63642EC5E43A45C9BAC22CE4 /* SocialSharing.h */,
 			);
 			name = Plugins;
 			path = ProjetVP/Plugins;
@@ -380,6 +398,8 @@
 				1334D672739E47C08227A379 /* CDVAssetLibraryFilesystem.m in Sources */,
 				A6BC5EE2A0A9438AA81E7D47 /* SQLitePlugin.m in Sources */,
 				15BB0D7C38F44E7EA46D0620 /* sqlite3.c in Resources */,
+				F99B405E98EC469ABFC372FA /* NSString+SSURLEncoding.m in Sources */,
+				42F92B79B9AC4B5291B70286 /* SocialSharing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

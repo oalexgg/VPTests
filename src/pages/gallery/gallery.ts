@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
-import { File } from '@ionic-native/file';
 import { Storage } from '@ionic/storage';
-import { GalleryModal } from 'ionic-gallery-modal';
+import { GalleryModal } from '../../image-viewer/gallery-modal/gallery-modal';
 
 
 import { GalleryService } from '../../services/gallery-service';
@@ -15,8 +14,7 @@ import { GalleryService } from '../../services/gallery-service';
 */
 @Component({
   selector: 'page-gallery',
-  templateUrl: 'gallery.html',
-  providers: [File]
+  templateUrl: 'gallery.html'
 })
 export class GalleryPage implements OnInit {
 
@@ -26,23 +24,26 @@ export class GalleryPage implements OnInit {
 
   constructor(public navCtrl: NavController,
    public navParams: NavParams,
-    private file: File,
      public storage: Storage,
       public galleryService: GalleryService,
        public modalCtrl: ModalController) {}
 
   ionViewDidLoad() { 
-  setTimeout(() => {
-      for (var i of this.galleryService.getAllImages()) {
-          this.allImages.push(i.src);
-      }
-       this.loaded = true;
-     }, 500);  
-  }
-
-  ngOnInit() {
     this.allImages = [];
-  }
+    if(this.allImages !== null) {
+     setTimeout(() => {
+        for (var i of this.galleryService.getAllImages()) {
+          this.allImages.push(i.src);
+        }
+     }
+     , 300);
+     }  
+     this.loaded = true;
+    }
+
+    ngOnInit() {
+      
+    }
 
   showImages(i) {
     var photos = [];
@@ -53,8 +54,10 @@ export class GalleryPage implements OnInit {
       photos: photos,
       initialSlide: i
     });
+   modal.onDidDismiss((images) => {
+     this.ionViewDidLoad();
+   });
     modal.present();
   }
-
 
 }

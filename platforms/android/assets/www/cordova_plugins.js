@@ -259,6 +259,14 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
+    },
+    {
+        "id": "cordova-plugin-x-socialsharing.SocialSharing",
+        "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+        "pluginId": "cordova-plugin-x-socialsharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -274,7 +282,8 @@ module.exports.metadata =
     "cordova-plugin-geolocation": "2.4.2",
     "cordova-plugin-camera": "2.4.0",
     "cordova-plugin-file": "4.3.2",
-    "cordova-sqlite-storage": "2.0.2"
+    "cordova-sqlite-storage": "2.0.2",
+    "cordova-plugin-x-socialsharing": "5.1.7"
 };
 // BOTTOM OF METADATA
 });

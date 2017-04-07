@@ -50,13 +50,15 @@ export class CameraPage implements OnInit{
       if(this.platform.is('ios')){ 
           // imageData est la variable qui contient le chemin de notre image vers le dossier temporaire du téléphone, il faut donc déplacer l'image dans le répertoire de l'appli pour qu'elle soit sauvegardée lorsque l'on relance l'application.                                     
           var currentName = imageData.replace(/^.*[\\\/]/, '');
-          var d = new Date(),n = d.getTime(),newFileName = n + ".jpg";                                  
+          var d = new Date();
+          var n = d.getTime();
+          var newFileName = n + ".jpg";                                  
           document.addEventListener('deviceready', () => {
           // Success.nativeURL contient le chemin vers le répertoire de l'appli où sont stockées les photos.
           this.file.moveFile(this.file.tempDirectory, currentName, this.file.dataDirectory, newFileName).then((success) => {
             allImages.push({'src': success.nativeURL})
             this.galleryService.setAllImages(allImages);  
-            this.storage.set('src', success.nativeURL + ',');
+            this.storage.set('src',  txt + ',' + success.nativeURL);
           }); 
         });
      }
@@ -64,11 +66,9 @@ export class CameraPage implements OnInit{
           allImages.push({'src': imageData})
           this.galleryService.setAllImages(allImages);
           document.addEventListener('deviceready', () => {
-            this.storage.set('src', imageData+ ',' + txt);
+          this.storage.set('src', txt + ',' + imageData);
           });
      }
-     //console.log(this.galleryService.getAllImages());
-     //$state.go('tab.gallery', {});
        this.navCtrl.setRoot(GalleryPage);
     }, (cause) => {
       console.log(cause);

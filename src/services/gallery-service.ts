@@ -11,11 +11,16 @@ export class GalleryService {
        public storage: Storage) {
         this.allImages = [];
         this.storage.get('src').then((value) => {
-            var routeImage = value.split(',');
-            for (var i of routeImage) {
-                if(i != "null"){
-                    this.allImages.push({'src': i});
+            if(value != null){
+                var routeImage = value.split(',');
+                for (var i of routeImage) {
+                    if(i != '' && i != null){
+                        this.allImages.push({'src': i});
+                    }
                 }
+            }
+            else {
+                this.allImages = [];
             }
         });
 
@@ -31,5 +36,25 @@ export class GalleryService {
              this.allImages.push({'src': i.src});   
             }
         }
+        
+    }
+
+    deleteImage(i) {
+        this.allImages.splice(i,1);
+        this.storage.clear().then(() => {
+            console.log("storage cleared");
+        });
+        var images ="";
+        for (var j of this.allImages) {
+            if ( j.src != null) {
+                 images = images + ',' + j.src;
+            }
+        }
+
+        this.storage.set('src', images)
+
+        this.storage.get('src').then((images) => {
+            this.setAllImages(images.src);
+        });
     }
 }

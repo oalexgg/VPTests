@@ -12,6 +12,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 })
 export class MyApp {
   rootPage = TabsPage;
+  galleryPage = GalleryPage;
+
+
   @ViewChild(Nav) nav: Nav;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -20,13 +23,13 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.backgroundColorByName('bordeaux');
       splashScreen.hide();
+
     });
+
   }
 
   openPage(p) {
-    if(p === "gallery") {
-      this.nav.push(GalleryPage);
-    }
+       this.nav.push(p);
   }
 
 }

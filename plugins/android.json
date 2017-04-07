@@ -36,6 +36,9 @@
         },
         "cordova-sqlite-storage": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         }
     },
     "dependent_plugins": {

@@ -47,6 +47,10 @@
                         {
                             "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"io.sqlc.SQLitePlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -68,12 +72,18 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 2
+                            "count": 3
                         }
                     ],
                     "application": [
                         {
                             "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
                             "count": 1
                         }
                     ]
@@ -113,6 +123,9 @@
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         },
         "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         }
     },
@@ -377,6 +390,14 @@
             "clobbers": [
                 "SQLitePlugin"
             ]
+        },
+        {
+            "id": "cordova-plugin-x-socialsharing.SocialSharing",
+            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+            "pluginId": "cordova-plugin-x-socialsharing",
+            "clobbers": [
+                "window.plugins.socialsharing"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -390,6 +411,7 @@
         "cordova-plugin-geolocation": "2.4.2",
         "cordova-plugin-camera": "2.4.0",
         "cordova-plugin-file": "4.3.2",
-        "cordova-sqlite-storage": "2.0.2"
+        "cordova-sqlite-storage": "2.0.2",
+        "cordova-plugin-x-socialsharing": "5.1.7"
     }
 }
