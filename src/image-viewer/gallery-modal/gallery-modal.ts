@@ -3,11 +3,11 @@ import { ViewController, NavParams, Slides, Content, Platform, NavController } f
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { Photo } from '../interfaces/photo-interface';
 import { Subject }    from 'rxjs/Subject';
-
+import {TranslateService} from 'ng2-translate';
+import { AlertController } from 'ionic-angular';
 import { File } from '@ionic-native/file';
 
 import { GalleryService } from '../../services/gallery-service';
-import { GalleryPage } from '../../pages/gallery/gallery';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -26,7 +26,9 @@ export class GalleryModal {
   private sliderLoaded: boolean = false;
   private closeIcon: string = 'close-circle';
   private parentSubject: Subject<any> = new Subject();
-
+  private cancelText: string;
+  private acceptText: string;
+  private deleteText: string;
   constructor(
    private viewCtrl: ViewController,
     public params: NavParams,
@@ -35,10 +37,21 @@ export class GalleryModal {
         public galleryService: GalleryService,
          public navCtrl: NavController,
           private socialSharing: SocialSharing,
-           private file: File) {
+           private file: File,
+            private translate: TranslateService,
+             private alertCtrl: AlertController) {
     this.photos = params.get('photos') || [];
     this.closeIcon = params.get('closeIcon') || 'close-circle';
     this.initialSlide = params.get('initialSlide') || 0;
+     this.translate.get('SUPPRIMER').subscribe((traduction) => {
+       this.acceptText = traduction;
+     });
+     this.translate.get('MAJAFL4').subscribe((traduction) => {
+       this.cancelText = traduction;
+     });
+     this.translate.get('TEMPLATE_SUP').subscribe((traduction) => {
+       this.deleteText = traduction;
+     });
   }
 
   /**
@@ -104,11 +117,28 @@ export class GalleryModal {
   }
 
   private delete() {
-    this.galleryService.deleteImage(this.slider.getActiveIndex());
-    var photo = this.photos[this.slider.getActiveIndex()].url.split('/');
-    this.file.removeFile(this.file.externalCacheDirectory,photo[photo.length-1]).then(() => {
-      console.log("File deleted");
+    let confirm = this.alertCtrl.create({
+      title: this.cancelText,
+      message: this.deleteText,
+      buttons: [
+        {
+          text: this.cancelText,
+          handler: () => {
+          }
+        },
+        {
+          text: this.acceptText,
+          handler: () => {
+            this.galleryService.deleteImage(this.slider.getActiveIndex());
+            var photo = this.photos[this.slider.getActiveIndex()].url.split('/');
+            this.file.removeFile(this.file.externalCacheDirectory,photo[photo.length-1]).then(() => {
+              console.log("File deleted");
+            });
+            this.dismiss();
+          }
+        }
+      ]
     });
-    this.dismiss();
+    confirm.present()
   }
 }

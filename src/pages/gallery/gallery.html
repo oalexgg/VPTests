@@ -21,10 +21,12 @@
     <div class="bar bar-header bar-gallery">
       <i class="center gallery-txt">&nbsp;&nbsp;
       <ion-icon name="images"></ion-icon>
-        Mes Souvenirs
+        {{ 'SOUVENIR' | translate }}
       </i>
     </div>
-  	<h1 class="noImage" *ngIf="allImages.length === 0 ">Aucune image disponible</h1>
+  	<h1 class="noImage" *ngIf="allImages.length === 0 ">
+      {{ 'NOIMAGE' | translate }}
+    </h1>
   	<ion-grid>
         <ion-row wrap *ngFor="let image of allImages; let i = index " >
           <div *ngIf="i % 4 === 0">

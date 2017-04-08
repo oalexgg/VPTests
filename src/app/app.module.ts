@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
 import { IonicStorageModule } from '@ionic/storage';
-
+import { TranslateModule, TranslateStaticLoader, TranslateLoader } from 'ng2-translate/ng2-translate';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 
@@ -13,8 +13,9 @@ import { ParcoursMainPage } from '../pages/parcours-main/parcours-main';
 import { HomePage } from '../pages/home/home';
 import { CameraPage } from '../pages/camera/camera';
 import { GalleryPage } from '../pages/gallery/gallery';
+import { TranslatePage } from '../pages/translate/translate';
 import { TabsPage } from '../pages/tabs/tabs';
-import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpModule, JsonpModule, Http } from '@angular/http';
 import { ParcourService } from "../services/parcours-service";
 import { GalleryService } from "../services/gallery-service";
 import { ParcourMomentService } from "../services/parcours-moment-service";
@@ -44,7 +45,8 @@ import { NguiMapModule} from '@ngui/map';
     CameraPage,
     GalleryPage,
     GalleryModal,
-    ZoomableImage
+    ZoomableImage,
+    TranslatePage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -56,6 +58,11 @@ import { NguiMapModule} from '@ngui/map';
     IonicStorageModule.forRoot({
         name: '__images',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    }),
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
     })
   ],
   bootstrap: [IonicApp],
@@ -70,7 +77,8 @@ import { NguiMapModule} from '@ngui/map';
     ParcourPage,
     CameraPage,
     GalleryPage,
-    GalleryModal
+    GalleryModal,
+    TranslatePage
   ],
   providers: [
     StatusBar,
@@ -84,3 +92,7 @@ import { NguiMapModule} from '@ngui/map';
     ]
 })
 export class AppModule {}
+
+export function createTranslateLoader(http: Http) {
+    return new TranslateStaticLoader(http, 'assets', '.json');
+}

@@ -38,19 +38,19 @@
   <ion-card>
     <ion-card-content>
       <ion-card-title style="text-align: center">
-        Temps et distance
+        {{ 'TEMPS_DISTANCE_TITLE' | translate }}
       </ion-card-title>
     </ion-card-content>
 
     <ion-item>
       <ion-icon name='time' item-left style="color: black!important;" ></ion-icon>
-      Trajet de: 
+      {{ 'PH_PART1' | translate }}: 
       <ion-badge item-center>{{travelTime}} minutes</ion-badge>
     </ion-item>
 
     <ion-item>
       <ion-icon name='navigate' item-left style="color: black!important"></ion-icon>
-      Distance:
+      {{ 'PH_PART2' | translate }}:
       <ion-badge item-center>{{distance}} km</ion-badge>
     </ion-item>
 

@@ -10,7 +10,7 @@ import {PI} from './model';
 export class PiService {
     Pis: Array<PI> = [];
     //url: string = "http://crowdsensing.univ-lr.fr/vp/montmorillon/sites/default/files/json/20170217122045/fr_Pis.json?callback=JSONP_CALLBACK";
-    url: string = "data/fr_pis.json";
+    url: string = "assets/fr_pis.json";
 
     constructor(public http: Http, private _jsonp: Jsonp) {
     }

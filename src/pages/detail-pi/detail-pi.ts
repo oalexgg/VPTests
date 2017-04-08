@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { PI } from "../../services/model";
 import { PiService } from "../../services/pi-service";
 
+import {TranslateService} from 'ng2-translate';
+
 /*
   Generated class for the DetailParcours page.
 
@@ -22,32 +24,40 @@ export class DetailPiPage {
   loaded: boolean = false;
   imagesColection: Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public piService: PiService) {
-  	this.id = navParams.get("piId");
-    this.pointsInteret = [];
-    this.imagesColection = [];
-        this.piService.getPis()
-            .subscribe(
-                pis=> {
-                  this.pointsInteret = Object.keys(pis).map(k => { return pis[k] });
-                  for(let i of this.pointsInteret[0]) {
-                    if(this.id === i.id) {
-                      this.pointInteret = i;
-                    }
-                  }
-                  this.adresse = "<div class='info'> Adresse:"+this.pointInteret["adresse"]+"</div>";
-                  if(this.pointInteret["horaire"]!= null) 
-                  {
-                    this.horaire = "<div class='info'> Horaire:"+this.pointInteret["horaire"]+"</div>";
-                  }
+  constructor(
+    public navCtrl: NavController,
+     public navParams: NavParams,
+      public piService: PiService,
+       public translateService: TranslateService) {
+        	this.id = navParams.get("piId");
+          this.pointsInteret = [];
+          this.imagesColection = [];
+              this.piService.getPis()
+                  .subscribe(
+                      pis=> {
+                        this.pointsInteret = Object.keys(pis).map(k => { return pis[k] });
+                        for(let i of this.pointsInteret[0]) {
+                          if(this.id === i.id) {
+                            this.pointInteret = i;
+                          }
+                        }
+                        this.translateService.get('ADRESSE').subscribe((data) => {
+                          this.adresse = "<div class='info'> "+data+":"+this.pointInteret["adresse"]+"</div>";
+                        });
+                        if(this.pointInteret["horaire"]!= null) 
+                        {
+                          this.translateService.get('HORAIRES').subscribe((data) => {
+                            this.horaire = "<div class='info'> "+data+":"+this.pointInteret["horaire"]+"</div>";
+                          });
+                        }
 
-                  this.imagesColection.push(this.pointInteret["image"]);
-                  for (let i of this.pointInteret["image_collection"]) {
-                    this.imagesColection.push(i);
-                  }
-                },
-                (err: any) => console.error(err)
-            );
+                        this.imagesColection.push(this.pointInteret["image"]);
+                        for (let i of this.pointInteret["image_collection"]) {
+                          this.imagesColection.push(i);
+                        }
+                      },
+                      (err: any) => console.error(err)
+                  );
   }
 
   ionViewDidLoad() {

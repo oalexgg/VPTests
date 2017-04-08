@@ -7,13 +7,16 @@
   <ion-content>
       <ion-list>
           <button menuClose ion-item  (click)="openPage(galleryPage)">
-            Galerie
+            <ion-icon name="images" style="color: black!important;"></ion-icon>
+            {{ 'GALERIE' | translate }}
           </button>
-          <button menuClose ion-item  (click)="openPage('traduire')">
-            Traduire
+          <button menuClose ion-item  (click)="openPage(translatePage)">
+            <ion-icon name="globe" style="color: black!important;"></ion-icon>
+            {{ 'LANGUE' | translate }}
           </button>
           <button menuClose ion-item  (click)="openPage('maj')">
-            Mise à jour
+            <ion-icon name="cloud-download" style="color: black!important;"></ion-icon>
+            {{ 'MISE_A_JOUR' | translate }}
           </button>
       </ion-list>
   </ion-content>

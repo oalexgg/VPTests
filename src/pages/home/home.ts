@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TranslateService} from 'ng2-translate';
 
 import { NavController, ToastController  } from 'ionic-angular';
 import { Parcours, ParcoursMoment } from "../../services/model";
@@ -28,7 +29,14 @@ export class HomePage implements OnInit{
   	visible: boolean = false;
   	
 
-	constructor(public navCtrl: NavController, public parcourService: ParcourService, private toastCtrl: ToastController, public parcourMService: ParcourMomentService ) {	 
+	constructor(
+		public navCtrl: NavController,
+	 	 public parcourService: ParcourService,
+	   	  private toastCtrl: ToastController,
+	   	   public parcourMService: ParcourMomentService,
+	   	    public translate: TranslateService) {
+	   	    	translate.setDefaultLang('fr');
+	   	    	translate.use('fr');
 	}
 	 
 	 ngOnInit() {
@@ -36,6 +44,7 @@ export class HomePage implements OnInit{
 		this.positions = [];
 		this.positionsM = [];
 		this.parcoursMoment = [];
+
 
 		this.parcourMService.getParcoursMoment()
 			.subscribe(
@@ -85,7 +94,8 @@ export class HomePage implements OnInit{
 		        
 		    } else {
 		        this.presentAlert();
-		    }			
+		    }	
+		    // para la recuperación del json traducido console.log(this.translate.currentLang);		
 		}
 
 	voirListePI(i: number) {
@@ -100,7 +110,6 @@ export class HomePage implements OnInit{
 		this.navCtrl.push(DetailPiPage,{
   		piId: id
   	});
-
 	}
 
 	presentAlert() {

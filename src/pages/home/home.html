@@ -20,7 +20,7 @@
   </ngui-map>
     <ion-card>
 	    <ion-item style=" background-color: #d6d6d6">
-			<h2 style="text-align: center"><b>Les Parcours</b></h2>
+			<h2 style="text-align: center"><b>{{ 'PARCOURS_DU_MOMENT' | translate }}</b></h2>
 	    </ion-item>
 	</ion-card>
 	<ion-card *ngFor="let parcours of parcoursMoment; let i = index" style="height: 23%" (click)="voirListePI(i)" >

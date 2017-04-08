@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { GalleryModal } from '../../image-viewer/gallery-modal/gallery-modal';
+import {TranslateService} from 'ng2-translate';
 
 
 import { GalleryService } from '../../services/gallery-service';
@@ -20,24 +21,27 @@ export class GalleryPage implements OnInit {
 
   allImages: Array<any>;
   url: any;  
-  loaded: boolean = false;
+  loaded: boolean;
 
   constructor(public navCtrl: NavController,
    public navParams: NavParams,
      public storage: Storage,
       public galleryService: GalleryService,
-       public modalCtrl: ModalController) {}
+       public modalCtrl: ModalController,
+        public translate: TranslateService) {}
 
   ionViewDidLoad() { 
     this.allImages = [];
     if(this.allImages !== null) {
      setTimeout(() => {
         for (var i of this.galleryService.getAllImages()) {
-          this.allImages.push(i.src);
+          if(i != null){
+            this.allImages.push(i.src);
+          }
         }
      }
      , 300);
-     }  
+     }
      this.loaded = true;
     }
 

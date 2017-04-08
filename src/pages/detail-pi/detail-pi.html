@@ -39,14 +39,20 @@
           <p [innerHTML]="horaire"></p>
         </ion-item>
         <p class="text" [innerHTML]="pointInteret.description"></p>
-        <h2 *ngIf="pointInteret.anecdote != null"><b>Le saviez-vous?</b></h2>
+        <h2 *ngIf="pointInteret.anecdote != null"><b>{{ 'ANECDOTE' | translate }}</b></h2>
         <p class="text" [innerHTML]="pointInteret.anecdote"></p>
+        <h2 *ngIf="pointInteret.tarif != null"><b>{{ 'TARIFS' | translate }}</b></h2>
+        <p class="text" *ngIf="pointInteret.tarif != null" [innerHTML]="pointInteret.tarif" ></p>
+        <h2 *ngIf="pointInteret.telephone != null || pointInteret.site_internet != null || pointInteret.email != null "><b>{{ 'CONTACT' | translate }}</b></h2>
+        <p class="text" *ngIf="pointInteret.telephone != null" >{{"TELEPHONE" | translate}}: {{pointInteret.telephone}}</p>
+        <p class="text" *ngIf="pointInteret.site_internet != null" >{{"SITE_INTERNET" | translate}}: {{pointInteret.site_internet}}</p>
+        <p class="text" *ngIf="pointInteret.email != null" >{{"EMAIL" | translate}}: {{pointInteret.email}}</p>
       </ion-card-content>
   </ion-card>
   <ion-card>
     <ion-card-content *ngIf="pointInteret">
       <ion-card-title>
-        Localisation
+        {{ 'LOCALISATION' | translate }}
       </ion-card-title>
         <ion-item class="item-text-wrap">
           <ngui-map [center]="pointInteret.longitude_latitude.lat+','+pointInteret.longitude_latitude.lon" [zoom]="zoom">

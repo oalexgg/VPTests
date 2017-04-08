@@ -10,7 +10,7 @@ import {Parcours} from './model';
 export class ParcourService {
     Parcours: Array<Parcours> = [];
     //url: string = "http://crowdsensing.univ-lr.fr/vp/montmorillon/sites/default/files/json/20170217122045/fr_parcours.json?callback=JSONP_CALLBACK";
-    url: string = "data/fr_parcours.json";
+    url: string = "assets/fr_parcours.json";
 
     constructor(public http: Http, private _jsonp: Jsonp) {
     }

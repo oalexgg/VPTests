@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TranslateService} from 'ng2-translate';
 
 import { HomePage } from '../home/home';
 import { PointsInteretMainPage } from '../points-interet-main/points-interet-main';
@@ -16,7 +17,8 @@ export class TabsPage {
   tab3Root: any = ParcoursMainPage;
   tab4Root: any = CameraPage;
 
-  constructor() {
+  constructor(
+  	public translate: TranslateService) {
 
   }
 }

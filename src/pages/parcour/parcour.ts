@@ -6,6 +6,7 @@ import { DetailPiPage } from "../detail-pi/detail-pi";
 
 import { DirectionsRenderer } from '@ngui/map';
 import {  FabContainer } from 'ionic-angular';
+import {TranslateService} from 'ng2-translate';
 
 declare var google: any;
 /*
@@ -37,7 +38,10 @@ export class ParcourPage implements OnInit {
         ];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+     public navParams: NavParams,
+      public translate: TranslateService) {
   		this.parcours = this.navParams.get("parcours"); 
   	   }
 
