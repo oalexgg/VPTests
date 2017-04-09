@@ -26876,7 +26876,7 @@ ion-navbar {
 /* Permet de gérer la taille de l'icone pour les parcours sur la page d'accueil*/
 .icon-Acc {
   width: 20%;
-  max-width: 140px;
+  max-width: 160px;
 }
 
 /* Permet de centre le titre sur MD(Android) */
@@ -27384,6 +27384,102 @@ progress::-webkit-progress-value {
   text-shadow: white 1px 1px, white -1px 1px, white -1px -1px, white 1px -1px;
 }
 
+.gallery-modal {
+  position: relative;
+  background: black;
+}
+
+.gallery-modal .close-button {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  z-index: 10;
+  background: none;
+}
+
+.gallery-modal .close-button.button-ios {
+  top: 20px;
+}
+
+.gallery-modal .share-button {
+  position: absolute;
+  right: 85px;
+  top: 10px;
+  z-index: 11;
+  background: none;
+}
+
+.gallery-modal .share-button.button-ios {
+  top: 20px;
+}
+
+.gallery-modal .delete-button {
+  position: absolute;
+  right: 45px;
+  top: 10px;
+  z-index: 12;
+  background: none;
+}
+
+.gallery-modal .delete-button.button-ios {
+  top: 20px;
+}
+
+.gallery-modal .slider .slide-zoom {
+  height: 100%;
+}
+
+.gallery-modal .image-on-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+zoomable-image {
+  width: 100%;
+  height: 100%;
+}
+
+zoomable-image ion-scroll {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+zoomable-image ion-scroll .scroll-zoom-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+zoomable-image ion-scroll .image {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+zoomable-image ion-scroll .image img {
+  pointer-events: none;
+  max-width: none;
+  min-width: none;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+
 page-detail-pi {
   /* image slider size */
   /*information du pi*/
@@ -27395,6 +27491,19 @@ page-detail-pi ion-slides {
 
 page-detail-pi .info {
   white-space: normal;
+}
+
+page-detail-pi .text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+page-gallery .imgCol img {
+  width: 22%;
+}
+
+page-gallery .gallery-txt {
+  color: white;
 }
 
 .ios page-home ngui-map, .md page-home ngui-map {
@@ -27438,7 +27547,7 @@ page-points-interet {
 }
 
 page-points-interet ion-slides {
-  height: 30%;
+  height: 40%;
 }
 
 page-points-interet p {
@@ -27473,4 +27582,16 @@ page-points-interet-main .card-background-page .card-subtitle {
 
 page-points-interet-main .card-background-page .icon-Parc {
   width: 20%;
+}
+
+page-translate .card-background-page ion-card {
+  position: relative;
+  text-align: center;
+  width: 80%;
+  height: 20%;
+}
+
+page-translate .card-background-page .flag {
+  width: 100%;
+  height: 100%;
 }

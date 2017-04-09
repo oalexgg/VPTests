@@ -6,6 +6,7 @@ import { DetailPiPage } from "../detail-pi/detail-pi";
 
 import { DirectionsRenderer } from '@ngui/map';
 import {  FabContainer } from 'ionic-angular';
+import {TranslateService} from 'ng2-translate';
 
 declare var google: any;
 /*
@@ -37,7 +38,10 @@ export class ParcourPage implements OnInit {
         ];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+     public navParams: NavParams,
+      public translate: TranslateService) {
   		this.parcours = this.navParams.get("parcours"); 
   	   }
 
@@ -113,12 +117,10 @@ export class ParcourPage implements OnInit {
            this.travelTime = this.travelTime + l.duration.value;
          });
        });
-       var addZero = function(v) { return v<10 ? '0' + v : v; };
-          var d = new Date(this.travelTime * 1000); // js fonctionne en milisecondes
-          var t = [];
-          t.push(addZero(d.getHours()-1));
-          t.push(addZero(d.getMinutes()));
-       this.travelTime = t.join(' heures ');
+       var hours = Math.floor( this.travelTime / 3600 );  
+       var minutes: any = Math.floor( (this.travelTime % 3600) / 60 );
+       minutes = minutes < 10 ? '0' + minutes : minutes;         
+       this.travelTime = hours + " heures " + minutes;
        this.distance = this.distance/1000;
        this.distance = (Math.round(this.distance * 10)/10)+" ";
   }

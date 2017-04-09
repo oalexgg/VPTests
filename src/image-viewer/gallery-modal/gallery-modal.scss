@@ -1,0 +1,61 @@
+.gallery-modal {
+  position: relative;
+  background: black;
+
+  .close-button {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    z-index: 10;
+    background: none;
+
+    &.button-ios {
+      top: 20px;
+    }
+  }
+
+  .share-button {
+    position: absolute;
+    right: 85px;
+    top: 10px;
+    z-index: 11;
+    background: none;
+
+    &.button-ios {
+      top: 20px;
+    }
+  }
+
+  .delete-button {
+    position: absolute;
+    right: 45px;
+    top: 10px;
+    z-index: 12;
+    background: none;
+
+    &.button-ios {
+      top: 20px;
+    }
+  }
+
+  .slider {
+    .slide-zoom {
+      height: 100%;
+    }
+  }
+
+  .image-on-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    display: block;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}

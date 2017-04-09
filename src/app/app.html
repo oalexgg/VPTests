@@ -1,21 +1,23 @@
 <ion-menu [content]="content" side="right">
 
-  <ion-content>
-    <img id="imgMenuSide"  src="img/logo-vec.png">
+  <ion-header>
+      <img id="imgMenuSide"  src="img/logo-vec.png">
+  </ion-header>
 
+  <ion-content>
       <ion-list>
-        <ion-item menu-close>
-          <i class="icon ion-images iconMenu"></i>&nbsp;&nbsp;
-          Galerie
-        </ion-item>
-        <ion-item menu-close>
-          <i class="icon ion-earth iconMenu"></i>&nbsp;&nbsp;
-          Translate
-        </ion-item>
-        <ion-item menu-close >
-          <i class="icon ion-android-upload iconMenu"></i>&nbsp;&nbsp;
-          Mise à jour
-        </ion-item>
+          <button menuClose ion-item  (click)="openPage(galleryPage)">
+            <ion-icon name="images" style="color: black!important;"></ion-icon>
+            {{ 'GALERIE' | translate }}
+          </button>
+          <button menuClose ion-item  (click)="openPage(translatePage)">
+            <ion-icon name="globe" style="color: black!important;"></ion-icon>
+            {{ 'LANGUE' | translate }}
+          </button>
+          <button menuClose ion-item  (click)="openPage('maj')">
+            <ion-icon name="cloud-download" style="color: black!important;"></ion-icon>
+            {{ 'MISE_A_JOUR' | translate }}
+          </button>
       </ion-list>
   </ion-content>
 

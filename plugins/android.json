@@ -27,6 +27,18 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         }
     },
     "dependent_plugins": {

@@ -10,7 +10,7 @@ import {PI} from './model';
 export class PiService {
     Pis: Array<PI> = [];
     //url: string = "http://crowdsensing.univ-lr.fr/vp/montmorillon/sites/default/files/json/20170217122045/fr_Pis.json?callback=JSONP_CALLBACK";
-    url: string = "data/fr_pis.json";
+    url: string = "assets/fr_pis.json";
 
     constructor(public http: Http, private _jsonp: Jsonp) {
     }
@@ -52,35 +52,7 @@ export class PiService {
         if (PiIndex >= 0) this.Pis.splice(PiIndex, 1);
     */
     }
-/*
-    getWorkouts(){
-        return this.http.get(this.collectionsUrl + '/workouts' + this.params)
-            .map((res:Response) => <WorkoutPlan[]>res.json())
-            .catch(HomeService.handleError);
-    }
 
-    getWorkout(workoutName: string){
-        return this.http.get(this.collectionsUrl + '/workouts/'+ workoutName  + this.params)
-            .map((res: Response) => <WorkoutPlan>res.json())
-            .catch(HomeService.handleError);
-    }
-
-    addWorkout(workout: WorkoutPlan){
-        if (workout.name) {
-            this.workouts.push(workout);
-            return workout;
-        }
-    }
-
-    updateWorkout(workout: WorkoutPlan){
-        for (var i = 0; i < this.workouts.length; i++) {
-            if (this.workouts[i].name === workout.name) {
-                this.workouts[i] = workout;
-                break;
-            }
-        }
-    }
-*/
     static handleError (error: Response) {
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');

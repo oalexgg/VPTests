@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import {TranslateService} from 'ng2-translate';
 
 import { HomePage } from '../home/home';
 import { PointsInteretMainPage } from '../points-interet-main/points-interet-main';
 import { ParcoursMainPage } from '../parcours-main/parcours-main';
+import { CameraPage } from '../camera/camera';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -13,8 +15,10 @@ export class TabsPage {
   tab1Root: any = HomePage;
   tab2Root: any = PointsInteretMainPage;
   tab3Root: any = ParcoursMainPage;
+  tab4Root: any = CameraPage;
 
-  constructor() {
+  constructor(
+  	public translate: TranslateService) {
 
   }
 }
