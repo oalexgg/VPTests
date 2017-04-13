@@ -5,7 +5,7 @@ import { GalleryModal } from '../../image-viewer/gallery-modal/gallery-modal';
 import {TranslateService} from 'ng2-translate';
 
 
-import { GalleryService } from '../../services/gallery-service';
+import { GalleryService } from '../../providers/gallery-service';
 
 /*
   Generated class for the Gallery page.

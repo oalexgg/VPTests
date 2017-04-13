@@ -6,7 +6,7 @@ import { GalleryPage } from '../gallery/gallery';
 import { HomePage } from '../home/home';
 import { Storage } from '@ionic/storage';
 
-import { GalleryService } from '../../services/gallery-service';
+import { GalleryService } from '../../providers/gallery-service';
 
 
 

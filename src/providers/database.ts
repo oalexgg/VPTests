@@ -27,13 +27,13 @@ export class Database {
    }
 
    getVersion() {
-   	this._DB.get('version')
+   	return this._DB.get('version')
 	   	.then((doc) => {
-	   		this.version =  doc;
-	   		console.log(this.version);
+	   		  console.log(doc);
+         return  doc;
 	   	})
 	   	.catch((err) => {
-	   		this.version =  0;
+	   		return 0;
 	   	});
    }
 

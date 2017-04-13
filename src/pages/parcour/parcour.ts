@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, NgZone } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { PI } from "../../providers/model";
@@ -41,7 +41,8 @@ export class ParcourPage implements OnInit {
   constructor(
     public navCtrl: NavController,
      public navParams: NavParams,
-      public translate: TranslateService) {
+      public translate: TranslateService,
+       private zone: NgZone) {
   		this.parcours = this.navParams.get("parcours"); 
   	   }
 
@@ -52,7 +53,7 @@ export class ParcourPage implements OnInit {
     });
     setTimeout(() => {
        this.calcTimeDistance();
-     }, 2000);
+     }, 2500);
   }
 
   ionViewDidLoad() {
@@ -98,7 +99,7 @@ export class ParcourPage implements OnInit {
     this.getDirections();
     setTimeout(() => {
        this.calcTimeDistance();
-     }, 500);
+     }, 200);
   }
 
 

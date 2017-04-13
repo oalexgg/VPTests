@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { PI } from "../../services/model";
-import { PiService } from "../../services/pi-service";
+import { PI } from "../../providers/model";
+import { PiService } from "../../providers/pi-service";
 
 import {TranslateService} from 'ng2-translate';
 
