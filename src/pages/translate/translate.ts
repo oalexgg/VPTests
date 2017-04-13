@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {TranslateService} from 'ng2-translate';
+import { TabsPage } from '../tabs/tabs';
 
 /*
   Generated class for the Translate page.
@@ -22,6 +23,10 @@ export class TranslatePage {
 
   switchLanguage(langue) {
   	this.translateService.use(langue);
-  	this.navCtrl.pop();
+  	this.navCtrl.setRoot(TabsPage);
   }
+                         
+    ionViewWillLeave(){
+     // this.homePage.ionViewWillEnter();
+    }
 }

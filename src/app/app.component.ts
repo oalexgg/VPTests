@@ -13,30 +13,32 @@ import { TabsPage } from '../pages/tabs/tabs';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = TabsPage;
-  galleryPage = GalleryPage;
-  translatePage = TranslatePage;
+  rootPage: any = TabsPage;
+  galleryPage: any = GalleryPage;
+  translatePage: any = TranslatePage;
 
 
   @ViewChild(Nav) nav: Nav;
 
   constructor(
-    platform: Platform,
-     statusBar: StatusBar,
-      splashScreen: SplashScreen,
-       translate: TranslateService) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.backgroundColorByName('bordeaux');
-      splashScreen.hide();
-
-    });
-
+    public platform: Platform,
+     public statusBar: StatusBar,
+      public splashScreen: SplashScreen,
+       public translate: TranslateService) {
+    this.initializeApp();
   }
 
+  initializeApp() {
+     this.platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      this.statusBar.backgroundColorByName('bordeaux');
+      this.splashScreen.hide();
+
+    });
+  }
+   
   openPage(p) {
        this.nav.push(p);
   }
-
 }

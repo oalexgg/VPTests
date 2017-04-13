@@ -4,19 +4,27 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import {TranslateService} from 'ng2-translate';
 import {ParcoursMoment} from './model';
 
 @Injectable()
 export class ParcourMomentService {
     Parcours: Array<ParcoursMoment> = [];
     //url: string = "http://crowdsensing.univ-lr.fr/vp/montmorillon/sites/default/files/json/20170217122045/fr_parcours.json?callback=JSONP_CALLBACK";
-    url: string = "assets/fr_moment.json";
+    lang: string = "fr";
 
-    constructor(public http: Http, private _jsonp: Jsonp) {
+    constructor(public http: Http, private _jsonp: Jsonp,
+               public translate: TranslateService) {
     }
 
     getParcoursMoment(){
-        return this.http.get(this.url)
+        if(this.translate.currentLang === "en"){
+            this.lang = "en-en";
+        }
+        else {
+            this.lang = "fr";
+        }
+        return this.http.get("assets/"+this.lang+"_moment.json")
             .map((res: Response) => <ParcoursMoment>res.json())
             .catch(ParcourMomentService.handleError);
     }

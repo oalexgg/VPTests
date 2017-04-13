@@ -25,6 +25,8 @@ import { DetailPiPage } from '../pages/detail-pi/detail-pi';
 import { ParcourPage } from '../pages/parcour/parcour';
 import { GalleryModal } from '../image-viewer/gallery-modal/gallery-modal';
 import { ZoomableImage } from '../image-viewer/zoomable-image/zoomable-image';
+import { Database } from '../providers/database';
+import { VPApi } from '../providers/vp-api';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -56,7 +58,7 @@ import { NguiMapModule} from '@ngui/map';
     CommonModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es'}),
     IonicStorageModule.forRoot({
-        name: '__images',
+        name: '__VP',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
     TranslateModule.forRoot({
@@ -88,7 +90,9 @@ import { NguiMapModule} from '@ngui/map';
     PiService,
     ParcourMomentService,
     GalleryService,
-    SocialSharing
+    SocialSharing,
+    Database,
+    VPApi
     ]
 })
 export class AppModule {}

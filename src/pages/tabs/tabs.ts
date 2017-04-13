@@ -5,8 +5,8 @@ import { HomePage } from '../home/home';
 import { PointsInteretMainPage } from '../points-interet-main/points-interet-main';
 import { ParcoursMainPage } from '../parcours-main/parcours-main';
 import { CameraPage } from '../camera/camera';
-
 @Component({
+  selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
@@ -17,8 +17,7 @@ export class TabsPage {
   tab3Root: any = ParcoursMainPage;
   tab4Root: any = CameraPage;
 
-  constructor(
-  	public translate: TranslateService) {
+  constructor(public translate: TranslateService) {
 
   }
 }

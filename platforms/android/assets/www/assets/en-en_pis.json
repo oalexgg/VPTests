@@ -1,0 +1,588 @@
+{
+  "lespis": [
+    {
+      "id": "1806",
+      "title": "Bourg-Archambault",
+      "description": "<p>Bourg-Archambault started expanding in the Middle Ages around the Saint-Laurent church and castle, probably built in the 13th century. The present day castle monument underwent three main construction stages: two at the end of the 15th century and one in 1865. Saint-Laurent was built as a Romanesque church and has been modified ever since. People came on pilgrimages to worship a <em>Pietà </em>(a statue of the Virgin Mary cradling the dead body of Jesus) called “Saint Braillaud”. The pilgrims came to see the <em>Pietà </em>for her healing powers.</p>\n",
+      "longitude_latitude": {
+        "lon": "1.003307000000",
+        "lat": "46.382919000000"
+      },
+      "adresse": "<p>Place de la Pierrere, 86390 Bourg-Archambault</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">The castle plans and moat were inspired by the du Plessis Bourré Castle (in Maine-et-Loire).</p>\r\n",
+      "image": {
+        "image": "7.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Vue sur l'église Saint-Laurent"
+      },
+      "image_collection": [
+        {
+          "image": "37.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Pietà à l'intérieur de l'église de Bourg-Archambault"
+        },
+        {
+          "image": "38.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Vue sur les douves et d'une partie du châtelet d’entrée du château - Gravure sur bois de Jehan Berjonneau "
+        }
+      ]
+    },
+    {
+      "id": "1807",
+      "title": "Saint-Nicolas chapel",
+      "description": "<p>The first records of Saint-Nicolas chapel date back to the 11th century. It was a priory dependent on Charroux abbey, located at a distance from the town. From the original chapel today there only remains the chevet-apse (on the east side of the monument). In the 19th and 20th centuries there were important pilgrimages to the chapel when people came for cures different rheumatic ailments and young women came to pray for a husband.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.851276000000",
+        "lat": "46.416471000000"
+      },
+      "adresse": "<p>Chapelle Saint-Nicolas, rue Saint-Nicolas 86500 Montmorillon</p>\r\n",
+      "horaire": "<p>Access to the chapel is by guided tour only.</p>\r\n",
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">Young women who prayed for a husband had to climb the hill seven times and say «&nbsp;Bon saint Nicolas qui mariez les filles aux gars, ne m’oubliez pas&nbsp;» \"O good Saint Nicolas who marries lads and lasses please don’t forget me”.</p>\r\n",
+      "image": {
+        "image": "28.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Vue sur la chapelle Saint-Nicolas"
+      },
+      "image_collection": [
+        {
+          "image": "39.jpg",
+          "auteur": "© G. Touraine",
+          "legende": "Carte postale du pélerinage à la chapelle Saint-Nicolas"
+        },
+        {
+          "image": "40.jpg",
+          "auteur": "© G. Touraine",
+          "legende": "Carte postale du pélerinage à la chapelle Saint-Nicolas"
+        }
+      ]
+    },
+    {
+      "id": "1808",
+      "title": "Notre-Dame Church",
+      "description": "<p>The oldest parts of Notre-Dame date back to the 11th century. Saint-Catherine’s crypt wall paintings were produced in the 1200s. They depict legendary episodes of the Christian martyr Saint-Catherine of Alexandria. In the 1970s two characters representing the <em>Elders of the Apocalypse</em> were removed from the hall for conservation purposes and are kept in the museum’s vaults. </p>\n",
+      "longitude_latitude": {
+        "lon": "0.865989000000",
+        "lat": "46.426160000000"
+      },
+      "adresse": "<p>1 Rue Bernard Harent,86500 Montmorillon</p>\r\n",
+      "horaire": "<p>Access to the crypt is by guided tour only.</p>\r\n",
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "12.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Intérieur de la crypte"
+      },
+      "image_collection": [
+        {
+          "image": "41.jpg",
+          "auteur": "© Région ALPC",
+          "legende": "Détail des visages de la Vierge à l'Enfant, crypte Sainte-Catherine"
+        },
+        {
+          "image": "42.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Fragments représentant les vieillards de l'Apocalypse"
+        }
+      ]
+    },
+    {
+      "id": "1809",
+      "title": "Saint-Maurice Church at Lathus",
+      "description": "<p>Saint-Maurice priory church was dependent on La Chaise-Dieu abbey (in Haute-Loire), and the Lathus parish fell within the jurisdiction of the Bishop of Poitiers. Built in the 12th century, the church underwent some modifications in the 13th and 19th centuries. Its construction was influenced by Limousin architecture, namely, its octagonal church tower and Romanesque parts, and the use of granite. It still has typical Romanesque sculptures such as grimacing faces, lions, birds and basilisks.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.958881000000",
+        "lat": "46.333680000000"
+      },
+      "adresse": "<p>Places des Victoires, 86390 Lathus-Saint-Rémy</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">During the Hundred Years’ War, like many churches in the region, its eastern sides were fortified. You can still observe its remains, including the raised apse and northern side chapels. Jehan Berjonneau has made a wooden carving of the church.</p>\r\n",
+      "image": {
+        "image": "43.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Vue sur le chevet et le clocher de l'église de Lathus - Gravure sur bois de Jehan Berjonneau"
+      },
+      "image_collection": [
+        {
+          "image": "44.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Détail d'un chapiteau avec basilic - chevet de l'église "
+        },
+        {
+          "image": "45.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Vue sur le chevet et le clocher de l'église"
+        }
+      ]
+    },
+    {
+      "id": "1810",
+      "title": "Le Brouard ",
+      "description": "<p>Le Brouard district is located in the medieval area of Montmorillon. It grew next to the castle and Notre-Dame Church and brings you directly to Le Vieux Pont. You can find Montmorillon's oldest houses in Le Brouard which are of typical medieval construction: arches on top of cellars, houses with timber frames, and ancient shop entrances. In the 19th century craftsmen ans shopkeepers lived in this area.<strong> </strong>Since 2000, la Cité de l'Écrit perpetuates this tradition. It's a perfect place for keen reader, writing and arts fan.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.866554000000",
+        "lat": "46.426435000000"
+      },
+      "adresse": "<p>Rue Montebello, 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "46.jpg",
+        "auteur": "© G. Touraine",
+        "legende": "Carte postale du Brouard "
+      },
+      "image_collection": [
+        {
+          "image": "47.jpg",
+          "auteur": "© G. Touraine",
+          "legende": "Carte postale du Brouard "
+        }
+      ]
+    },
+    {
+      "id": "1811",
+      "title": "Le Roc d'Enfer at Lathus",
+      "description": "<p>This protected natural site is in the centre of the classified sites of the Gartempe valley. The river flows on a granite river bed down to the town of Lathus. This valley has an unusual landscape and is home to a rich and diverse flora and fauna such as the european otter and the white-throated dipper. It is a mysterious place where legends abound.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.934093000000",
+        "lat": "46.318426000000"
+      },
+      "adresse": "<p>Les Portes d'Enfer, route départementale 10, 86390 Lathus-Saint-Rémy</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">A lot of artists have tried to grasp the essence of the natural world in their works of art. Jehan Berjonneau has made a wooden carving of Le Roc d'Enfer. This engraving is part of a poem written by Soline. Le Roc d'Enfer&nbsp;belongs to a piece of work called <em>Paysage de chez nous</em> \"Homeland landscapes\" composed of 66 coloured monuments and landscapes drawings from Montmorillon, Châtellerault, Civaux and Poitiers.</p>\r\n",
+      "image": {
+        "image": "34.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Site naturel du Roc d'Enfer sur la Gartempe"
+      },
+      "image_collection": [
+        {
+          "image": "48.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Ail des ours sur le site du Roc d'Enfer"
+        },
+        {
+          "image": "49.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Vue sur le Roc d'Enfer - Gravure de Jehan Berjonneau"
+        }
+      ]
+    },
+    {
+      "id": "1812",
+      "title": "L'Aventure de la Machine à écrire et à calculer",
+      "description": "<p>L'aventure de la Machine à écrire et à calculer is in the heart of la Cité de l'Ecrit et des Métiers du Livre. In this exhibition you will be able to discover the history of typewriter and calculators (200 different models), its creators and users. You can see them work, you can try and listen to them.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.864881000000",
+        "lat": "46.426120000000"
+      },
+      "adresse": "<p>3 Rue Bernard Harent,86500 Montmorillon</p>\r\n",
+      "horaire": "<p>Open every day from 10.00 - 12.30 / 14.00 - 18.00</p>\r\n",
+      "tarif": "<p class=\"rtejustify\">Free entrance for individuals and 20€ for groups. Group visits last one hour or one hour and a half. Group size is 20 people maximum per time slot.</p>\r\n",
+      "telephone": "0549830303 ",
+      "site_internet": null,
+      "email": "cite-de-lecrit@wanadoo.fr  ",
+      "anecdote": null,
+      "image": {
+        "image": "14.jpg",
+        "auteur": "© Club photo Vidéo de Saulgé",
+        "legende": "L’Aventure de la Machine à écrire et à calculer"
+      },
+      "image_collection": [
+        {
+          "image": "50.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Intérieur de l'aventure de la machine à écrire et calculer  "
+        }
+      ]
+    },
+    {
+      "id": "1813",
+      "title": "Maison Dieu",
+      "description": "<p>The very first hospital goes back to the 11th century but it quickly fell into ruin. Its later development is attributed to a 12th century pilgrim nobleman associated with a monastery. The present day building has had several periods of reconstruction which belong to its great historical moments (hospital-monastery, minor seminary). L'Octogone is the site's most emblematic monument. This 12th century cemetery chapel and old ossuary probably borrowed the Holy Sepulchre in Jerusalem as its model.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.863640000000",
+        "lat": "46.422708000000"
+      },
+      "adresse": "<p>6 Rue des Augustins, 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">In 1937 the museum was created on the first floor of the Town Hall. But in 1975 the museum’s collections were transferred to the Tower of the Maison-Dieu and a 17th century barn. This followed the expansion of the museum’s collections and the discovery, in 1966, of a prehistoric site called La Piscine 'The Pool'.</p>\r\n",
+      "image": {
+        "image": "51.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Joseph Dezitter, Séminaire de Montmorillon, encre de chine sur papier, 30x42.5 cm"
+      },
+      "image_collection": [
+        {
+          "image": "52.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Jardins de la Maison Dieu"
+        },
+        {
+          "image": "53.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Tour de fortification de la Maison Dieu "
+        },
+        {
+          "image": "54.jpg",
+          "auteur": "© Club photo Vidéo de Saulgé",
+          "legende": "Vue sur l'Octogone"
+        },
+        {
+          "image": "55.jpg",
+          "auteur": "© Région Aquitaine Limousin Poitou-Charentes",
+          "legende": "Vue tirée de : Petit séminaire Cardinal Pie, 1926-1927. Tourte et Petitin éditeurs à Paris. "
+        }
+      ]
+    },
+    {
+      "id": "1814",
+      "title": "Moussac-sur-Gartempe",
+      "description": "<p>Saint-Martin is a Romanesque chapel, some parts could be Carolingian (the wall’s nave). Its parish is older than Montmorillon’s. Some wall paintings are preserved in the chapel. The Lantern of the Dead is from the 12th century, its top part is missing.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.904152000000",
+        "lat": "46.409536000000"
+      },
+      "adresse": "<p>Moussac, 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">In the 19th century, the Lantern of the Dead was moved on Bourg-Archambaults’ side of the road. In 2004, it was refurbished and returned to its place of origin, which is the cemetery next to the chapel.</p>\r\n",
+      "image": {
+        "image": "26.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Lanterne des Morts - Gravure sur bois de Jehan Berjonneau"
+      },
+      "image_collection": [
+        {
+          "image": "52.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Jardins de la Maison Dieu"
+        },
+        {
+          "image": "53.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Tour de fortification de la Maison Dieu "
+        },
+        {
+          "image": "54.jpg",
+          "auteur": "© Club photo Vidéo de Saulgé",
+          "legende": "Vue sur l'Octogone"
+        },
+        {
+          "image": "55.jpg",
+          "auteur": "© Région Aquitaine Limousin Poitou-Charentes",
+          "legende": "Vue tirée de : Petit séminaire Cardinal Pie, 1926-1927. Tourte et Petitin éditeurs à Paris. "
+        }
+      ]
+    },
+    {
+      "id": "1815",
+      "title": "Montmorillon Museum",
+      "description": "<p>The museum was created in 1937, today it is located in the primary school on the 1st floor. The museum allows visitors to discover a diverse collection ranging from fine arts to ethnology and archaeology.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.872817000000",
+        "lat": "46.428841000000"
+      },
+      "adresse": "<p>9 Avenue Pasteur, 86500 Montmorillon</p>\r\n",
+      "horaire": "<p>The museum building is being renovated and modernized. It is scheduled to open in 2017.</p>\r\n",
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": "musee@ville-montmorillon.fr",
+      "anecdote": "<p class=\"rtejustify\">The museum and multimedia library were located in the primary school which was public and free where&nbsp;12 years old pupils could continue their studies after their&nbsp;received their school certificate.&nbsp;</p>\r\n",
+      "image": {
+        "image": "27.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Musée de Montmorillon"
+      },
+      "image_collection": [
+        {
+          "image": "56.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Inauguration de l'arbre de la liberté en 1948, avenue Pasteur"
+        }
+      ]
+    },
+    {
+      "id": "1816",
+      "title": "Tourist Office",
+      "description": "<p>This structure was built in 1863 to house the town’s court house. It was created during a period when Montmorillon was rethinking its urban planning. Entire rows of houses were destroyed for this purpose and the metallic covered marketplace, (which no longer exists), was moved to the front of the court house in 1878. Jehan Berjonneau a local painter immortalised this public place in his painting <em>Place du Vieux Marché</em>, \"Old Marketplace\" which reminds us of his interest in his birth place and the lives of ordinary people.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.868267000000",
+        "lat": "46.425579000000"
+      },
+      "adresse": "<p>2 Place du Maréchal Leclerc, 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "29.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Vue sur la façade de l'ancien palais de justice"
+      },
+      "image_collection": [
+        {
+          "image": "57.jpg",
+          "auteur": "© Région Aquitaine Limousin Poitou-Charentes",
+          "legende": "Le marché aux oies près du Palais de Justice "
+        },
+        {
+          "image": "58.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Jehan Berjonneau, Place du Marché, Montmorillon, huile sur toile, 60x73cm"
+        }
+      ]
+    },
+    {
+      "id": "1817",
+      "title": "Plaisance",
+      "description": "<p>In the Middle Ages the church was located in a fortified village. The present day monument was built between the middle of the 12th century and the beginning of the 13th century. After the destruction of its apse the choir was transferred to the nave's east side. There are still sculptured elements on the front side (<em>modillon, bas relief</em>). Pilgrims came to worship the virgin here. Jehan Berjonneau, a local artist, has produced a carved wooden image of the church.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.872792000000",
+        "lat": "46.333017000000"
+      },
+      "adresse": "<p>2 Place de l'Eglise, 86500 Plaisance</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">According to legend the church was founded by Charlemagne but no historical information source can confirm this. During the Middle Ages the priory received support from the kings of France.</p>\r\n",
+      "image": {
+        "image": "32.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Façade de l'église de Plaisance"
+      },
+      "image_collection": [
+        {
+          "image": "60.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Bas-relief situé à proximité du portail de l'église "
+        },
+        {
+          "image": "61.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Vue sur l'église de Plaisance - Jehan Berjonneau, Paysage de chez nous, 1932"
+        }
+      ]
+    },
+    {
+      "id": "1818",
+      "title": "Saint-Léomer",
+      "description": "<p>The priory was a dependant of the Lesterps abbey (in Charente). Saint-Leomer was a priest from the Chartres diocese who lived in the 6th century. Locals call him “Saint Yomé”. The 12th century church interior was changed in the 19th century. It still has a “Saint Yomé” bust from the 17th century with Saint Francis de Sales features. The bust was connected to a fountain called Font Gallou where pilgrims came to be cured of different skin diseases.  </p>\n",
+      "longitude_latitude": {
+        "lon": "0.994362000000",
+        "lat": "46.436270000000"
+      },
+      "adresse": "<p>Saint-Leomer church</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "22.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Détail de la statue de saint \"Yomé\""
+      },
+      "image_collection": [
+        {
+          "image": "22.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Détail de la statue de saint \"Yomé\""
+        }
+      ]
+    },
+    {
+      "id": "1819",
+      "title": "Saint-Martial Square ",
+      "description": "<p>The first records of Saint-Martial church date back to the 12th century, the priory was dependent on Saint-Martial abbey of Limoges. It was rebuilt in the 19th century. Up until the 18th century the graveyard was located in front of the monument, after its removal a town square developed and now contains the war memorial and a stattue of general Ladmirault.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.871042000000",
+        "lat": "46.426614000000"
+      },
+      "adresse": "<p>Place st martial 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">The war memorial was originally located next to the Pont Neuf but in 1974 it was moved to&nbsp;the town square in 1974 which also contained a bandstand from the end of the 19<sup>th</sup> century up until 1974.</p>\r\n",
+      "image": {
+        "image": "24.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Détail de la statue de Ladmirault"
+      },
+      "image_collection": [
+        {
+          "image": "59.jpg",
+          "auteur": "© Région Aquitaine Limousin Poitou-Charentes",
+          "legende": "Kiosque de la place saint-Martial "
+        }
+      ]
+    },
+    {
+      "id": "1820",
+      "title": " Masamas Sanctuary",
+      "description": "<p>The digs that took place here from 1964 to 1987 revealed a rural Gallo-Roman sanctuary which showed traces of different human occupation. The Gauls built the first sanctuary here - its surrounding walls and other square constructions reminded archaeologists of a small Gallo-Roman temple. In the 1st century AD the sanctuary expanded from 900m2 to 2000m2. The peribolos (a court surrounded by a wall) was built on the Gallic wall, two twin temples positioned eastwards replaced the previous buildings. The divinities linked to the temple haven’t been identified yet.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.973577000000",
+        "lat": "46.399169000000"
+      },
+      "adresse": "<p>Masamas Sanctuary, les Grandes Brandes,86290 Saint Léomer</p>\r\n",
+      "horaire": "<p>The Masamas Sanctuary is open to visitors all year.</p>\r\n",
+      "tarif": "<p>The Masamas Sanctuary can be visited free of charge.</p>\r\n",
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">The archaeological digs have revealed abundant artefacts from the Gallic period and Roman periods, as well as pottery ceramic remains from the medieval period, and Neolithic flints. Archaeologists have discovered 40 <em>antefixes</em>. These <em>terracotta </em>decorations finished the covering roof tiles of the twin temples. They are decorated with the open-eyed Medusa heads.</p>\r\n",
+      "image": {
+        "image": "62.jpg",
+        "auteur": "© Alain Buchet Studio Buch Créations",
+        "legende": "Vue aérienne du site antique de Masamas"
+      },
+      "image_collection": [
+        {
+          "image": "63.jpg",
+          "auteur": "© Club photo Vidéo de Saulgé",
+          "legende": "Vue sur une partie du site de Masamas "
+        },
+        {
+          "image": "64.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Tuiles gallo-romaines avec antéfixe à tête de Méduse "
+        }
+      ]
+    },
+    {
+      "id": "1821",
+      "title": "Saulgé",
+      "description": "<p>The first records of Saint-Divitien priory church date between 1087 and 1092. It was dependent on Bourg-Dieus’ Benedictine Abbey at Déols (in the Indre), and was probably used as a parochial church during the Middle Ages. It consisted of several buildings: the church, its chapel, monastic edifice, cloister and dovecote, partly visible, on ancient documents. The monument went through several stages of construction from the 11th to the 19th century. In 1859 a painted décor was added, allowing its inclusion into the tour of selected edifices known as the “Valley of the frescos”.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.874966000000",
+        "lat": "46.378032000000"
+      },
+      "adresse": "<p>Place du Prieuré, 86500 Saulgé</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": null,
+      "image": {
+        "image": "35.jpg",
+        "auteur": "© Club photo Vidéo de Saulgé",
+        "legende": "Église de Saulgé de nuit "
+      },
+      "image_collection": [
+        {
+          "image": "65.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Bas-relief à Saulgé"
+        }
+      ]
+    },
+    {
+      "id": "1822",
+      "title": "Le Vieux Pont",
+      "description": "<p>A bridge already existed in the 12th century which allowed for the crossing of the Gartempe River throughout the year, it linked both parts of the town. Rebuilt and modified, the bridge has become a landmark site of the town which has inspired numerous artists, including Raoul Carré. This painter has painted oil paintings from the right side of the river bank called Montmorillon, le vieux pont, \"The old Montmorillon Bridge\". It had an archway or city gate in its right side arches.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.867218000000",
+        "lat": "46.425831000000"
+      },
+      "adresse": "<p>Rue du Vieux Pont, Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">Originally the bridge had three arches, two of them disappeared during a river flood. The spaces on the columns are called shelters and were used by pedestrians to protect themselves from cart horses whilst crossing the bridge.</p>\r\n",
+      "image": {
+        "image": "33.jpg",
+        "auteur": "© Ville de Montmorillon",
+        "legende": "Raoul Carré, Montmorillon, le Vieux pont, huile sur toile, 50x57cm "
+      },
+      "image_collection": [
+        {
+          "image": "66.jpg",
+          "auteur": "© Christian Daniel Perez - Archives départementales de la Vienne",
+          "legende": "Détail du plan des ponts et chaussées de 1733"
+        },
+        {
+          "image": "67.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Vue sur le vieux pont"
+        }
+      ]
+    },
+    {
+      "id": "1823",
+      "title": "Le Vieux-Palais",
+      "description": "<p>In the 13th century a monastery dependent on Grandmont abbey (in the Haute-Vienne) was established. It was then sold to different private buyers. Distinctive buildings were built and these slowly replaced the religious building. Only the vaulted room from the 13th century remains. Le Vieux-Palais and Saint-Christophe private mansion dating from the classical period and in all likelihood housed the court of justice. In 1545 Montmorillon became head of a Bailiwick.</p>\n",
+      "longitude_latitude": {
+        "lon": "0.867970000000",
+        "lat": "46.426512000000"
+      },
+      "adresse": "<p>2 Rue Saint-Christophe 86500 Montmorillon</p>\r\n",
+      "horaire": null,
+      "tarif": null,
+      "telephone": null,
+      "site_internet": null,
+      "email": null,
+      "anecdote": "<p class=\"rtejustify\">The anonymous person depicted in the painting <em>Portrait d'homme</em> \"Portrait of a man\" has never been able to be identified. He had some links with the Bailiwick. Certain clues suggest it was the town’s hall mayor.</p>\r\n",
+      "image": {
+        "image": "30.jpg",
+        "auteur": "© Béatrice Guyonnet",
+        "legende": "Vue sur le Vieux Palais"
+      },
+      "image_collection": [
+        {
+          "image": "68.jpg",
+          "auteur": "© Ville de Montmorillon",
+          "legende": "Détail du tableau, anonyme, huile sur toile, 120x95cm"
+        },
+        {
+          "image": "69.jpg",
+          "auteur": "© Béatrice Guyonnet",
+          "legende": "Intérieur de la salle des Grandmontains"
+        }
+      ]
+    }
+  ]
+}

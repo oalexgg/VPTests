@@ -19,15 +19,15 @@
 <ion-content class="card-background-page">
 	<img class="center"  style=" margin-top:10px;margin-bottom:10px; width: 90%;" src = "img/logo-vecb.png">      
 
-  <ion-card class="center" (click)="switchLanguage('fr')">
-    <img class="flag" src="img/fr.png"/>
+  <ion-card class="center" >
+    <img class="flag" src="img/fr.png" (click)="switchLanguage('fr')" />
   </ion-card>
 
-  <ion-card class="center" (click)="switchLanguage('en')">
-    <img class="flag" src="img/gb.gif"/>
+  <ion-card class="center" >
+    <img class="flag" src="img/gb.gif" (click)="switchLanguage('en')" />
   </ion-card>
-
-  <ion-card class="center" (click)="switchLanguage('es')">
-    <img class="flag" src="img/es.png"/>
-  </ion-card>
+<!--
+  <ion-card class="center" >
+    <img class="flag" src="img/es.png" (click)="switchLanguage('es')" />
+  </ion-card>-->
 </ion-content>
