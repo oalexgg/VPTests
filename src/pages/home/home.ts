@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import {TranslateService} from 'ng2-translate';
 
 import { NavController, ToastController } from 'ionic-angular';
-import { Parcours, ParcoursMoment } from "../../services/model";
-import { ParcourService } from "../../services/parcours-service";
-import { ParcourMomentService } from "../../services/parcours-moment-service";
+import { Parcours, ParcoursMoment } from "../../providers/model";
+import { ParcourService } from "../../providers/parcours-service";
+import { ParcourMomentService } from "../../providers/parcours-moment-service";
 import { PointsInteretPage } from '../points-interet/points-interet';
 import { DetailPiPage } from "../detail-pi/detail-pi";
 import { Database } from "../../providers/database";

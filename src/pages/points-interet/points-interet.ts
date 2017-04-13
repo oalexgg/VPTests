@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { PI } from "../../services/model";
+import { PI } from "../../providers/model";
 import { DetailPiPage } from "../detail-pi/detail-pi";
 import { ParcourPage} from "../parcour/parcour";
 import {TranslateService} from 'ng2-translate';

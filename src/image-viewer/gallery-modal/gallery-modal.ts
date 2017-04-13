@@ -7,7 +7,7 @@ import {TranslateService} from 'ng2-translate';
 import { AlertController } from 'ionic-angular';
 import { File } from '@ionic-native/file';
 
-import { GalleryService } from '../../services/gallery-service';
+import { GalleryService } from '../../providers/gallery-service';
 
 @Component({
   encapsulation: ViewEncapsulation.None,

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { Parcours } from "../../services/model";
-import { ParcourService } from "../../services/parcours-service";
+import { Parcours } from "../../providers/model";
+import { ParcourService } from "../../providers/parcours-service";
 
 import { DetailPiPage } from "../detail-pi/detail-pi";
 

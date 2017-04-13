@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { PI } from "../../services/model";
+import { PI } from "../../providers/model";
 import { DetailPiPage } from "../detail-pi/detail-pi";
 
 import { DirectionsRenderer } from '@ngui/map';
