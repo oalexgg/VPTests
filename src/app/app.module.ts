@@ -5,7 +5,10 @@ import { CommonModule } from '@angular/common';
 import { IonicStorageModule } from '@ionic/storage';
 import { TranslateModule, TranslateStaticLoader, TranslateLoader } from 'ng2-translate/ng2-translate';
 import { SocialSharing } from '@ionic-native/social-sharing';
-
+import {CallNumber} from '@ionic-native/call-number';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { NguiMapModule} from '@ngui/map';
 
 import { MyApp } from './app.component';
 import { PointsInteretMainPage } from '../pages/points-interet-main/points-interet-main';
@@ -28,10 +31,6 @@ import { ZoomableImage } from '../image-viewer/zoomable-image/zoomable-image';
 import { Database } from '../providers/database';
 import { VPApi } from '../providers/vp-api';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-
-import { NguiMapModule} from '@ngui/map';
 
 
 @NgModule({
@@ -92,7 +91,8 @@ import { NguiMapModule} from '@ngui/map';
     GalleryService,
     SocialSharing,
     Database,
-    VPApi
+    VPApi,
+    CallNumber
     ]
 })
 export class AppModule {}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { PI } from "../../providers/model";
 import { PiService } from "../../providers/pi-service";
+import {CallNumber} from '@ionic-native/call-number';
 
 import {TranslateService} from 'ng2-translate';
 
@@ -28,7 +29,8 @@ export class DetailPiPage {
     public navCtrl: NavController,
      public navParams: NavParams,
       public piService: PiService,
-       public translateService: TranslateService) {
+       public translateService: TranslateService,
+        private callNumber: CallNumber) {
         	this.id = navParams.get("piId");
           this.pointsInteret = [];
           this.imagesColection = [];
@@ -64,6 +66,14 @@ export class DetailPiPage {
     setTimeout(() => {
        this.loaded = true;
      }, 100);
+  }
+
+  call(phone) {
+    console.log(phone);
+    
+    this.callNumber.callNumber(phone, true)
+    .then(() => console.log('Launched dialer!'))
+    .catch((error) => console.log(error));
   }
 
 }

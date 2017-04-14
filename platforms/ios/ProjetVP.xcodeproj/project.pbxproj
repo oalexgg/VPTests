@@ -35,6 +35,7 @@
 		42F92B79B9AC4B5291B70286 /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE5769F54E54BFB9E45F51E /* SocialSharing.m */; };
 		4A168ED0B88E4E2899141CB5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B79762410824C2FBA545229 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D6677E31366A42B7AD53DDED /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BEE22535494826B65D0A01 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6962D2E57613453F881B7547 /* CFCallNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E5BB322974CEDAFE578A9 /* CFCallNumber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,8 @@
 		63642EC5E43A45C9BAC22CE4 /* SocialSharing.h */ = {isa = PBXFileReference; name = "SocialSharing.h"; path = "cordova-plugin-x-socialsharing/SocialSharing.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		2B79762410824C2FBA545229 /* Social.framework */ = {isa = PBXFileReference; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		C2BEE22535494826B65D0A01 /* MessageUI.framework */ = {isa = PBXFileReference; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		0E6E5BB322974CEDAFE578A9 /* CFCallNumber.m */ = {isa = PBXFileReference; name = "CFCallNumber.m"; path = "mx.ferreyra.callnumber/CFCallNumber.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E4C92D94295B4794B25C3820 /* CFCallNumber.h */ = {isa = PBXFileReference; name = "CFCallNumber.h"; path = "mx.ferreyra.callnumber/CFCallNumber.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				7BE5769F54E54BFB9E45F51E /* SocialSharing.m */,
 				C925EC4F969643168BD06D75 /* NSString+SSURLEncoding.h */,
 				63642EC5E43A45C9BAC22CE4 /* SocialSharing.h */,
+				0E6E5BB322974CEDAFE578A9 /* CFCallNumber.m */,
+				E4C92D94295B4794B25C3820 /* CFCallNumber.h */,
 			);
 			name = Plugins;
 			path = ProjetVP/Plugins;
@@ -400,6 +405,7 @@
 				15BB0D7C38F44E7EA46D0620 /* sqlite3.c in Resources */,
 				F99B405E98EC469ABFC372FA /* NSString+SSURLEncoding.m in Sources */,
 				42F92B79B9AC4B5291B70286 /* SocialSharing.m in Sources */,
+				6962D2E57613453F881B7547 /* CFCallNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

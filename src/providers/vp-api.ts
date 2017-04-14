@@ -15,11 +15,10 @@ export class VPApi {
 
   }
 
-  isUpToDate() {
+  isUpToDate(){
     //valider si l'appli a installée la dernière version 
-    
-  }
-
+   }
+  
   getUpdate() {
     //obtenir le json via le http.post
   	

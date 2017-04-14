@@ -59,6 +59,10 @@
                         {
                             "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CallNumber\"><param name=\"ios-package\" value=\"CFCallNumber\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -129,6 +133,9 @@
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         },
         "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "mx.ferreyra.callnumber": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         }
     },
@@ -435,6 +442,14 @@
             "clobbers": [
                 "window.plugins.socialsharing"
             ]
+        },
+        {
+            "id": "mx.ferreyra.callnumber.CallNumber",
+            "file": "plugins/mx.ferreyra.callnumber/www/CallNumber.js",
+            "pluginId": "mx.ferreyra.callnumber",
+            "clobbers": [
+                "call"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -449,6 +464,7 @@
         "cordova-plugin-camera": "2.4.0",
         "cordova-plugin-file": "4.3.2",
         "cordova-sqlite-storage": "2.0.2",
-        "cordova-plugin-x-socialsharing": "5.1.7"
+        "cordova-plugin-x-socialsharing": "5.1.7",
+        "mx.ferreyra.callnumber": "0.0.2"
     }
 }

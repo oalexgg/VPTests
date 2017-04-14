@@ -85,4 +85,7 @@
         <param name="ios-package" value="SocialSharing" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="CallNumber">
+        <param name="ios-package" value="CFCallNumber" />
+    </feature>
 </widget>
