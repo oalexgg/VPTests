@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-navbar>
+<ion-header no-shadow>
+  <ion-navbar transparent>
     <button ion-button clear (click)="centerOnMe()" left>
     	<ion-icon name="locate"></ion-icon>
     </button>
@@ -14,25 +14,30 @@
 
 <ion-content>
   <img class="imageHome"  src="56-1.jpg">
-  <ngui-map [center]="lat+','+lng" [zoom]="zoom">
-    <marker *ngFor="let pos of positionsM" [position]="pos" icon="img/icon-map.png" animation="DROP" (click)="voirDetailPI(pos[2])"></marker>
+  <div class="title-app">MONTMORILLON</div>
+  <div class="homeText">
+    <h1>
+      VISITEZ AUTREMENT
+    </h1>
+    <p>
+      un texto de relleno acá bien mamalon a la verga compa fierro
+    </p>
+  </div>
+  <div class="parcours">
+    <div class="image" *ngFor="let parcours of parcoursMoment; let i = index " (click)="voirListePI(i)">
+      <img [src]="parcours.image">
+      <div class="title-parc">
+        <p>
+         {{parcours.title}}
+        </p>
+      </div>
+      <div class="textleg">
+        <p>--- {{pisParcour[i]}} PI ---</p>
+      </div>
+    </div>
+  </div>
+  <ngui-map [center]="lat+','+lng" [zoom]="zoom" streetViewControl="false" zoomControl="false" fullscreenControl="false" mapTypeControl="false">
+    <marker *ngFor="let pos of positionsM" [position]="pos" icon="img/icon-map.png" animation="DROP" (click)="voirDetailPI(pos[2])" ></marker>
     <marker [position]="markers" icon="img/ic.png" [visible]="visible" animation="BOUNCE"></marker>
   </ngui-map>
-    <ion-card>
-	    <ion-item style=" background-color: #d6d6d6">
-			<h2 style="text-align: center"><b>{{ 'PARCOURS_DU_MOMENT' | translate }}</b></h2>
-	    </ion-item>
-	</ion-card>
-	<ion-card *ngFor="let parcours of parcoursMoment; let i = index" style="height: 23%" (click)="voirListePI(i)" >
-		   
-			    <img class="center icon-Acc" [src]="parcours.icone">
-			    <h1 class="center">{{parcours.title}}</h1>
-      
-	</ion-card>
-
-  <!--	
-  <ion-fab right bottom>
-    	<button ion-fab color="bordeaux"><ion-icon name="add"></ion-icon></button>
-  </ion-fab>
-  -->
 </ion-content>

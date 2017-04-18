@@ -3,13 +3,98 @@
     page-home {
     
 	    ngui-map {
-		  height: 30%;
+		  height: 38%;
 		}
 
 		.imageHome { 	
-		height: 25%;
+		height: 35%;
 		width: 100%;
 		}
-    }
+
+		ion-navbar .toolbar-background {
+		    background: transparent;
+		}
+
+		ion-content .scroll-content {
+		    margin-top:0px !important;
+		}
+		ion-header::after {
+			background-image: none;
+		}
+		.homeText {
+			height: 10%;
+			background-color: white;
+		}
+		.homeText p{
+			text-align: center;
+    		text-justify: inter-word;
+    		font-size: .5rem;
+		}
+		.homeText h1{
+    		font-family: 'Aqua Grotesque Regular';
+			text-align: center;
+			margin-top: 1%;
+			height: 30%;
+			font-size: 1.5rem;
+			color: $app_colour;
+		}
+
+		.homeText h1::first-letter { 
+		    font-size: 150%;
+		    color: $app_colour;
+		}
+		.parcours {
+			height: 15%;
+		}
+		.parcours img{
+			width: 100%;
+			height: 100%;
+			-webkit-filter: blur(1px);
+			-moz-filter: blur(1px);
+			-o-filter: blur(1px);
+			-ms-filter: blur(1px);
+			filter: blur(1px);
+		}
+		.image {
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+		}
+		.textleg {
+		    opacity: 0.8;
+		    background-color: #7c413d;
+		    position: relative;
+		    margin-top: -15%;
+		    height: 20%;
+		    left: 0;
+		    right: 0;
+
+		}
+		.title-parc {
+			font-family: 'Aqua Grotesque Regular';
+			text-align: center;
+		    position: absolute;
+		    margin-top: -20%;
+		    font-size: 1.2em;
+		    width: 50%;
+		    font-weight: bold;
+		    color: #fff;
+		  }
+		  .title-app {
+			font-family: 'Aqua Grotesque Regular';
+			text-align: center;
+		    position: absolute;
+		    margin-top: -30%;
+		    font-size: 1.3em;
+		    left: 25%;
+		    width: 50%;
+		    font-weight: bold;
+		    color: #fff;
+		    border: 4px solid #fff;
+		  }
+		  .title-app::first-letter { 
+		    font-size: 150%;
+		}
+	}
 
 }

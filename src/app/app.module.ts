@@ -64,7 +64,7 @@ import { VPApi } from '../providers/vp-api';
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
       deps: [Http]
-    })
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

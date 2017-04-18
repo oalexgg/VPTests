@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { Parcours } from "../../providers/model";
+import { PI } from "../../providers/model";
 import { PiService } from "../../providers/pi-service";
 
 import { DetailPiPage } from "../detail-pi/detail-pi";
@@ -18,7 +18,7 @@ import { DetailPiPage } from "../detail-pi/detail-pi";
 })
 export class PointsInteretMainPage {
 	parcours: Array<any>;
-	PIS: Array<any>;
+	PIS: Array<PI>;
 	constructor(public navCtrl: NavController, public navParams: NavParams, public piService: PiService) {}
 
 	ionViewDidLoad() {
@@ -28,8 +28,7 @@ export class PointsInteretMainPage {
 		this.PIS = [];
 		
         this.piService.getPis()
-            .subscribe(
-                pis=> {
+            .subscribe(pis => {
                 	this.parcours = Object.keys(pis).map(k => { return pis[k] });
                 	for (let i of this.parcours) {
                     for (let j of i) {

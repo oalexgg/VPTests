@@ -1,7 +1,7 @@
 /*Menu Side*/
 #imgMenuSide{
   width: 100%;
-  background-color: #7c413d!important;
+  background-color: $app_colour!important!important;
 }
 
 .iconMenu{
@@ -32,11 +32,12 @@ Image Navigation bar
 /*
 NavBar and footer Background 
 *********************
-*/
+
 .toolbar-background, .tabbar {
-  border-color: #7c413d!important;
-  background-color: #7c413d !important;
+  border-color: $app_colour!important!important;
+  background-color: $app_colour!important !important;
 }
+*/
 /*
 *********************
 */
@@ -94,7 +95,7 @@ ion-title {
 }
 .textleg{
   opacity: 1;
-  background-color:#7c413d;
+  background-color: $app_colour!important;
   position: absolute;
   bottom: 2%;
   left: 16px;
@@ -113,7 +114,7 @@ ion-title {
 /* Ici on rajoute le petit bandeau sur le bas des images */
 .textim{
   opacity: 0.9;
-  background-color:#7c413d;
+  background-color: $app_colour!important;
   position: absolute;
   bottom: 19px;
   left: 16px;
@@ -122,7 +123,7 @@ ion-title {
   height: 25%;
 }
 .buttonDemarrer {
-  background-color: #7c413d;
+  background-color: $app_colour!important;
 }
 
 .roundedImage{
@@ -138,7 +139,7 @@ ion-title {
 
 .textimg{
   opacity: 0.8;
-  background-color:#7c413d;
+  background-color:$app_colour!important;
   position: absolute;
   bottom: 19px;
   left: 16px;
@@ -178,22 +179,22 @@ ion-title {
 
 /* Ici on difinit la police du bouton TEL dans la page détailsPi */
 .button.button-positive.button-outline {
-  border-color: #7c413d;
+  border-color: $app_colour!important;
   background: transparent;
-  color: #7c413d;
+  color: $app_colour!important;
 }
 
 /*Permet de changer la couleur du bandeau du haut pour les pages de détail*/
 .bar.bar-positive {
-  border-color: #7c413d!important;
-  background-color:#7c413d !important;
+  border-color: $app_colour!important;
+  background-color:$app_colour!important;
   background-image: linear-gradient(0deg, #fafafa, #fafafa 50%, rgba(255, 255, 255, 0.4) 50%);
 }
 
 /*Permet de changer la couleur du bandeau du bas*/
 .tab-nav {
-  border-color: #7c413d!important;
-  background-color:#7c413d!important;
+  border-color: $app_colour!important;
+  background-color:$app_colour!important;
 }
 
 /* Permet de définir les propriétés de l'image dans le bandeau du haut ( emplacement et taille ) */
@@ -268,7 +269,7 @@ a {
 /* Ici on rajoute le petit bandeau sur le bas des images */
 .textimg{
   opacity: 0.8;
-  background-color:#7c413d;
+  background-color:$app_colour!important;
   position: absolute;
   bottom: 19px;
   left: 16px;
@@ -289,7 +290,7 @@ a {
 /* Ici on rajoute le petit bandeau sur le bas des images */
 .textim{
   opacity: 0.8;
-  background-color:#7c413d;
+  background-color:$app_colour!important;
   position: absolute;
   bottom: 19px;
   left: 16px;
@@ -334,20 +335,20 @@ a {
 
 /* Permet de définir la couleur du bouton demarrer de la page details d'un parcours*/
 .boutonDem{
-  border-color: #7c413d!important;
-  color:#7c413d!important;
+  border-color: $app_colour!important;
+  color:$app_colour!important;
 }
 
 /* Permet de définir la couleur a l'appui du bouton demarrer de la page details d'un parcours*/
 .boutonDem.activated{
-  background-color: #7c413d!important;
+  background-color: $app_colour!important;
   color:#FFFFFF!important;
 }
 
 /* Ici on difinit la police de la bare de titre de la page DétailsPi*/
 .barpi{
   color:white !important;
-  background-color:#7c413d !important;
+  background-color:$app_colour!important;
   border-width: 1px !important;
   border-top-style: solid;
 }
@@ -402,7 +403,7 @@ a {
 
 /*Ici on définit le design d'un bouton actif sur la page 'carte' */
 .button.active{
-  background-color: #7c413d!important;
+  background-color: $app_colour!important;
   color: #FFFFFF!important;
 }
 
@@ -436,24 +437,24 @@ a {
 /*Boite de dialogue*/
 div.popup-buttons .button.button-positive{
   border-color: transparent;
-  background-color: #7c413d;
+  background-color: $app_colour!important;
   color: #fff;
 }
 
 div.popup-buttons .button.button-positive.activated{
   background-color: #ffffff!important;
-  color:#7c413d!important;
+  color:$app_colour!important;
 }
 div.popup-buttons .button.button-default{
   border-color: transparent;
-  color: #7c413d;
+  color: $app_colour!important;
 }
 
 
 
 /*bar mes souvenirs*/
 .bar.bar-gallery {
-  background-color: #7c413d!important;
+  background-color: $app_colour!important;
   color:#FFFFFF!important;
 }
 
@@ -477,7 +478,7 @@ i.ion-images{
 /*Menu Side*/
 #imgMenuSide{
   width: 100%;
-  background-color: #7c413d!important;
+  background-color: $app_colour!important;
 }
 
 .iconMenu{
@@ -502,7 +503,7 @@ progress::-webkit-progress-bar {
 /* Now the value part */
 progress::-webkit-progress-value {
   background:
-    -webkit-linear-gradient(left, #7c413d, #7c413d);
+    -webkit-linear-gradient(left, $app_colour!important, $app_colour!important);
 }
 
 #progress h1{
@@ -512,14 +513,14 @@ progress::-webkit-progress-value {
 /*Ici on difinit la police du bouton mise à jour dans la page mise à jour*/
 .button.button-block {
   border-color: transparent;
-  background-color: #7c413d;
+  background-color: $app_colour!important;
   font-size: 23px;
 }
 
 .button.button-block.activated {
   border-color: transparent;
   background-color: white;
-  color: #7c413d;
+  color: $app_colour!important;
   font-size: 23px;
 }
 
@@ -566,7 +567,6 @@ progress::-webkit-progress-value {
 .ion-record{
   text-shadow: white 1px 1px, white -1px 1px, white -1px -1px, white 1px -1px;
 }
-
 
 
 

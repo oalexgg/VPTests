@@ -9,6 +9,7 @@ import { PointsInteretPage } from '../points-interet/points-interet';
 import { DetailPiPage } from "../detail-pi/detail-pi";
 import { Database } from "../../providers/database";
 import { VPApi } from "../../providers/vp-api";
+import { Update } from './model';
 
 
 
@@ -26,12 +27,13 @@ export class HomePage {
 	lat: number = 46.42493120988299;
   	lng: number = 0.867619514465332;
   	positions: Array<any>;
-  	zoom: number = 15;
+  	zoom: number = 13;
   	positionsM: Array<any>;
   	markers: any = [46.42493120988299, 0.867619514465332];
   	visible: boolean = false;
   	upToDate: boolean = false;
   	version: any;
+  	pisParcour: Array<any>;
 
 	constructor(
 		public navCtrl: NavController,
@@ -42,20 +44,18 @@ export class HomePage {
 	   	     public db: Database,
 	   	      public vpapi: VPApi) {
 	   	    	translate.setDefaultLang('fr');
-	   	    	//translate.use('fr');
 	}
-	 
+
 	ionViewDidLoad(){
       this.loadData();
     }
 
-
-	 
     loadData() {
     	this.parcours = [];
 		this.positions = [];
 		this.positionsM = [];
 		this.parcoursMoment = [];
+		this.pisParcour = [];
 
 
 		this.parcourMService.getParcoursMoment()
@@ -79,12 +79,15 @@ export class HomePage {
                 		this.parcours = i;
                 	}
                 	for (let i of this.parcours) {
+                		let pisparc = 0;
 						for (let j = 0; j<Object.keys(i.pi).length; j++) {
 							this.positions.push(i.pi[j]);
+							pisparc++;
 						}
+						this.pisParcour.push(pisparc);
 					}
 					for (let i of this.positions) {
-						this.positionsM.push([Number(i.longitude_latitude.lat), Number(i.longitude_latitude.lon), i.id]);	
+						this.positionsM.push([Number(i.longitude_latitude.lat), Number(i.longitude_latitude.lon), i.id]);
 					}
 
                 },
@@ -96,18 +99,25 @@ export class HomePage {
 		if(navigator.geolocation) {
            navigator.geolocation.getCurrentPosition(position => {
            		 this.lat = position.coords.latitude;
-				 this.lng = position.coords.longitude;
-				 this.markers = {lat: position.coords.latitude, lng: position.coords.longitude};
-				 this.visible = true;
+      				 this.lng = position.coords.longitude;
+      				 this.markers = {
+                 lat: position.coords.latitude,
+                 lng: position.coords.longitude
+               };
+      				 this.visible = true;
+  		    }, error => {
+  		    	this.presentAlert()
+  		    }, {timeout: 1000});
 
-		    }, error => {
-		    	this.presentAlert()
-		    }, {timeout: 1000});
-		        
 		    } else {
 		        this.presentAlert();
 		    }
-		    // para la recuperación del json traducido console.log(this.translate.currentLang);		
+
+		    //this.vpapi.doUpdate();
+		    this.vpapi.isUpToDate().then(value => {
+		    	console.log(value);
+          console.log("db value:" + this.db.getV());
+		    });
 		}
 
 	voirListePI(i: number) {

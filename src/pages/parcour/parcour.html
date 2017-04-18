@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="app_colour">
   	<button ion-button menuToggle right>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -25,13 +25,13 @@
     <marker *ngFor="let pos of parcours" [position]="pos.longitude_latitude.lat+','+pos.longitude_latitude.lon" icon="img/icon-map.png" animation="DROP" (click)="voirPI(pos.id)"></marker>
   </ngui-map>
   <ion-fab right bottom #fab>
-    <button ion-fab color="bordeaux"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <button ion-fab color="app_colour"><ion-icon name="arrow-dropleft"></ion-icon></button>
     <ion-fab-list side="left">
-      <button ion-fab color="bordeaux" (click)="changeTravelMode('DRIVING', fab)" *ngIf="travelMode!='DRIVING'"><ion-icon name="car"></ion-icon></button>
+      <button ion-fab color="app_colour" (click)="changeTravelMode('DRIVING', fab)" *ngIf="travelMode!='DRIVING'"><ion-icon name="car"></ion-icon></button>
       <button ion-fab color="secondary" (click)="changeTravelMode('DRIVING', fab)" *ngIf="travelMode=='DRIVING'"><ion-icon name="car"></ion-icon></button>
-      <button ion-fab color="bordeaux" (click)="changeTravelMode('BICYCLING', fab)" *ngIf="travelMode!='BICYCLING'"><ion-icon name="bicycle"> </ion-icon></button>
+      <button ion-fab color="app_colour" (click)="changeTravelMode('BICYCLING', fab)" *ngIf="travelMode!='BICYCLING'"><ion-icon name="bicycle"> </ion-icon></button>
       <button ion-fab color="secondary" (click)="changeTravelMode('BICYCLING', fab)" *ngIf="travelMode=='BICYCLING'"><ion-icon name="bicycle"></ion-icon></button>
-      <button ion-fab color="bordeaux" (click)="changeTravelMode('WALKING', fab)" *ngIf="travelMode!='WALKING'"><ion-icon name="walk"></ion-icon></button>
+      <button ion-fab color="app_colour" (click)="changeTravelMode('WALKING', fab)" *ngIf="travelMode!='WALKING'"><ion-icon name="walk"></ion-icon></button>
       <button ion-fab color="secondary" (click)="changeTravelMode('WALKING', fab)" *ngIf="travelMode=='WALKING'"><ion-icon name="walk"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>

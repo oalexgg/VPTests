@@ -32,7 +32,7 @@ export class MyApp {
      this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.backgroundColorByName('bordeaux');
+      this.statusBar.backgroundColorByName('app_colour');
       this.splashScreen.hide();
 
     });

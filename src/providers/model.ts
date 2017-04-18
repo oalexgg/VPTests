@@ -38,3 +38,18 @@ export class ParcoursMoment {
     public image: Array<string>,
     public icone: string) { }
 }
+
+export class Update {
+    constructor(
+        public version: number,
+        public listSuppr: Array<any>,
+        public listDiff: Array<any>,
+        public size: number,
+        public json: Array<any>
+        ){}
+}
+export class isUpToDate {
+    constructor(
+        public iutd: number
+        ){}
+}

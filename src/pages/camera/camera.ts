@@ -18,7 +18,7 @@ import { GalleryService } from '../../providers/gallery-service';
 */
 @Component({
   selector: 'page-camera',
-  templateUrl: 'camera.html',
+  template: '',
   providers: [Camera, File]
 })
 export class CameraPage implements OnInit{

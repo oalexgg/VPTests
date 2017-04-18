@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/catch';
 import { Database } from './database';
+import { Update, isUpToDate } from './model';
 /*
   Generated class for the VPApi provider.
 
@@ -11,22 +14,63 @@ import { Database } from './database';
 @Injectable()
 export class VPApi {
 
-  constructor(public http: Http, private db: Database) {
+  private url = 'http://crowdsensing.univ-lr.fr/vp/montmorillon/api/';
+  constructor(private http: Http, private db: Database) {
 
   }
 
-  isUpToDate(){
-    //valider si l'appli a installée la dernière version 
+  isUpToDate(): Promise<isUpToDate>{
+    //valider si l'appli est mis à jour
+    var item = this.db.getVersion().then((versionN) => {
+      this.db.setVersion(versionN);
+      return this.http
+              .post(this.url+"isuptodate", "{\"version\":" + versionN + "}")
+              .toPromise()
+              .then(response => response.json() as isUpToDate)
+              .catch(this.handleError);
+            });
+    return item;
    }
-  
-  getUpdate() {
+
+  getUpdate(): Promise<Update>{
     //obtenir le json via le http.post
-  	
+    var item = this.db.getVersion().then((versionN) => {
+      this.db.setVersion(versionN);
+      return this.http
+              .post(this.url+"update", "{\"version\":" + versionN + "}")
+              .toPromise()
+              .then(response => response.json() as Update)
+              .catch(this.handleError);
+          });
+    return item;
   }
 
   doUpdate() {
     //metre les données dans une variable json
+    this.getUpdate().then(response => {
+      for (var name in response.json) {
+        for (var key of response.json[name]) {
+          let lang = name;
+          this.http.get(key).subscribe(result => {
+            var jsonAct = result.json();
+            for (var value in jsonAct) {
+              jsonAct._id = value + "_" + lang;
+            }
+            this.db.insertDoc(jsonAct).then((res) => {
+              console.log(res);
+            });
+          });
+        }
+      }
+    });
+  }
 
+  getDoc() {
+    this.db.getDoc().then(data => {
+     // console.log(data);
+    });
+
+    //this.db.getVersion();
   }
 
   /*
@@ -72,5 +116,8 @@ export class VPApi {
     }
 
   */
-
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error); // for demo purposes only
+    return Promise.reject(error.message || error);
+  }
 }
