@@ -57,7 +57,6 @@ export class VPApi {
               jsonAct._id = value + "_" + lang;
             }
             this.db.insertDoc(jsonAct).then((res) => {
-              console.log(res);
             });
           });
         }

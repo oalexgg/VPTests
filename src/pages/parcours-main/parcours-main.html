@@ -19,7 +19,7 @@
 <ion-content  class="card-background-page">
 	<ion-card *ngFor="let parcours of parcoursMoment; let i = index ">
 		<ion-item>
-			<img [src]="parcours.image" (click)="voirListePI(i)">
+			<img [src]="imageSrc[i]" (click)="voirListePI(i)">
 			<div class="textCopyright2">
               <p>{{parcours.auteur}}</p>
             </div>

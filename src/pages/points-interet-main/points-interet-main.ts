@@ -19,6 +19,7 @@ import { DetailPiPage } from "../detail-pi/detail-pi";
 export class PointsInteretMainPage {
 	parcours: Array<any>;
 	PIS: Array<PI>;
+  imageSrc: Array<any>;
 	constructor(public navCtrl: NavController, public navParams: NavParams, public piService: PiService) {}
 
 	ionViewDidLoad() {
@@ -26,13 +27,17 @@ export class PointsInteretMainPage {
 
 	ngOnInit() {
 		this.PIS = [];
-		
+    this.imageSrc = [];
+
         this.piService.getPis()
-            .subscribe(pis => {
+            .then(pis => {
                 	this.parcours = Object.keys(pis).map(k => { return pis[k] });
                 	for (let i of this.parcours) {
                     for (let j of i) {
-                      this.PIS.push(j);
+                      if(j instanceof Object){
+                        this.PIS.push(j);
+                        this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + j.image["image"]);
+                      }
                     }
                 	}
                 },

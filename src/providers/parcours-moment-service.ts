@@ -3,6 +3,7 @@ import { Http, Response, Jsonp } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { Database } from "./database";
 
 import {TranslateService} from 'ng2-translate';
 import {ParcoursMoment} from './model';
@@ -13,8 +14,10 @@ export class ParcourMomentService {
     //url: string = "http://crowdsensing.univ-lr.fr/vp/montmorillon/sites/default/files/json/20170217122045/fr_parcours.json?callback=JSONP_CALLBACK";
     lang: string = "fr";
 
-    constructor(public http: Http, private _jsonp: Jsonp,
-               public translate: TranslateService) {
+    constructor(
+      public http: Http, private _jsonp: Jsonp,
+       private translate: TranslateService,
+        private db: Database) {
     }
 
     getParcoursMoment(){
@@ -24,9 +27,10 @@ export class ParcourMomentService {
         else {
             this.lang = "fr";
         }
-        return this.http.get("assets/"+this.lang+"_moment.json")
-            .map((res: Response) => <ParcoursMoment>res.json())
-            .catch(ParcourMomentService.handleError);
+        var item = this.db._DB.get("moment_" + this.lang).then((data) => {
+          return data;
+        });
+        return item;
     }
 
     updateParcours(Parcour: ParcoursMoment){

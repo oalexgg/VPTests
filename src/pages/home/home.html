@@ -25,7 +25,7 @@
   </div>
   <div class="parcours">
     <div class="image" *ngFor="let parcours of parcoursMoment; let i = index " (click)="voirListePI(i)">
-      <img [src]="parcours.image">
+      <img [src]="imageSrc[i]">
       <div class="title-parc">
         <p>
          {{parcours.title}}

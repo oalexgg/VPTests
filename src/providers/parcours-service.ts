@@ -7,14 +7,19 @@ import 'rxjs/add/operator/catch';
 import {TranslateService} from 'ng2-translate';
 import {Parcours} from './model';
 
+import { Database } from "./database";
+
 @Injectable()
 export class ParcourService {
     Parcours: Array<Parcours> = [];
     //url: string = "http://crowdsensing.univ-lr.fr/vp/montmorillon/sites/default/files/json/20170217122045/fr_parcours.json?callback=JSONP_CALLBACK";
     lang: string = "fr";
 
-    constructor(public http: Http, private _jsonp: Jsonp,
-               public translate: TranslateService) {
+    constructor(
+      public http: Http, private _jsonp: Jsonp,
+       private translate: TranslateService,
+        private db: Database
+     ){
     }
 
     getParcours(){
@@ -24,9 +29,10 @@ export class ParcourService {
         else {
             this.lang = "fr";
         }
-        return this.http.get("assets/"+this.lang+"_parcours.json")
-            .map((res: Response) => <Parcours>res.json())
-            .catch(ParcourService.handleError);
+        var item = this.db._DB.get("parcours_" + this.lang).then((data) => {
+          return data;
+        });
+        return item;
     }
 
     updateParcours(Parcour: Parcours){
@@ -60,7 +66,7 @@ export class ParcourService {
         if (ParcourIndex >= 0) this.Parcours.splice(ParcourIndex, 1);
     */
     }
-    
+
     static handleError (error: Response) {
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');

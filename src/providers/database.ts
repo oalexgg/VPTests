@@ -17,6 +17,7 @@ export class Database {
    	private item: any;
    	public jsonUp: any;
     public data: any;
+		public isMaj: boolean;
 
   constructor(public http: Http) {
   	this.initialiseDB();
@@ -95,10 +96,18 @@ export class Database {
 
   }
 
-updateVersion(){
-      this._DB.insertDoc({
+	_isMaj(){
+		return this.isMaj;
+	}
+
+	setIsMaj(isMaj) {
+		this.isMaj = isMaj;
+	}
+
+updateVersion(version){
+      this.insertDoc({
         _id: "version",
-        version: this.version
+        version: version
       });
     }
 

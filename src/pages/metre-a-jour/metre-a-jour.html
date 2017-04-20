@@ -1,0 +1,110 @@
+<!--
+  Generated template for the MetreAJour page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="app_colour">
+  	<button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="z-index: -1">
+    	<img class="title-image center" src="img/logoM.png"/>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <img class="center"  style=" margin-top:10px;margin-bottom:10px; width: 90%;"src="img/logo-vecb.png">
+  <div *ngIf="firstLaunch">
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title *ngIf="isConnected">
+          {{ 'MAJ1' | translate }}<br/>
+        </ion-card-title>
+        <div class="item item-text-wrap maj"  *ngIf="isConnected && !maj">
+          {{ 'MAJ3' | translate }} <br/>  {{ 'MAJ4' | translate }} <br/>
+        </div>
+        <div class="item item-text-wrap maj"  *ngIf="!isConnected && !maj">
+          {{ 'MAJ7' | translate }} <br/>
+        </div>
+
+        <a (click)="goacc()" *ngIf="!isConnected && !maj">
+          <button>
+            <ion-icon name="home"></ion-icon><br>
+            {{ 'MAJAFL6' | translate }}
+          </button>
+        </a>
+        <a (click)="install()" *ngIf="maj">
+          <button>
+            <ion-icon name="download"></ion-icon><br>
+            {{ 'MAJ5' | translate }}
+          </button>
+        </a>
+        <div *ngIf="isConnected && !maj">
+          <div id="progress">
+            <h3 class="center">{{ 'MAJ6' | translate }}<strong>{{progres | number:0}}%</strong>  <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i></h3>
+            <progress value={{progres}} min="0" max="100">{{progres}}%</progress>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="!firstLaunch">
+    <div *ngIf="!isMaj">
+      <ion-card>
+        <ion-card-content>
+          <ion-card-title >
+            {{ 'MAJAFL1' | translate }}<br/>
+            ({{size | number:1}} Mo à télécharger)<br/>
+          </ion-card-title>
+          <div class="item item-text-wrap maj"  *ngIf="!maj">
+            {{ 'MAJAFL2' | translate }}. <br/>  {{ 'MAJ4' | translate }}. <br/>
+          </div>
+
+          <a (click)="install()" *ngIf="maj">
+            <button>
+              <ion-icon name="download"></ion-icon><br>
+                {{ 'MAJAFL3' | translate }}
+            </button>
+          </a>
+          <a (click)="goacc()" *ngIf="maj">
+            <button>
+              <ion-icon name="close-circle"></ion-icon><br>
+              {{ 'MAJAFL6' | translate }}
+            </button>
+          </a>
+          <div *ngIf="isMaj">
+            <div id="progress">
+              <h3 class="center">{{ 'MAJ6' | translate }}<strong>{{progres | number:0}}%</strong>  <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i></h3>
+              <progress value={{progres}} min="0" max="100">{{progres}}%</progress>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="isMaj">
+      <ion-card>
+        <ion-card-content>
+          <div class="item item-text-wrap maj">
+            <ion-icon name="checkmark-circle">
+            </ion-icon>
+            <br>
+            {{ 'MAJAFL5' | translate }}
+            <br/>
+            <br>
+          </div>
+        </ion-card-content>
+      </ion-card>
+        <a (click)="goacc()" *ngIf="maj">
+          <button>
+            <ion-icon name="home"></ion-icon><br>
+            {{ 'MAJAFL6' | translate }}
+          </button>
+        </a>
+    </div>
+  </div>
+</ion-content>

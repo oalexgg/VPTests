@@ -18,9 +18,9 @@
 
 <ion-content>
   <ion-slides autoplay="5000" loop pager effect="fade" *ngIf="loaded">
-    <ion-slide *ngFor="let images of imagesColection">
+    <ion-slide *ngFor="let images of imagesColection; let i = index">
         <div class="box">
-            <img class="full-image" [src]="images.image">
+            <img class="full-image" [src]="imageSrc[i]">
             <div class="textCopyright">
               <p>{{images.auteur}}</p>
             </div>

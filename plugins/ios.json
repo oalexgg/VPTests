@@ -45,6 +45,12 @@
         },
         "mx.ferreyra.callnumber": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         }
     },
     "dependent_plugins": {

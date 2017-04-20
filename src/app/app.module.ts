@@ -24,6 +24,7 @@ import { GalleryService } from "../providers/gallery-service";
 import { ParcourMomentService } from "../providers/parcours-moment-service";
 import { PiService } from "../providers/pi-service";
 import { PointsInteretPage } from '../pages/points-interet/points-interet';
+import { MetreAJourPage } from '../pages/metre-a-jour/metre-a-jour'
 import { DetailPiPage } from '../pages/detail-pi/detail-pi';
 import { ParcourPage } from '../pages/parcour/parcour';
 import { GalleryModal } from '../image-viewer/gallery-modal/gallery-modal';
@@ -47,7 +48,8 @@ import { VPApi } from '../providers/vp-api';
     GalleryPage,
     GalleryModal,
     ZoomableImage,
-    TranslatePage
+    TranslatePage,
+    MetreAJourPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -74,12 +76,13 @@ import { VPApi } from '../providers/vp-api';
     HomePage,
     TabsPage,
     PointsInteretPage,
-    DetailPiPage, 
+    DetailPiPage,
     ParcourPage,
     CameraPage,
     GalleryPage,
     GalleryModal,
-    TranslatePage
+    TranslatePage,
+    MetreAJourPage
   ],
   providers: [
     StatusBar,

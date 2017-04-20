@@ -24,6 +24,7 @@ export class DetailPiPage {
   id: any;
   loaded: boolean = false;
   imagesColection: Array<any>;
+  imageSrc: Array<any>;
 
   constructor(
     public navCtrl: NavController,
@@ -34,8 +35,9 @@ export class DetailPiPage {
         	this.id = navParams.get("piId");
           this.pointsInteret = [];
           this.imagesColection = [];
+          this.imageSrc = [];
               this.piService.getPis()
-                  .subscribe(
+                  .then(
                       pis=> {
                         this.pointsInteret = Object.keys(pis).map(k => { return pis[k] });
                         for(let i of this.pointsInteret[0]) {
@@ -46,7 +48,7 @@ export class DetailPiPage {
                         this.translateService.get('ADRESSE').subscribe((data) => {
                           this.adresse = "<div class='info'> "+data+":"+this.pointInteret["adresse"]+"</div>";
                         });
-                        if(this.pointInteret["horaire"]!= null) 
+                        if(this.pointInteret["horaire"]!= null)
                         {
                           this.translateService.get('HORAIRES').subscribe((data) => {
                             this.horaire = "<div class='info'> "+data+":"+this.pointInteret["horaire"]+"</div>";
@@ -56,6 +58,9 @@ export class DetailPiPage {
                         this.imagesColection.push(this.pointInteret["image"]);
                         for (let i of this.pointInteret["image_collection"]) {
                           this.imagesColection.push(i);
+                        }
+                        for(let image of this.imagesColection) {
+                          this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + image.image);
                         }
                       },
                       (err: any) => console.error(err)
@@ -70,7 +75,7 @@ export class DetailPiPage {
 
   call(phone) {
     console.log(phone);
-    
+
     this.callNumber.callNumber(phone, true)
     .then(() => console.log('Launched dialer!'))
     .catch((error) => console.log(error));

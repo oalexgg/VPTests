@@ -9,7 +9,7 @@ import { PointsInteretPage } from '../points-interet/points-interet';
 import { DetailPiPage } from "../detail-pi/detail-pi";
 import { Database } from "../../providers/database";
 import { VPApi } from "../../providers/vp-api";
-import { Update } from './model';
+import { MetreAJourPage } from "../metre-a-jour/metre-a-jour";
 
 
 
@@ -25,15 +25,16 @@ export class HomePage {
 	parcour: Array<any>;
 	selection: number;
 	lat: number = 46.42493120988299;
-  	lng: number = 0.867619514465332;
-  	positions: Array<any>;
-  	zoom: number = 13;
-  	positionsM: Array<any>;
-  	markers: any = [46.42493120988299, 0.867619514465332];
-  	visible: boolean = false;
-  	upToDate: boolean = false;
-  	version: any;
-  	pisParcour: Array<any>;
+  lng: number = 0.867619514465332;
+  positions: Array<any>;
+  zoom: number = 13;
+  positionsM: Array<any>;
+  markers: any = [46.42493120988299, 0.867619514465332];
+  visible: boolean = false;
+  upToDate: boolean = false;
+  version: any;
+  pisParcour: Array<any>;
+  imageSrc: Array<any>;
 
 	constructor(
 		public navCtrl: NavController,
@@ -47,52 +48,66 @@ export class HomePage {
 	}
 
 	ionViewDidLoad(){
+    this.vpapi.isUpToDate().then(value => {
+      if(this.db.getV() === 0) {
+        this.navCtrl.setRoot(MetreAJourPage);
+      } else if(!value && this.db.getV() !== 0) {
+        this.db.setIsMaj(false);
+        //quand un maj est disponible mis l'appli a été déjà maj
+      } else if(this.db.getV() !== 0){
+        this.db.setIsMaj(true);
+      }
+    });
       this.loadData();
     }
 
     loadData() {
     	this.parcours = [];
-		this.positions = [];
-		this.positionsM = [];
-		this.parcoursMoment = [];
-		this.pisParcour = [];
+  		this.positions = [];
+  		this.positionsM = [];
+  		this.parcoursMoment = [];
+  		this.pisParcour = [];
+      this.imageSrc = [];
 
+  		this.parcourMService.getParcoursMoment()
+  			.then(
+  				parcoursM => {
+  					let parcours = [];
+  					parcours = Object.keys(parcoursM).map(k => { return parcoursM[k]});
+  					for (var i of parcours) {
+  						for (let j of i) {
+                if(j instanceof Object){
+    							this.parcoursMoment.push(j);
+                  this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + j.image);
+                }
+              }
+  					}
+  				}
+  				);
 
-		this.parcourMService.getParcoursMoment()
-			.subscribe(
-				parcoursM => {
-					let parcours = [];
-					parcours = Object.keys(parcoursM).map(k => { return parcoursM[k]});
-					for (var i of parcours) {
-						for (let j of i) {
-							this.parcoursMoment.push(j);
-						}
-					}
-				}
-				);
-
-        this.parcourService.getParcours()
-            .subscribe(
-                parcoursM=> {
-                	this.parcour = Object.keys(parcoursM).map(k => { return parcoursM[k] });
-                	for (let i of this.parcour) {
-                		this.parcours = i;
-                	}
-                	for (let i of this.parcours) {
-                		let pisparc = 0;
-						for (let j = 0; j<Object.keys(i.pi).length; j++) {
-							this.positions.push(i.pi[j]);
-							pisparc++;
-						}
-						this.pisParcour.push(pisparc);
-					}
-					for (let i of this.positions) {
-						this.positionsM.push([Number(i.longitude_latitude.lat), Number(i.longitude_latitude.lon), i.id]);
-					}
-
-                },
-                (err: any) => console.error(err)
-            );
+          this.parcourService.getParcours()
+              .then(
+                  parcoursM=> {
+                  	this.parcour = Object.keys(parcoursM).map(k => { return parcoursM[k] });
+                  	for (let i of this.parcour) {
+                      if(i instanceof Object){
+                    		this.parcours = i;
+                      }
+                  	}
+                  	for (let i of this.parcours) {
+                  		let pisparc = 0;
+          						for (let j = 0; j<Object.keys(i.pi).length; j++) {
+          							this.positions.push(i.pi[j]);
+          							pisparc++;
+          						}
+          						this.pisParcour.push(pisparc);
+          					}
+          					for (let i of this.positions) {
+          						this.positionsM.push([Number(i.longitude_latitude.lat), Number(i.longitude_latitude.lon), i.id]);
+          					}
+                  },
+                  (err: any) => console.error(err)
+              );
     }
 
 	centerOnMe() {
@@ -112,12 +127,6 @@ export class HomePage {
 		    } else {
 		        this.presentAlert();
 		    }
-
-		    //this.vpapi.doUpdate();
-		    this.vpapi.isUpToDate().then(value => {
-		    	console.log(value);
-          console.log("db value:" + this.db.getV());
-		    });
 		}
 
 	voirListePI(i: number) {

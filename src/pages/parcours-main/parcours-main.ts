@@ -21,6 +21,7 @@ export class ParcoursMainPage implements OnInit {
   parcours: Array<Parcours>;
 	parcour: Array<any>;
   parcoursMoment: Array<ParcoursMoment>;
+  imageSrc: Array<any>;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public parcourService: ParcourService, public parcourMService: ParcourMomentService) {}
 
@@ -30,26 +31,36 @@ export class ParcoursMainPage implements OnInit {
 	ngOnInit() {
 		this.parcours = [];
 		this.parcoursMoment = [];
+    this.imageSrc = [];
 
     this.parcourMService.getParcoursMoment()
-      .subscribe(
+      .then(
         parcoursM => {
           let parcours = [];
           parcours = Object.keys(parcoursM).map(k => { return parcoursM[k]});
           for (var i of parcours) {
             for (var j of i) {
-              this.parcoursMoment.push(j);
+              if(j instanceof Object) {
+                console.log(j)
+                this.parcoursMoment.push(j);
+                this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + j.image);
+              }
             }
           }
         }
         );
 
         this.parcourService.getParcours()
-            .subscribe(
+            .then(
                 parcoursM=> {
                 	this.parcour = Object.keys(parcoursM).map(k => { return parcoursM[k] });
                 	for (let i of this.parcour) {
-                		this.parcours = i;
+                    for(let j of i){
+                      if(j instanceof Object){
+                    		this.parcours.push(j);
+                        console.log(j);
+                      }
+                    }
                 	}
                 },
                 (err: any) => console.error(err)

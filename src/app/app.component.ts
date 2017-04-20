@@ -6,6 +6,7 @@ import {TranslateService} from 'ng2-translate';
 
 import { GalleryPage } from '../pages/gallery/gallery';
 import { TranslatePage } from '../pages/translate/translate';
+import { MetreAJourPage } from "../pages/metre-a-jour/metre-a-jour";
 import { TabsPage } from '../pages/tabs/tabs';
 
 
@@ -16,6 +17,7 @@ export class MyApp {
   rootPage: any = TabsPage;
   galleryPage: any = GalleryPage;
   translatePage: any = TranslatePage;
+  majPage: any = MetreAJourPage;
 
 
   @ViewChild(Nav) nav: Nav;
@@ -37,7 +39,7 @@ export class MyApp {
 
     });
   }
-   
+
   openPage(p) {
        this.nav.push(p);
   }

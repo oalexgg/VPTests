@@ -50,6 +50,6 @@ export class Update {
 }
 export class isUpToDate {
     constructor(
-        public iutd: number
+        public iutd: boolean
         ){}
 }

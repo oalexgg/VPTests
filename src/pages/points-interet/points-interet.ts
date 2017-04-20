@@ -20,6 +20,8 @@ export class PointsInteretPage {
 	imageParam: Object;
 	images: string[] = [];
   description: string;
+  private imageSrc: Array<any>;
+
   constructor(
     public navCtrl: NavController,
      public navParams: NavParams,
@@ -28,8 +30,12 @@ export class PointsInteretPage {
   	this.imageParam = this.navParams.get("images");
     this.description = this.navParams.get("description");
   	Object.getOwnPropertyNames(this.imageParam).forEach(val => {
-  		this.images.push(this.imageParam[val]);
+  		this.images.push("file:///data/data/com.ionicframework.projetvp880805/files/" + this.imageParam[val]);
   	});
+    this.imageSrc = [];
+    for(let pi of this.pointsInteret) {
+      this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + pi.image["image"]);
+    }
   }
 
   ionViewDidLoad() {

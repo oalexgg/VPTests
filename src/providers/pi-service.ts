@@ -3,6 +3,7 @@ import { Http, Response, Jsonp } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { Database } from "./database";
 
 import {TranslateService} from 'ng2-translate';
 import {PI} from './model';
@@ -13,8 +14,11 @@ export class PiService {
     //url: string = "http://crowdsensing.univ-lr.fr/vp/montmorillon/sites/default/files/json/20170217122045/fr_Pis.json?callback=JSONP_CALLBACK";
     lang: string = "fr";
 
-    constructor(public http: Http, private _jsonp: Jsonp,
-               public translate: TranslateService) {
+    constructor(
+      public http: Http, private _jsonp: Jsonp,
+       public translate: TranslateService,
+        private db: Database
+      ) {
     }
 
     getPis(){
@@ -24,9 +28,11 @@ export class PiService {
         else {
             this.lang = "fr";
         }
-        return this.http.get("assets/"+this.lang+"_pis.json")
-            .map((res: Response) => <PI>res.json())
-            .catch(PiService.handleError);
+
+        var item = this.db._DB.get("lespis_" + this.lang).then((data) => {
+          return data;
+        });
+        return item;
     }
 
     updatePis(Pi: PI){
