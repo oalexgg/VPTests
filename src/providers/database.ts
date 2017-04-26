@@ -12,9 +12,7 @@ import PouchDB from 'pouchdb';
 @Injectable()
 export class Database {
 	public _DB: any;
-   	private success: boolean = true;
-   	public version: any;
-   	private item: any;
+   	public version: any = 0;
    	public jsonUp: any;
     public data: any;
 		public isMaj: boolean;
@@ -73,7 +71,7 @@ export class Database {
        console.log(result);
       this.data = [];
 
-      let docs = result.rows.map((row) => {
+      result.rows.map((row) => {
         this.data.push(row.doc);
         //console.log(row);
       });

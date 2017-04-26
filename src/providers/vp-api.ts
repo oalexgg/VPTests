@@ -22,7 +22,7 @@ export class VPApi {
   isUpToDate(): Promise<isUpToDate>{
     //valider si l'appli est mis à jour
     var item = this.db.getVersion().then((versionN) => {
-      this.db.setVersion(versionN);
+      //this.db.setVersion(versionN);
       return this.http
               .post(this.url+"isuptodate", "{\"version\":" + versionN + "}")
               .toPromise()

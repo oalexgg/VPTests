@@ -37,7 +37,19 @@
     </div>
   </div>
   <ngui-map [center]="lat+','+lng" [zoom]="zoom" streetViewControl="false" zoomControl="false" fullscreenControl="false" mapTypeControl="false">
-    <marker *ngFor="let pos of positionsM" [position]="pos" icon="img/icon-map.png" animation="DROP" (click)="voirDetailPI(pos[2])" ></marker>
+    <info-window id="iw">
+      <img class="roundedImage" src="[[image]]">
+      <b>
+        [[title]]
+      </b>
+       [[myTruncatedinfo]]
+       <a href="/#/detail">
+         <b>
+           {{ 'EN_SAVOIR' | translate }}
+         </b>
+       </a>
+    </info-window>
+    <marker *ngFor="let pos of positionsM; let i = index" [position]="pos" icon="img/icon-map.png" animation="DROP" (click)="voirDetailPI($event, i)" ></marker>
     <marker [position]="markers" icon="img/ic.png" [visible]="visible" animation="BOUNCE"></marker>
   </ngui-map>
 </ion-content>

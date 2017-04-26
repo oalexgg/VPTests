@@ -20,7 +20,7 @@
   <img class="center"  style=" margin-top:10px;margin-bottom:10px; width: 90%;"src="img/logo-vecb.png">
   <div *ngIf="firstLaunch">
     <ion-card>
-      <ion-card-content>
+      <ion-card-content class="center">
         <ion-card-title *ngIf="isConnected">
           {{ 'MAJ1' | translate }}<br/>
         </ion-card-title>
@@ -32,20 +32,23 @@
         </div>
 
         <a (click)="goacc()" *ngIf="!isConnected && !maj">
-          <button>
-            <ion-icon name="home"></ion-icon><br>
+          <button ion-button color="app_colour">
+            <ion-icon name="home">
             {{ 'MAJAFL6' | translate }}
+          </ion-icon><br>
           </button>
         </a>
         <a (click)="install()" *ngIf="maj">
-          <button>
-            <ion-icon name="download"></ion-icon><br>
-            {{ 'MAJ5' | translate }}
+          <button ion-button color="app_colour">
+            <ion-icon name="download">
+              {{ 'MAJ5' | translate }}
+            </ion-icon><br>
           </button>
         </a>
         <div *ngIf="isConnected && !maj">
           <div id="progress">
-            <h3 class="center">{{ 'MAJ6' | translate }}<strong>{{progres | number:0}}%</strong>  <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i></h3>
+            <h3 class="center">{{ 'MAJ6' | translate }}<strong>{{progres | number:0}}%</strong>
+               <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i></h3>
             <progress value={{progres}} min="0" max="100">{{progres}}%</progress>
           </div>
         </div>
@@ -56,8 +59,8 @@
   <div *ngIf="!firstLaunch">
     <div *ngIf="!isMaj">
       <ion-card>
-        <ion-card-content>
-          <ion-card-title >
+        <ion-card-content class="center">
+          <ion-card-title  >
             {{ 'MAJAFL1' | translate }}<br/>
             ({{size | number:1}} Mo à télécharger)<br/>
           </ion-card-title>
@@ -66,18 +69,20 @@
           </div>
 
           <a (click)="install()" *ngIf="maj">
-            <button>
-              <ion-icon name="download"></ion-icon><br>
+            <button ion-button color="app_colour">
+              <ion-icon name="download">
                 {{ 'MAJAFL3' | translate }}
+              </ion-icon><br>
             </button>
           </a>
           <a (click)="goacc()" *ngIf="maj">
-            <button>
-              <ion-icon name="close-circle"></ion-icon><br>
-              {{ 'MAJAFL6' | translate }}
+            <button ion-button color="app_colour">
+              <ion-icon name="close-circle">
+                {{ 'MAJAFL6' | translate }}
+              </ion-icon><br>
             </button>
           </a>
-          <div *ngIf="isMaj">
+          <div *ngIf="!isMaj">
             <div id="progress">
               <h3 class="center">{{ 'MAJ6' | translate }}<strong>{{progres | number:0}}%</strong>  <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i></h3>
               <progress value={{progres}} min="0" max="100">{{progres}}%</progress>
@@ -88,7 +93,7 @@
     </div>
     <div *ngIf="isMaj">
       <ion-card>
-        <ion-card-content>
+        <ion-card-content class="center">
           <div class="item item-text-wrap maj">
             <ion-icon name="checkmark-circle">
             </ion-icon>
@@ -100,9 +105,11 @@
         </ion-card-content>
       </ion-card>
         <a (click)="goacc()" *ngIf="maj">
-          <button>
-            <ion-icon name="home"></ion-icon><br>
-            {{ 'MAJAFL6' | translate }}
+          <button ion-button full color="app_colour">
+            <ion-icon name="home">
+              {{ 'MAJAFL6' | translate }}
+            </ion-icon><br>
+
           </button>
         </a>
     </div>

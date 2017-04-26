@@ -17,15 +17,15 @@
 
 
 <ion-content>
-	<ngui-map [center]="lat+','+lng" [zoom]="zoom" mapTypeId="satellite" streetViewControl="false" zoomControl="false" fullscreenControl="false" mapTypeControl="false">
+	<ngui-map [center]="lat+','+lng" [zoom]="zoom"  streetViewControl="false" zoomControl="false" fullscreenControl="false" mapTypeControl="false">
     <directions-renderer
       [suppressMarkers]="true"
       [directions-request]="direction">
     </directions-renderer>
     <marker *ngFor="let pos of parcours" [position]="pos.longitude_latitude.lat+','+pos.longitude_latitude.lon" icon="img/icon-map.png" animation="DROP" (click)="voirPI(pos.id)"></marker>
   </ngui-map>
-  <ion-fab right bottom #fab>
-    <button ion-fab color="app_colour"><ion-icon name="arrow-dropleft"></ion-icon></button>
+  <ion-fab middle right  #fab>
+    <button ion-fab color="app_colour"><ion-icon [name]="activeIcon"></ion-icon></button>
     <ion-fab-list side="left">
       <button ion-fab color="app_colour" (click)="changeTravelMode('DRIVING', fab)" *ngIf="travelMode!='DRIVING'"><ion-icon name="car"></ion-icon></button>
       <button ion-fab color="secondary" (click)="changeTravelMode('DRIVING', fab)" *ngIf="travelMode=='DRIVING'"><ion-icon name="car"></ion-icon></button>
@@ -44,7 +44,7 @@
 
     <ion-item>
       <ion-icon name='time' item-left style="color: black!important;" ></ion-icon>
-      {{ 'PH_PART1' | translate }}: 
+      {{ 'PH_PART1' | translate }}:
       <ion-badge item-center>{{travelTime}} minutes</ion-badge>
     </ion-item>
 

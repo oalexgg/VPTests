@@ -17,19 +17,40 @@
 
 
 <ion-content>
-  <ion-slides autoplay="5000" loop pager effect="fade" *ngIf="loaded">
-    <ion-slide *ngFor="let images of imagesColection; let i = index">
-        <div class="box">
-            <img class="full-image" [src]="imageSrc[i]">
-            <div class="textCopyright">
-              <p>{{images.auteur}}</p>
+  <div *ngIf="!videoActive">
+    <ion-slides autoplay="5000" loop pager effect="fade" *ngIf="loaded">
+      <ion-slide *ngFor="let images of imagesColection; let i = index">
+          <div class="box">
+              <img class="full-image" [src]="imageSrc[i]">
+              <div class="textCopyright">
+                <p>{{images.auteur}}</p>
+              </div>
+              <div class="textleg">
+                <p>{{images.legende}}</p>
+              </div>
             </div>
-            <div class="textleg">
-              <p>{{images.legende}}</p>
-            </div>
-          </div>
-    </ion-slide>
-  </ion-slides>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div *ngIf="videoActive">
+      <video autoplay="true" (ended)="videoEnded()" controls>
+        <source src="assets/videos/sample_video.mp4" type="video/mp4">
+      </video>
+  </div>
+  <button class="mediaBtn" ion-button large color="app_colour" (click)="musicBtn()"><ion-icon class="center" name="headset"></ion-icon></button>
+  <button class="mediaBtn" ion-button large color="app_colour" (click)="videoBtn()"><ion-icon class="center" name="videocam"></ion-icon></button>
+  <div *ngIf="musicActive">
+    <audio-track #audio [track]="myTracks[0]" (onFinish)="onTrackFinished($event)">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <audio-track-play [audioTrack]="audio"><ion-spinner></ion-spinner></audio-track-play>
+        </ion-thumbnail>
+        <div item-content style="width:100%">
+          <audio-track-progress-bar dark duration progress [audioTrack]="audio" [ngStyle]="{visibility: audio.completed > 0 ? 'visible' : 'hidden'}"></audio-track-progress-bar>
+        </div>
+      </ion-item>
+    </audio-track>
+  </div>
 
   <ion-card *ngIf="pointInteret">
       <ion-card-content>

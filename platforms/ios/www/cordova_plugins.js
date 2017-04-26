@@ -342,6 +342,14 @@ module.exports = [
         "clobbers": [
             "window.FileTransfer"
         ]
+    },
+    {
+        "id": "com.moust.cordova.videoplayer.VideoPlayer",
+        "file": "plugins/com.moust.cordova.videoplayer/www/videoplayer.js",
+        "pluginId": "com.moust.cordova.videoplayer",
+        "clobbers": [
+            "VideoPlayer"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -361,7 +369,8 @@ module.exports.metadata =
     "cordova-plugin-x-socialsharing": "5.1.7",
     "mx.ferreyra.callnumber": "0.0.2",
     "cordova-plugin-network-information": "1.3.2",
-    "cordova-plugin-file-transfer": "1.6.2"
+    "cordova-plugin-file-transfer": "1.6.2",
+    "com.moust.cordova.videoplayer": "1.0.1"
 };
 // BOTTOM OF METADATA
 });

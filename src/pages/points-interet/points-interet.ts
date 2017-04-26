@@ -29,13 +29,16 @@ export class PointsInteretPage {
   	this.pointsInteret = this.navParams.get('pointsInteret');
   	this.imageParam = this.navParams.get("images");
     this.description = this.navParams.get("description");
-  	Object.getOwnPropertyNames(this.imageParam).forEach(val => {
-  		this.images.push("file:///data/data/com.ionicframework.projetvp880805/files/" + this.imageParam[val]);
-  	});
+  	Object
+      .getOwnPropertyNames(this.imageParam)
+      .forEach(val => {
+    		this.images.push("file:///data/data/com.ionicframework.projetvp880805/files/" + this.imageParam[val]);
+    	});
     this.imageSrc = [];
-    for(let pi of this.pointsInteret) {
-      this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + pi.image["image"]);
-    }
+    this.pointsInteret
+      .forEach((pi) => {
+        this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + pi.image["image"]);
+      });
   }
 
   ionViewDidLoad() {

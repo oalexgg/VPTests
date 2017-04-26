@@ -32,14 +32,17 @@ export class PointsInteretMainPage {
         this.piService.getPis()
             .then(pis => {
                 	this.parcours = Object.keys(pis).map(k => { return pis[k] });
-                	for (let i of this.parcours) {
+                  this.parcours.forEach((i) => {
                     for (let j of i) {
                       if(j instanceof Object){
                         this.PIS.push(j);
                         this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + j.image["image"]);
                       }
+                      else {
+                        break;
+                      }
                     }
-                	}
+                  });
                 },
                 (err: any) => console.error(err)
             );

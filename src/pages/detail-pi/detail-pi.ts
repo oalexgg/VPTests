@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { PI } from "../../providers/model";
 import { PiService } from "../../providers/pi-service";
 import {CallNumber} from '@ionic-native/call-number';
+import { AudioProvider } from 'ionic-audio';
 
 import {TranslateService} from 'ng2-translate';
 
@@ -25,13 +26,17 @@ export class DetailPiPage {
   loaded: boolean = false;
   imagesColection: Array<any>;
   imageSrc: Array<any>;
+  myTracks: any[];
+  musicActive: boolean = false;
+  videoActive: boolean = false;
 
   constructor(
     public navCtrl: NavController,
      public navParams: NavParams,
       public piService: PiService,
        public translateService: TranslateService,
-        private callNumber: CallNumber) {
+        private callNumber: CallNumber,
+         private _audioProvider: AudioProvider) {
         	this.id = navParams.get("piId");
           this.pointsInteret = [];
           this.imagesColection = [];
@@ -40,31 +45,54 @@ export class DetailPiPage {
                   .then(
                       pis=> {
                         this.pointsInteret = Object.keys(pis).map(k => { return pis[k] });
-                        for(let i of this.pointsInteret[0]) {
-                          if(this.id === i.id) {
-                            this.pointInteret = i;
-                          }
-                        }
-                        this.translateService.get('ADRESSE').subscribe((data) => {
-                          this.adresse = "<div class='info'> "+data+":"+this.pointInteret["adresse"]+"</div>";
-                        });
+                        this
+                          .pointsInteret[0]
+                          .forEach((i) => {
+                            if(this.id === i.id) {
+                              this.pointInteret = i;
+                            }
+                          });
+                        this.translateService
+                          .get('ADRESSE')
+                          .subscribe((data) => {
+                            this.adresse = "<div class='info'> "+data+":"+this.pointInteret["adresse"]+"</div>";
+                          });
                         if(this.pointInteret["horaire"]!= null)
                         {
-                          this.translateService.get('HORAIRES').subscribe((data) => {
-                            this.horaire = "<div class='info'> "+data+":"+this.pointInteret["horaire"]+"</div>";
-                          });
+                          this.translateService
+                            .get('HORAIRES')
+                            .subscribe((data) => {
+                              this.horaire = "<div class='info'> "+data+":"+this.pointInteret["horaire"]+"</div>";
+                            });
                         }
 
-                        this.imagesColection.push(this.pointInteret["image"]);
-                        for (let i of this.pointInteret["image_collection"]) {
-                          this.imagesColection.push(i);
-                        }
-                        for(let image of this.imagesColection) {
-                          this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + image.image);
-                        }
+                        this.imagesColection
+                          .push(this.pointInteret["image"]);
+                        this.pointInteret["image_collection"]
+                          .forEach((i) => {
+                            this.imagesColection.push(i);
+                          });
+                        this.imagesColection
+                          .forEach((image) => {
+                            this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + image.image);
+                          });
                       },
                       (err: any) => console.error(err)
                   );
+                  this.myTracks = [{
+      src: 'https://archive.org/download/JM2013-10-05.flac16/V0/jm2013-10-05-t12-MP3-V0.mp3',
+      artist: 'John Mayer',
+      title: 'Why Georgia',
+      art: 'img/johnmayer.jpg',
+      preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
+    },
+    {
+      src: 'https://archive.org/download/JM2013-10-05.flac16/V0/jm2013-10-05-t30-MP3-V0.mp3',
+      artist: 'John Mayer',
+      title: 'Who Says',
+      art: 'img/johnmayer.jpg',
+      preload: 'metadata' // tell the plugin to preload metadata such as duration for this track,  set to 'none' to turn off
+    }];
   }
 
   ionViewDidLoad() {
@@ -80,5 +108,31 @@ export class DetailPiPage {
     .then(() => console.log('Launched dialer!'))
     .catch((error) => console.log(error));
   }
+
+  playSelectedTrack() {
+   // use AudioProvider to control selected track
+   this._audioProvider.play(this.myTracks[0]);
+ }
+
+ pauseSelectedTrack() {
+    // use AudioProvider to control selected track
+    this._audioProvider.pause(this.myTracks[0]);
+ }
+
+ onTrackFinished(track: any) {
+   console.log('Track finished', track)
+ }
+
+ musicBtn() {
+   this.musicActive = !this.musicActive;
+ }
+
+ videoBtn() {
+   this.videoActive = !this.videoActive;
+ }
+
+ videoEnded() {
+   this.videoActive = false;
+ }
 
 }

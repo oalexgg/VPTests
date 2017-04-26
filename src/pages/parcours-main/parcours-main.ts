@@ -38,15 +38,17 @@ export class ParcoursMainPage implements OnInit {
         parcoursM => {
           let parcours = [];
           parcours = Object.keys(parcoursM).map(k => { return parcoursM[k]});
-          for (var i of parcours) {
+          parcours.forEach((i)=>{
             for (var j of i) {
               if(j instanceof Object) {
-                console.log(j)
                 this.parcoursMoment.push(j);
                 this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + j.image);
               }
+              else {
+                break;
+              }
             }
-          }
+          });
         }
         );
 
@@ -58,7 +60,9 @@ export class ParcoursMainPage implements OnInit {
                     for(let j of i){
                       if(j instanceof Object){
                     		this.parcours.push(j);
-                        console.log(j);
+                      }
+                      else {
+                        break;
                       }
                     }
                 	}

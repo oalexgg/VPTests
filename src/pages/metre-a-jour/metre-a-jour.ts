@@ -5,7 +5,7 @@ import {TranslateService} from 'ng2-translate';
 import { Network } from '@ionic-native/network';
 import { VPApi } from "../../providers/vp-api";
 import { File } from '@ionic-native/file';
-import { Transfer, FileUploadOptions, TransferObject } from '@ionic-native/transfer';
+import { Transfer, TransferObject } from '@ionic-native/transfer';
 import { HomePage } from "../../pages/home/home";
 /*
   Generated class for the MetreAJour page.
@@ -51,7 +51,6 @@ export class MetreAJourPage {
       this.isConnected = false;
       this.maj = false;
     }
-    console.log(this.isMaj);
 
     if(this.db.getV() === 0) {
       this.firstLaunch = true
@@ -75,38 +74,42 @@ export class MetreAJourPage {
     this.vpapi.doUpdate();
     this.titreF = [];
     if(this.listSupr.length !== 0) {
-      for(let i of this.listSupr) {
-        this.file.removeFile(this.file.dataDirectory, i).then((response) => {
-          console.log(response);
+      this.listSupr
+        .forEach((i) => {
+          this.file
+            .removeFile(this.file.dataDirectory, i).then((response) => {
+              console.log(response);
+            });
         });
-      }
     }
     if(this.sizeTab !== 0) {
-      for(let i of this.listDif) {
-        var url = i.url;
-        var target = this.file.dataDirectory + i.title;
-        this.titreF.push(i.title);
-        this.urlF = i.url;
-        if(url == null) {
-          this.sizeTab--;
-        } else {
-          fileTransfer.download(url, target, true)
-          .then((result) => {
-            this.nbFichier++;
-            this.progres = (100 * this.nbFichier) / this.sizeTab;
-            this.downloadProgress = 0;
-            if(this.progres === 100) {
-              setTimeout(() => {
-                this.db.updateVersion(this.version);
-                this.navCtrl.setRoot(HomePage);
-              }, 1000);
-            }
-          }, err => {} );
-          fileTransfer.onProgress((progress)=> {
-            this.downloadProgress = (progress.loaded / progress.total) * 100;
-          });
-        }
-      }
+      this.listDif
+        .forEach((i) => {
+          var url = i.url;
+          var target = this.file.dataDirectory + i.title;
+          this.titreF.push(i.title);
+          this.urlF = i.url;
+          if(url == null) {
+            this.sizeTab--;
+          } else {
+            fileTransfer.download(url, target, true)
+            .then((result) => {
+              this.nbFichier++;
+              this.progres = (100 * this.nbFichier) / this.sizeTab;
+              this.downloadProgress = 0;
+              if(this.progres === 100) {
+                  this.db.setVersion(this.version);
+                  this.db.updateVersion(this.version);
+                setTimeout(() => {
+                  this.navCtrl.setRoot(HomePage);
+                }, 1000);
+              }
+            }, err => {} );
+            fileTransfer.onProgress((progress)=> {
+              this.downloadProgress = (progress.loaded / progress.total) * 100;
+            });
+          }
+        });
     } else {
       this.db.updateVersion(this.version);
       this.navCtrl.setRoot(HomePage);

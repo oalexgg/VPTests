@@ -36,6 +36,7 @@ export class ParcourPage implements OnInit {
           {location: {lat:44.32384807250689, lng: -78.079833984375}},
           {location: {lat:44.55916341529184, lng: -76.17919921875}},
         ];
+  private activeIcon: string = "car";
 
 
   constructor(
@@ -43,7 +44,7 @@ export class ParcourPage implements OnInit {
      public navParams: NavParams,
       public translate: TranslateService,
        private zone: NgZone) {
-  		this.parcours = this.navParams.get("parcours"); 
+  		this.parcours = this.navParams.get("parcours");
   	   }
 
   ngOnInit() {
@@ -57,12 +58,11 @@ export class ParcourPage implements OnInit {
   }
 
   ionViewDidLoad() {
-  }    
+  }
 
   getDirections () {
   	this.wayPoints = [];
 	  for (var i = 1; i < this.parcours.length-1; i++) {
-	  	
 	      this.wayPoints.push({
 	        location: {
             lat: Number(this.parcours[i].longitude_latitude["lat"]),
@@ -71,7 +71,7 @@ export class ParcourPage implements OnInit {
 	        stopover: true
 	      });
 	  }
-	  let last = this.parcours.length-1; 
+	  let last = this.parcours.length-1;
 	  let startLat = Number(this.parcours[0].longitude_latitude["lat"]);
 	  let startLng = Number(this.parcours[0].longitude_latitude["lon"]);
 	  let destLat = Number(this.parcours[last].longitude_latitude["lat"]);
@@ -84,13 +84,13 @@ export class ParcourPage implements OnInit {
 	    },
 	    destination: {
         lat: destLat ,
-	      lng: destLng 
+	      lng: destLng
 	    },
       waypoints: this.wayPoints,
       optimizeWaypoints: true,
-      travelMode: this.travelMode 
+      travelMode: this.travelMode
     };
-    
+
   }
 
   changeTravelMode(TM, fab: FabContainer) {
@@ -99,7 +99,14 @@ export class ParcourPage implements OnInit {
     this.getDirections();
     setTimeout(() => {
        this.calcTimeDistance();
-     }, 200);
+     }, 500);
+     if(TM === "DRIVING") {
+       this.activeIcon = "car";
+     } else if(TM === "WALKING") {
+       this.activeIcon = "walk";
+     } else {
+       this.activeIcon = "bicycle"
+     }
   }
 
 
@@ -112,17 +119,20 @@ export class ParcourPage implements OnInit {
   calcTimeDistance () {
     this.distance = 0;
     this.travelTime = 0;
-    this.directionsRenderer.getDirections().routes.forEach( r => {
-         r.legs.forEach(l => {
-           this.distance = Number(this.distance) + Number(l.distance.value);
-           this.travelTime = this.travelTime + l.duration.value;
-         });
+    this.directionsRenderer
+      .getDirections()
+      .routes
+      .forEach( r => {
+           r.legs.forEach(l => {
+             this.distance = Number(this.distance) + Number(l.distance.value);
+             this.travelTime = this.travelTime + l.duration.value;
+           });
        });
-       var hours = Math.floor( this.travelTime / 3600 );  
-       var minutes: any = Math.floor( (this.travelTime % 3600) / 60 );
-       minutes = minutes < 10 ? '0' + minutes : minutes;         
-       this.travelTime = hours + " heures " + minutes;
-       this.distance = this.distance/1000;
-       this.distance = (Math.round(this.distance * 10)/10)+" ";
+    var hours = Math.floor( this.travelTime / 3600 );
+    var minutes: any = Math.floor( (this.travelTime % 3600) / 60 );
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    this.travelTime = hours + " heures " + minutes;
+    this.distance = this.distance/1000;
+    this.distance = (Math.round(this.distance * 10)/10)+" ";
   }
 }

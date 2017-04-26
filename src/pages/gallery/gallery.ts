@@ -20,7 +20,7 @@ import { GalleryService } from '../../providers/gallery-service';
 export class GalleryPage implements OnInit {
 
   allImages: Array<any>;
-  url: any;  
+  url: any;
   loaded: boolean;
 
   constructor(public navCtrl: NavController,
@@ -30,15 +30,18 @@ export class GalleryPage implements OnInit {
        public modalCtrl: ModalController,
         public translate: TranslateService) {}
 
-  ionViewDidLoad() { 
+  ionViewDidLoad() {
     this.allImages = [];
     if(this.allImages !== null) {
      setTimeout(() => {
-        for (var i of this.galleryService.getAllImages()) {
-          if(i != null){
-            this.allImages.push(i.src);
-          }
-        }
+       this.galleryService
+         .getAllImages()
+         .filter((i) => {
+           return i != null;
+         })
+         .forEach((i) => {
+           this.allImages.push(i.src);
+         });
      }
      , 300);
      }
@@ -46,18 +49,19 @@ export class GalleryPage implements OnInit {
     }
 
     ngOnInit() {
-      
+
     }
 
   showImages(i) {
     var photos = [];
-    for (var j of this.allImages) {
-      photos.push({'url': j});
-    }
-   let modal = this.modalCtrl.create(GalleryModal, {
-      photos: photos,
-      initialSlide: i
+    this.allImages.forEach((img) => {
+      photos.push({'url': img});
     });
+   let modal = this.modalCtrl
+                .create(GalleryModal, {
+                  photos: photos,
+                  initialSlide: i
+                });
    modal.onDidDismiss((images) => {
      this.ionViewDidLoad();
    });
