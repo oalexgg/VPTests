@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 import { PI } from "../../providers/model";
 import { PiService } from "../../providers/pi-service";
 import {CallNumber} from '@ionic-native/call-number';
-import { AudioProvider } from 'ionic-audio';
 
 import {TranslateService} from 'ng2-translate';
 
@@ -35,8 +34,7 @@ export class DetailPiPage {
      public navParams: NavParams,
       public piService: PiService,
        public translateService: TranslateService,
-        private callNumber: CallNumber,
-         private _audioProvider: AudioProvider) {
+        private callNumber: CallNumber) {
         	this.id = navParams.get("piId");
           this.pointsInteret = [];
           this.imagesColection = [];
@@ -80,19 +78,19 @@ export class DetailPiPage {
                       (err: any) => console.error(err)
                   );
                   this.myTracks = [{
-      src: 'https://archive.org/download/JM2013-10-05.flac16/V0/jm2013-10-05-t12-MP3-V0.mp3',
-      artist: 'John Mayer',
-      title: 'Why Georgia',
-      art: 'img/johnmayer.jpg',
-      preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
-    },
-    {
-      src: 'https://archive.org/download/JM2013-10-05.flac16/V0/jm2013-10-05-t30-MP3-V0.mp3',
-      artist: 'John Mayer',
-      title: 'Who Says',
-      art: 'img/johnmayer.jpg',
-      preload: 'metadata' // tell the plugin to preload metadata such as duration for this track,  set to 'none' to turn off
-    }];
+                    src: 'https://archive.org/download/JM2013-10-05.flac16/V0/jm2013-10-05-t12-MP3-V0.mp3',
+                    artist: 'John Mayer',
+                    title: 'Why Georgia',
+                    art: 'img/johnmayer.jpg',
+                    preload: 'metadata' // tell the plugin to preload metadata such as duration for this track, set to 'none' to turn off
+                  },
+                  {
+                    src: 'https://archive.org/download/JM2013-10-05.flac16/V0/jm2013-10-05-t30-MP3-V0.mp3',
+                    artist: 'John Mayer',
+                    title: 'Who Says',
+                    art: 'img/johnmayer.jpg',
+                    preload: 'metadata' // tell the plugin to preload metadata such as duration for this track,  set to 'none' to turn off
+                  }];
   }
 
   ionViewDidLoad() {
@@ -111,12 +109,10 @@ export class DetailPiPage {
 
   playSelectedTrack() {
    // use AudioProvider to control selected track
-   this._audioProvider.play(this.myTracks[0]);
  }
 
  pauseSelectedTrack() {
     // use AudioProvider to control selected track
-    this._audioProvider.pause(this.myTracks[0]);
  }
 
  onTrackFinished(track: any) {

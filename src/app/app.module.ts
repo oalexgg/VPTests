@@ -9,7 +9,9 @@ import {CallNumber} from '@ionic-native/call-number';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NguiMapModule} from '@ngui/map';
-import { IonicAudioModule } from 'ionic-audio';
+import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
+import { Geolocation } from '@ionic-native/geolocation';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 import { MyApp } from './app.component';
 import { PointsInteretMainPage } from '../pages/points-interet-main/points-interet-main';
@@ -32,6 +34,7 @@ import { GalleryModal } from '../image-viewer/gallery-modal/gallery-modal';
 import { ZoomableImage } from '../image-viewer/zoomable-image/zoomable-image';
 import { Database } from '../providers/database';
 import { VPApi } from '../providers/vp-api';
+import { LocationTracker } from '../providers/location-tracker';
 
 
 
@@ -67,8 +70,7 @@ import { VPApi } from '../providers/vp-api';
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
       deps: [Http]
-    }),
-    IonicAudioModule.forRoot()
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -97,7 +99,11 @@ import { VPApi } from '../providers/vp-api';
     SocialSharing,
     Database,
     VPApi,
-    CallNumber
+    CallNumber,
+    BackgroundGeolocation,
+    LocationTracker,
+    Geolocation,
+    LocalNotifications
     ]
 })
 export class AppModule {}

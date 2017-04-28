@@ -9,6 +9,7 @@ import { PointsInteretPage } from '../points-interet/points-interet';
 import { Database } from "../../providers/database";
 import { VPApi } from "../../providers/vp-api";
 import { MetreAJourPage } from "../metre-a-jour/metre-a-jour";
+import { LocationTracker } from '../../providers/location-tracker';
 
 
 
@@ -47,7 +48,8 @@ export class HomePage {
 	   	   public parcourMService: ParcourMomentService,
 	   	    public translate: TranslateService,
 	   	     public db: Database,
-	   	      public vpapi: VPApi) {
+	   	      public vpapi: VPApi,
+             public locationTracker: LocationTracker) {
 	   	    	translate.setDefaultLang('fr');
 	}
 
@@ -63,7 +65,8 @@ export class HomePage {
       }
     });
       this.loadData();
-      this.getCurrentLocation();
+      this.locationTracker.startTracking();
+      //this.getCurrentLocation();
     }
 
     loadData() {

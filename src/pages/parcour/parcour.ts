@@ -44,7 +44,7 @@ export class ParcourPage implements OnInit {
      public navParams: NavParams,
       public translate: TranslateService,
        private zone: NgZone) {
-  		this.parcours = this.navParams.get("parcours");
+  		     this.parcours = this.navParams.get("parcours");
   	   }
 
   ngOnInit() {

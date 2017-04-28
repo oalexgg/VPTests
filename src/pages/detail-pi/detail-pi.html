@@ -40,16 +40,9 @@
   <button class="mediaBtn" ion-button large color="app_colour" (click)="musicBtn()"><ion-icon class="center" name="headset"></ion-icon></button>
   <button class="mediaBtn" ion-button large color="app_colour" (click)="videoBtn()"><ion-icon class="center" name="videocam"></ion-icon></button>
   <div *ngIf="musicActive">
-    <audio-track #audio [track]="myTracks[0]" (onFinish)="onTrackFinished($event)">
-      <ion-item>
-        <ion-thumbnail item-left>
-          <audio-track-play [audioTrack]="audio"><ion-spinner></ion-spinner></audio-track-play>
-        </ion-thumbnail>
-        <div item-content style="width:100%">
-          <audio-track-progress-bar dark duration progress [audioTrack]="audio" [ngStyle]="{visibility: audio.completed > 0 ? 'visible' : 'hidden'}"></audio-track-progress-bar>
-        </div>
-      </ion-item>
-    </audio-track>
+    <audio controls>
+      <source [src]="myTracks[0].src" type="audio/mpeg">
+    </audio>
   </div>
 
   <ion-card *ngIf="pointInteret">

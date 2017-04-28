@@ -3,4 +3,6 @@
     <string name="app_name">ProjetVP</string>
     <string name="launcher_name">@string/app_name</string>
     <string name="activity_name">@string/launcher_name</string>
+    <string name="account_type">com.ionicframework.projetvp880805.account</string>
+    <string name="content_authority">com.ionicframework.projetvp880805</string>
 </resources>

@@ -63,8 +63,25 @@
     <key>NSLocationWhenInUseUsageDescription</key>
     <string/>
     <key>NSCameraUsageDescription</key>
-    <string></string>
+    <string/>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string></string>
+    <string/>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>This app requires background location tracking</string>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>location</string>
+    </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>prefs</string>
+        </array>
+      </dict>
+    </array>
   </dict>
 </plist>
