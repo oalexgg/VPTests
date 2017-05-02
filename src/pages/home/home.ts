@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {TranslateService} from 'ng2-translate';
 
+import { File } from '@ionic-native/file';
+
 import { NavController, ToastController } from 'ionic-angular';
 import { Parcours, ParcoursMoment } from "../../providers/model";
 import { ParcourService } from "../../providers/parcours-service";
@@ -49,7 +51,8 @@ export class HomePage {
 	   	    public translate: TranslateService,
 	   	     public db: Database,
 	   	      public vpapi: VPApi,
-             public locationTracker: LocationTracker) {
+             public locationTracker: LocationTracker,
+              private file: File) {
 	   	    	translate.setDefaultLang('fr');
 	}
 
@@ -86,7 +89,7 @@ export class HomePage {
               for(let j of p){
                 if(j instanceof Object){
                   this.parcoursMoment.push(j);
-                  this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + j.image);
+                  this.imageSrc.push(this.file.dataDirectory + j.image);
                 }
               }
             });
