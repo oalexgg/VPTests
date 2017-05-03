@@ -54,6 +54,7 @@ export class PointsInteretMainPage {
     }
 
   detailPI(i: number) {
+    console.log(this.PIS[i].id);
     this.navCtrl.push(DetailPiPage,{
       piId: this.PIS[i].id
     });

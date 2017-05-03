@@ -17,15 +17,15 @@
 
 
 <ion-content  class="card-background-page">
-	<ion-card *ngFor="let parcours of parcoursMoment; let i = index ">
+	<ion-card *ngFor="let parcour of parcours; let i = index ">
 		<button ion-item (click)="voirListePI(i)">
 			<img [src]="imageSrc[i]" >
 			<div class="textCopyright2">
-              <p>{{parcours.auteur}}</p>
+              <p>{{parcour.auteur}}</p>
             </div>
             <div class="textimg">
               <p>
-                {{parcours.title}}
+                {{parcour.title}}
               </p>
             </div>
 		</button>

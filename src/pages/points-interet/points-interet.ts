@@ -26,7 +26,7 @@ export class PointsInteretPage {
   constructor(
     public navCtrl: NavController,
      public navParams: NavParams,
-      public translate: TranslateService, 
+      public translate: TranslateService,
        private file: File) {
   	this.pointsInteret = this.navParams.get('pointsInteret');
   	this.imageParam = this.navParams.get("images");
@@ -34,7 +34,9 @@ export class PointsInteretPage {
   	Object
       .getOwnPropertyNames(this.imageParam)
       .forEach(val => {
-    		this.images.push(this.file.dataDirectory + this.imageParam[val]);
+        if(val === "image"){
+          this.images.push(this.file.dataDirectory + this.imageParam[val]);
+        }
     	});
     this.imageSrc = [];
     this.pointsInteret

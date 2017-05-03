@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, } from 'ionic-angular';
 import { File } from "@ionic-native/file";
 
-import { Parcours, ParcoursMoment } from "../../providers/model";
+import { Parcours } from "../../providers/model";
 import { ParcourService } from "../../providers/parcours-service";
-import { ParcourMomentService } from "../../providers/parcours-moment-service";
 
 import { PointsInteretPage } from '../points-interet/points-interet';
 
@@ -21,13 +20,11 @@ import { PointsInteretPage } from '../points-interet/points-interet';
 export class ParcoursMainPage implements OnInit {
   parcours: Array<Parcours>;
 	parcour: Array<any>;
-  parcoursMoment: Array<ParcoursMoment>;
   imageSrc: Array<any>;
 
 	constructor(public navCtrl: NavController,
      public navParams: NavParams,
       public parcourService: ParcourService,
-       public parcourMService: ParcourMomentService,
         private file: File) {}
 
 	ionViewDidLoad() {
@@ -35,27 +32,7 @@ export class ParcoursMainPage implements OnInit {
 
 	ngOnInit() {
 		this.parcours = [];
-		this.parcoursMoment = [];
     this.imageSrc = [];
-
-    this.parcourMService.getParcoursMoment()
-      .then(
-        parcoursM => {
-          let parcours = [];
-          parcours = Object.keys(parcoursM).map(k => { return parcoursM[k]});
-          parcours.forEach((i)=>{
-            for (var j of i) {
-              if(j instanceof Object) {
-                this.parcoursMoment.push(j);
-                this.imageSrc.push(this.file.dataDirectory + j.image);
-              }
-              else {
-                break;
-              }
-            }
-          });
-        }
-        );
 
         this.parcourService.getParcours()
             .then(
@@ -65,6 +42,7 @@ export class ParcoursMainPage implements OnInit {
                     for(let j of i){
                       if(j instanceof Object){
                     		this.parcours.push(j);
+                        this.imageSrc.push(this.file.dataDirectory + j.image["image"]);
                       }
                       else {
                         break;

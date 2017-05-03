@@ -14,7 +14,7 @@ import { Update, isUpToDate } from './model';
 @Injectable()
 export class VPApi {
 
-  private url = 'http://crowdsensing.univ-lr.fr/vp/montmorillon/api/';
+  private url = 'http://crowdsensing.univ-lr.fr/vp/parthenay/api/';
   constructor(private http: Http, private db: Database) {
 
   }

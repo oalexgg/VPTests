@@ -72,6 +72,7 @@ export class DetailPiPage {
                           .forEach((i) => {
                             this.imagesColection.push(i);
                           });
+                          console.log(this.imagesColection);
                         this.imagesColection
                           .forEach((image) => {
                             this.imageSrc.push(this.file.dataDirectory + image.image);

@@ -91,6 +91,7 @@ export class HomePage {
               for(let j of p){
                 if(j instanceof Object){
                   this.parcoursMoment.push(j);
+                  console.log(j);
                   this.imageSrc.push(this.file.dataDirectory + j.image);
                 }
               }
