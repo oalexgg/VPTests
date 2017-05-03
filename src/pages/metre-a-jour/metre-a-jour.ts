@@ -73,7 +73,6 @@ export class MetreAJourPage {
     this.progres = 0;
     this.vpapi.doUpdate();
     this.titreF = [];
-    //console.log(this.file.dataDirectory);
     if(this.listSupr.length !== 0) {
       this.listSupr
         .forEach((i) => {

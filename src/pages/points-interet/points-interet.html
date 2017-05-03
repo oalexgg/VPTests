@@ -35,7 +35,8 @@
   </ion-card>
 
   <ion-card *ngFor="let pi of pointsInteret; let i = index" >
-      <ion-card-content (click)="detailPI(i)">
+    <a (click)="detailPI(i)">
+      <ion-card-content >
         <ion-item>
           <ion-card-title>
             <strong style="font-size: .65em">{{pi.title}}</strong>
@@ -46,5 +47,6 @@
         </ion-item>
       <p [innerHTML]="pi.description"></p>
     </ion-card-content>
+  </a>
   </ion-card>
 </ion-content>

@@ -4,6 +4,7 @@ import { PI } from "../../providers/model";
 import { DetailPiPage } from "../detail-pi/detail-pi";
 import { ParcourPage} from "../parcour/parcour";
 import {TranslateService} from 'ng2-translate';
+import { File } from "@ionic-native/file"
 
 /*
   Generated class for the PointsInteret page.
@@ -25,19 +26,20 @@ export class PointsInteretPage {
   constructor(
     public navCtrl: NavController,
      public navParams: NavParams,
-      public translate: TranslateService) {
+      public translate: TranslateService, 
+       private file: File) {
   	this.pointsInteret = this.navParams.get('pointsInteret');
   	this.imageParam = this.navParams.get("images");
     this.description = this.navParams.get("description");
   	Object
       .getOwnPropertyNames(this.imageParam)
       .forEach(val => {
-    		this.images.push("file:///data/data/com.ionicframework.projetvp880805/files/" + this.imageParam[val]);
+    		this.images.push(this.file.dataDirectory + this.imageParam[val]);
     	});
     this.imageSrc = [];
     this.pointsInteret
       .forEach((pi) => {
-        this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + pi.image["image"]);
+        this.imageSrc.push(this.file.dataDirectory + pi.image["image"]);
       });
   }
 

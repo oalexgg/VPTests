@@ -3,8 +3,7 @@ import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 import 'rxjs/add/operator/filter';
 import { LocalNotifications } from '@ionic-native/local-notifications';
-import { Http } from '@angular/http';
-import { PiService } from "../providers/pi-service";
+import { Http } from '@angular/http'
 
 @Injectable()
 export class LocationTracker {
@@ -12,33 +11,14 @@ export class LocationTracker {
   public watch: any;
   public lat: number = 0;
   public lng: number = 0;
-  private dist: number = 0;
-  public id: number = 0;
-  private PIS: Array<any>;
+  private dist = 0;
   constructor(
     public zone: NgZone,
      private geolocation: Geolocation,
       private backgroundGeolocation: BackgroundGeolocation,
        private localNotifications: LocalNotifications,
-         private http: Http,
-          private piService: PiService) {
+         private http: Http) {
            localNotifications.clearAll();
-           this.piService.getPis()
-               .then(pis => {
-                   	Object.keys(pis).map(k => { return pis[k] })
-                    .forEach((i) => {
-                       for (let j of i) {
-                         if(j instanceof Object){
-                           this.PIS.push(j);
-                         }
-                         else {
-                           break;
-                         }
-                       }
-                     });
-                   },
-                   (err: any) => console.error(err)
-               );
 
   }
 
@@ -55,30 +35,29 @@ export class LocationTracker {
 
      this.backgroundGeolocation.configure(config).subscribe((location) => {
 
+      //console.log('BackgroundGeolocation:  ' + location.latitude + ',' + location.longitude);
+      //console.log(this.getDistanceFromLatLonInKm(location.latitude, location.longitude, 46.142462, -1.152266));
       //if validando
-      this.PIS.forEach((value) => {
-        this.calcDistance(location.latitude, location.longitude, value["longitude_latitude"].latitude, value["longitude_latitude"].longitude);
-        console.log(this.dist);
-        if(this.dist > 0 && this.dist  <= 200) {
-          this.localNotifications.schedule({
-             id: 1,
-             text: 'cerca'
-           });
-           this.localNotifications.clearAll();
-        }
-         // Run update inside of Angular's zone
-         this.zone.run(() => {
-           this.lat = location.latitude;
-           this.lng = location.longitude;
+      this.calcDistance(location.latitude, location.longitude);
+      console.log(this.dist);
+      if(this.dist > 0 && this.dist  <= 2000) {
+        this.localNotifications.schedule({
+           id: 1,
+           text: 'cerca'
          });
-
-       }, (err) => {
-
-         console.log(err);
-
+         this.localNotifications.clearAll();
+      }
+       // Run update inside of Angular's zone
+       this.zone.run(() => {
+         this.lat = location.latitude;
+         this.lng = location.longitude;
        });
-      });
 
+     }, (err) => {
+
+       console.log(err);
+
+     });
 
      // Turn ON the background-geolocation system.
      this.backgroundGeolocation.start();
@@ -93,11 +72,10 @@ export class LocationTracker {
 
    this.watch = this.geolocation.watchPosition(options).filter((p: any) => p.code === undefined).subscribe((position: Geoposition) => {
 
-     this.PIS.forEach((value) => {
      //console.log(position);
-     this.calcDistance(position.coords.latitude, position.coords.longitude, value["longitude_latitude"].latitude, value["longitude_latitude"].longitude);
+     this.calcDistance(position.coords.latitude, position.coords.longitude);
     // console.log(this.dist);
-     if(this.dist != 0 && this.dist <= 200 ) {
+     if(this.dist != 0 && this.dist <= 2000 ) {
        this.localNotifications.schedule({
           id: 2,
           text: 'cerca del punto'
@@ -111,7 +89,6 @@ export class LocationTracker {
      });
 
    });
- });
 
   }
 
@@ -123,9 +100,9 @@ export class LocationTracker {
 
   }
 
-  calcDistance(latitude, longitude, latitude2, longitude2) {
+  calcDistance(latitude, longitude) {
      this.http
-      .get("https://maps.googleapis.com/maps/api/directions/json?origin="+ latitude + ',' + longitude + "&destination="+latitude2+","+longitude2 )
+      .get("https://maps.googleapis.com/maps/api/directions/json?origin="+ latitude + ',' + longitude + "&destination=46.142462,-1.152266" )
       .subscribe((data) => {
          this.dist = data.json().routes[0].legs[0].distance.value;
       });

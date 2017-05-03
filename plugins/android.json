@@ -7,6 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.moust.cordova.videoplayer": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         },
@@ -25,6 +28,11 @@
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         },
+        "cordova-plugin-mauron85-background-geolocation": {
+            "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
+            "CONTENT_AUTHORITY": "$PACKAGE_NAME",
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         },
@@ -40,7 +48,13 @@
         "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
         "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         },
         "ionic-plugin-keyboard": {
@@ -48,27 +62,13 @@
         },
         "mx.ferreyra.callnumber": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
-        },
-        "com.moust.cordova.videoplayer": {
-            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
-        },
-        "cordova-plugin-x-toast": {
-            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
-        },
-        "cordova-plugin-mauron85-background-geolocation": {
-            "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
-            "CONTENT_AUTHORITY": "$PACKAGE_NAME",
-            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
-        },
-        "de.appplant.cordova.plugin.local-notification": {
-            "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-compat": {
+        "cordova-plugin-app-event": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         },
-        "cordova-plugin-app-event": {
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.ionicframework.projetvp880805"
         }
     }

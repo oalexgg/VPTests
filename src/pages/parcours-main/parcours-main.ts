@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, } from 'ionic-angular';
+import { File } from "@ionic-native/file";
 
 import { Parcours, ParcoursMoment } from "../../providers/model";
 import { ParcourService } from "../../providers/parcours-service";
@@ -23,7 +24,11 @@ export class ParcoursMainPage implements OnInit {
   parcoursMoment: Array<ParcoursMoment>;
   imageSrc: Array<any>;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public parcourService: ParcourService, public parcourMService: ParcourMomentService) {}
+	constructor(public navCtrl: NavController,
+     public navParams: NavParams,
+      public parcourService: ParcourService,
+       public parcourMService: ParcourMomentService,
+        private file: File) {}
 
 	ionViewDidLoad() {
 	}
@@ -42,7 +47,7 @@ export class ParcoursMainPage implements OnInit {
             for (var j of i) {
               if(j instanceof Object) {
                 this.parcoursMoment.push(j);
-                this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + j.image);
+                this.imageSrc.push(this.file.dataDirectory + j.image);
               }
               else {
                 break;

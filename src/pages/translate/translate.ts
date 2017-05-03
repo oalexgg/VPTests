@@ -23,9 +23,9 @@ export class TranslatePage {
 
   switchLanguage(langue) {
   	this.translateService.use(langue);
-  	this.navCtrl.setRoot(TabsPage);
+  	this.navCtrl.pop();
   }
-                         
+
     ionViewWillLeave(){
      // this.homePage.ionViewWillEnter();
     }

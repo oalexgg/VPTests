@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {TranslateService} from 'ng2-translate';
-
-import { File } from '@ionic-native/file';
+import { File } from "@ionic-native/file";
 
 import { NavController, ToastController } from 'ionic-angular';
 import { Parcours, ParcoursMoment } from "../../providers/model";
@@ -54,6 +53,9 @@ export class HomePage {
              public locationTracker: LocationTracker,
               private file: File) {
 	   	    	translate.setDefaultLang('fr');
+            translate.onLangChange.subscribe((event) => {
+              this.loadData();
+            })
 	}
 
 	ionViewDidLoad(){

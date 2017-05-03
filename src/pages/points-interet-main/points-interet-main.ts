@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { File } from "@ionic-native/file";
 
 import { PI } from "../../providers/model";
 import { PiService } from "../../providers/pi-service";
@@ -20,7 +21,11 @@ export class PointsInteretMainPage {
 	parcours: Array<any>;
 	PIS: Array<PI>;
   imageSrc: Array<any>;
-	constructor(public navCtrl: NavController, public navParams: NavParams, public piService: PiService) {}
+	constructor(
+    public navCtrl: NavController,
+     public navParams: NavParams,
+      public piService: PiService,
+       private file: File) {}
 
 	ionViewDidLoad() {
 	}
@@ -36,7 +41,7 @@ export class PointsInteretMainPage {
                     for (let j of i) {
                       if(j instanceof Object){
                         this.PIS.push(j);
-                        this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + j.image["image"]);
+                        this.imageSrc.push(this.file.dataDirectory + j.image["image"]);
                       }
                       else {
                         break;

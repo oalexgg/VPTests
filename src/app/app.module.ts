@@ -12,6 +12,7 @@ import { NguiMapModule} from '@ngui/map';
 import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { File } from "@ionic-native/file";
 
 import { MyApp } from './app.component';
 import { PointsInteretMainPage } from '../pages/points-interet-main/points-interet-main';
@@ -103,7 +104,8 @@ import { LocationTracker } from '../providers/location-tracker';
     BackgroundGeolocation,
     LocationTracker,
     Geolocation,
-    LocalNotifications
+    LocalNotifications,
+    File
     ]
 })
 export class AppModule {}

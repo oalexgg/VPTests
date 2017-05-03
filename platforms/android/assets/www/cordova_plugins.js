@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "id": "com.moust.cordova.videoplayer.VideoPlayer",
+        "file": "plugins/com.moust.cordova.videoplayer/www/videoplayer.js",
+        "pluginId": "com.moust.cordova.videoplayer",
+        "clobbers": [
+            "VideoPlayer"
+        ]
+    },
+    {
         "id": "cordova-plugin-camera.Camera",
         "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
         "pluginId": "cordova-plugin-camera",
@@ -244,6 +252,14 @@ module.exports = [
         "runs": true
     },
     {
+        "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeolocation",
+        "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeolocation.js",
+        "pluginId": "cordova-plugin-mauron85-background-geolocation",
+        "clobbers": [
+            "backgroundGeolocation"
+        ]
+    },
+    {
         "id": "cordova-plugin-network-information.network",
         "file": "plugins/cordova-plugin-network-information/www/network.js",
         "pluginId": "cordova-plugin-network-information",
@@ -285,39 +301,6 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-sqlite-storage.SQLitePlugin",
-        "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-        "pluginId": "cordova-sqlite-storage",
-        "clobbers": [
-            "SQLitePlugin"
-        ]
-    },
-    {
-        "id": "ionic-plugin-keyboard.keyboard",
-        "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
-        "pluginId": "ionic-plugin-keyboard",
-        "clobbers": [
-            "cordova.plugins.Keyboard"
-        ],
-        "runs": true
-    },
-    {
-        "id": "mx.ferreyra.callnumber.CallNumber",
-        "file": "plugins/mx.ferreyra.callnumber/www/CallNumber.js",
-        "pluginId": "mx.ferreyra.callnumber",
-        "clobbers": [
-            "call"
-        ]
-    },
-    {
-        "id": "com.moust.cordova.videoplayer.VideoPlayer",
-        "file": "plugins/com.moust.cordova.videoplayer/www/videoplayer.js",
-        "pluginId": "com.moust.cordova.videoplayer",
-        "clobbers": [
-            "VideoPlayer"
-        ]
-    },
-    {
         "id": "cordova-plugin-x-toast.Toast",
         "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
         "pluginId": "cordova-plugin-x-toast",
@@ -331,11 +314,11 @@ module.exports = [
         "pluginId": "cordova-plugin-x-toast"
     },
     {
-        "id": "cordova-plugin-mauron85-background-geolocation.backgroundGeolocation",
-        "file": "plugins/cordova-plugin-mauron85-background-geolocation/www/backgroundGeolocation.js",
-        "pluginId": "cordova-plugin-mauron85-background-geolocation",
+        "id": "cordova-sqlite-storage.SQLitePlugin",
+        "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+        "pluginId": "cordova-sqlite-storage",
         "clobbers": [
-            "backgroundGeolocation"
+            "SQLitePlugin"
         ]
     },
     {
@@ -364,11 +347,30 @@ module.exports = [
             "cordova.plugins.notification.local.core",
             "plugin.notification.local.core"
         ]
+    },
+    {
+        "id": "ionic-plugin-keyboard.keyboard",
+        "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+        "pluginId": "ionic-plugin-keyboard",
+        "clobbers": [
+            "cordova.plugins.Keyboard"
+        ],
+        "runs": true
+    },
+    {
+        "id": "mx.ferreyra.callnumber.CallNumber",
+        "file": "plugins/mx.ferreyra.callnumber/www/CallNumber.js",
+        "pluginId": "mx.ferreyra.callnumber",
+        "clobbers": [
+            "call"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "com.moust.cordova.videoplayer": "1.0.1",
+    "cordova-plugin-app-event": "1.2.0",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-camera": "2.4.0",
     "cordova-plugin-console": "1.0.5",
@@ -376,19 +378,17 @@ module.exports.metadata =
     "cordova-plugin-file": "4.3.2",
     "cordova-plugin-file-transfer": "1.6.2",
     "cordova-plugin-geolocation": "2.4.2",
+    "cordova-plugin-mauron85-background-geolocation": "2.2.5",
     "cordova-plugin-network-information": "1.3.2",
     "cordova-plugin-splashscreen": "4.0.2",
     "cordova-plugin-statusbar": "2.2.1",
     "cordova-plugin-whitelist": "1.3.1",
     "cordova-plugin-x-socialsharing": "5.1.7",
-    "cordova-sqlite-storage": "2.0.2",
-    "ionic-plugin-keyboard": "2.2.1",
-    "mx.ferreyra.callnumber": "0.0.2",
-    "com.moust.cordova.videoplayer": "1.0.1",
     "cordova-plugin-x-toast": "2.6.0",
-    "cordova-plugin-mauron85-background-geolocation": "2.2.5",
-    "cordova-plugin-app-event": "1.2.0",
-    "de.appplant.cordova.plugin.local-notification": "0.8.4"
+    "cordova-sqlite-storage": "2.0.2",
+    "de.appplant.cordova.plugin.local-notification": "0.8.4",
+    "ionic-plugin-keyboard": "2.2.1",
+    "mx.ferreyra.callnumber": "0.0.2"
 };
 // BOTTOM OF METADATA
 });

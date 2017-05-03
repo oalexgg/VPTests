@@ -24,7 +24,8 @@
     </p>
   </div>
   <div class="parcours">
-    <div class="image" *ngFor="let parcours of parcoursMoment; let i = index " (click)="voirListePI(i)">
+    <div class="image" *ngFor="let parcours of parcoursMoment; let i = index ">
+      <a (click)="voirListePI(i)">
       <img [src]="imageSrc[i]">
       <div class="title-parc">
         <p>
@@ -34,6 +35,7 @@
       <div class="textleg">
         <p>--- {{pisParcour[i]}} PI ---</p>
       </div>
+    </a>
     </div>
   </div>
   <ngui-map [center]="lat+','+lng" [zoom]="zoom" streetViewControl="false" zoomControl="false" fullscreenControl="false" mapTypeControl="false">

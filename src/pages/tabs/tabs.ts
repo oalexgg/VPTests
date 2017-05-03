@@ -18,6 +18,6 @@ export class TabsPage {
   tab4Root: any = CameraPage;
 
   constructor(public translate: TranslateService) {
-
+    
   }
 }

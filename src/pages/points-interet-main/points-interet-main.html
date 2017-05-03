@@ -18,8 +18,8 @@
 
 <ion-content class="card-background-page">
 <ion-card *ngFor="let pi of PIS; let i = index">
-    <ion-item>
-      <img [src]="imageSrc[i]" (click)="detailPI(i)">
+    <button ion-item (click)="detailPI(i)">
+      <img [src]="imageSrc[i]" >
       <div class="textCopyright2">
         <p>{{pi.image.auteur}}</p>
       </div>
@@ -28,6 +28,6 @@
           {{pi.title}}
         </p>
       </div>
-    </ion-item>
+    </button>
   </ion-card>
 </ion-content>

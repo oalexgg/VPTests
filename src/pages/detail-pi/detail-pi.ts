@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { PI } from "../../providers/model";
 import { PiService } from "../../providers/pi-service";
 import {CallNumber} from '@ionic-native/call-number';
+import { File } from "@ionic-native/file";
 
 import {TranslateService} from 'ng2-translate';
 
@@ -34,7 +35,8 @@ export class DetailPiPage {
      public navParams: NavParams,
       public piService: PiService,
        public translateService: TranslateService,
-        private callNumber: CallNumber) {
+        private callNumber: CallNumber,
+         private file: File) {
         	this.id = navParams.get("piId");
           this.pointsInteret = [];
           this.imagesColection = [];
@@ -72,7 +74,7 @@ export class DetailPiPage {
                           });
                         this.imagesColection
                           .forEach((image) => {
-                            this.imageSrc.push("file:///data/data/com.ionicframework.projetvp880805/files/" + image.image);
+                            this.imageSrc.push(this.file.dataDirectory + image.image);
                           });
                       },
                       (err: any) => console.error(err)
